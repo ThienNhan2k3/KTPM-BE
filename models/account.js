@@ -13,7 +13,13 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Account.init({
+  Account.init(
+  {
+    uuid: {
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
