@@ -3,6 +3,8 @@ const cors = require('cors');
 const { sequelize } = require('./models');
 const accountRoutes = require('./routes/accountRoutes');
 const quizRoutes = require ('./routes/quizRoutes');
+const quizEventRoutes = require ('./routes/quizEventRoutes');
+const EventRoutes = require ('./routes/EventRoutes')
 
 const app = express();
 app.use(cors());
@@ -16,6 +18,8 @@ const PORT = process.env.PORT || 5000;
 // Use the routes
 app.use('/account', accountRoutes);
 app.use('/quiz',quizRoutes);
+app.use('/quizEvent', quizEventRoutes);
+app.use('/event', EventRoutes);
 
 
 

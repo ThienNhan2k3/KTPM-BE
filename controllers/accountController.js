@@ -15,8 +15,16 @@ exports.getAllAccounts = async (req, res) => {
 exports.createAccount = async (req, res) => {
     const { name, email, password, phone, status } = req.body;
     try {
-        const account = await Account.create({ name, email, password, phone, status });
-        return res.json(account);
+        const f_account = await Account.findOne({
+            where: { email },
+        });
+        if (f_account) {
+            return res.status(404).json({ error: 'Account already exist!' });
+        } else {
+            const account = await Account.create({ name, email, password, phone, status });
+            return res.json(account);
+        }
+        
     } catch (err) {
         console.log(err);
         return res.status(500).json(err);
