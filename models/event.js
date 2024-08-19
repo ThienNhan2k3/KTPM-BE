@@ -2,8 +2,9 @@
 const {
   Model
 } = require('sequelize');
+const voucherQuantity = require('./voucherQuantity');
 module.exports = (sequelize, DataTypes) => {
-  class GameInfor extends Model {
+  class Event extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,31 +12,34 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      const {User, Playturn, VoucherQuantity} = models;
+      this.belongsToMany(User, {through: Playturn});
+      this.belongsToMany(VoucherQuantity, {through: "Event_VoucherQuantity"});
     }
   }
-  GameInfor.init({
+  Event.init({
     id: {
-      allowNull: false,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
+      allowNull: false,
       primaryKey: true,
-      type: DataTypes.INTEGER
     },
-    name: {
-      type: DataTypes.STRING,
+    gender: {
       allowNull: false,
+      type: DataTypes.STRING
     },
-    types: {
-      type: DataTypes.STRING,
+    dob: {
       allowNull: false,
+      type: DataTypes.STRING
     },
-    photo: {
-      type: DataTypes.STRING,
+    username: {
       allowNull: false,
+      type: DataTypes.STRING
     },
   }, {
     sequelize,
-    tableName: 'GameInfors',
-    modelName: 'GameInfor',
+    tableName: 'Events',
+    modelName: 'Event',
   });
-  return GameInfor;
+  return Event;
 };

@@ -11,14 +11,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      const {Brand, User} = models;
+      this.hasOne(Brand);
+      this.hasOne(User);
     }
   }
   Account.init(
   {
-    uuid: {
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4,
-      primaryKey: true
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      allowNull: false,
+      primaryKey: true,
     },
     name: {
       type: DataTypes.STRING,
@@ -32,14 +36,25 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    phone: DataTypes.STRING,
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    avatarUrl: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     status: {
       type: DataTypes.STRING,
       allowNull: false,
     },
   }, {
     sequelize,
-    tableName: 'account',
+    tableName: 'Accounts',
     modelName: 'Account',
   });
   return Account;

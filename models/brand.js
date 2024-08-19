@@ -1,9 +1,10 @@
 'use strict';
 const {
-  Model
+  Model,
+  Sequelize
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class GameInfor extends Model {
+  class Brand extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,31 +12,34 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      const {VoucherType, Event} = models;
+      this.hasMany(VoucherType);
+      this.hasMany(Event);
     }
   }
-  GameInfor.init({
+  Brand.init({
     id: {
-      allowNull: false,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
+      allowNull: false,
       primaryKey: true,
-      type: DataTypes.INTEGER
     },
-    name: {
-      type: DataTypes.STRING,
+    industryName: {
       allowNull: false,
+      type: Sequelize.STRING
     },
-    types: {
-      type: DataTypes.STRING,
+    address: {
       allowNull: false,
+      type: Sequelize.STRING
     },
-    photo: {
-      type: DataTypes.STRING,
+    GPS: {
       allowNull: false,
+      type: Sequelize.STRING
     },
   }, {
     sequelize,
-    tableName: 'GameInfors',
-    modelName: 'GameInfor',
+    tableName: 'Brands',
+    modelName: 'Brand',
   });
-  return GameInfor;
+  return Brand;
 };

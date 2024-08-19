@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class GameInfor extends Model {
+  class Item extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,31 +11,29 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      const {ItemQuantity} = models;
+      this.hasMany(ItemQuantity);
     }
   }
-  GameInfor.init({
+  Item.init({
     id: {
-      allowNull: false,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
+      allowNull: false,
       primaryKey: true,
-      type: DataTypes.INTEGER
     },
-    name: {
+    itemName: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
-    types: {
+    itemImageUrl: {
       type: DataTypes.STRING,
-      allowNull: false,
-    },
-    photo: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
   }, {
     sequelize,
-    tableName: 'GameInfors',
-    modelName: 'GameInfor',
+    tableName: 'Items',
+    modelName: 'Item',
   });
-  return GameInfor;
+  return Item;
 };

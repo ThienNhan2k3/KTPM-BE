@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple chat app</title>
+
+</head>
+<body>
+    <h2>Simple chat app </h2>
+    <form id="chat-form">
+        <input type="text" id="chat-message">
+        <button id="send-chat">Send</button>
+    </form>
+    <ul id="messages">
+
+    </ul>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js" integrity="sha512-luMnTJZ7oEchNDZAtQhgjomP1eZefnl82ruTH/3Oj/Yu5qYtwL7+dVRccACS/Snp1lFXq188XFipHKYE75IaQQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+<script>
+  let name = prompt("Please enter your name: ");
+  const socket = io("http://localhost:5000");
+  
+  const ulElement = document.querySelector("#messages");    
+  socket.on("connect", (res) => {
+    console.log(res);
+  })
+  
+  socket.on("message", (text) => {
+    const el = document.createElement("li");
+    el.textContent = text;  
+    ulElement.appendChild(el);
+  })
+
+  document.querySelector("#send-chat").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const text = document.querySelector("#chat-message").value;
+    socket.emit("message", name + ": " + text);
+
+    document.querySelector("#chat-message").value = "";
+
+  })
+</script>
+
+</html>
