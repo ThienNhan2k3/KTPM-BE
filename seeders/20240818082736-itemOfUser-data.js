@@ -14,7 +14,7 @@ module.exports = {
     */
     await queryInterface.bulkInsert('ItemOfUsers', [{
       id: 1,
-      eventId: 1,
+      eventId: 2,
       updatedAt:"2024-08-1T04:14:54",
       createdAt:"2024-08-1T04:14:54"  
     }, {
@@ -24,7 +24,7 @@ module.exports = {
       createdAt:"2024-08-1T04:14:54"  
     }, {
       id: 3,
-      eventId: 1,
+      eventId: 2,
       updatedAt:"2024-08-1T04:14:54",
       createdAt:"2024-08-1T04:14:54"  
     }, ], {});

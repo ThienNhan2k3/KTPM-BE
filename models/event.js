@@ -2,7 +2,6 @@
 const {
   Model
 } = require('sequelize');
-const voucherQuantity = require('./voucherQuantity');
 module.exports = (sequelize, DataTypes) => {
   class Event extends Model {
     /**
@@ -24,15 +23,29 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       primaryKey: true,
     },
-    gender: {
+    name: {
       allowNull: false,
       type: DataTypes.STRING
     },
-    dob: {
+    photo: {
       allowNull: false,
       type: DataTypes.STRING
     },
-    username: {
+    start: {
+      allowNull: false,
+      type: DataTypes.DATE
+    },
+    end: {
+      allowNull: false,
+      type: DataTypes.DATE
+    },
+    brandId: {
+      type: DataTypes.INTEGER,
+    },
+    gameInforId: {
+      type: DataTypes.INTEGER,
+    },
+    type: {
       allowNull: false,
       type: DataTypes.STRING
     },

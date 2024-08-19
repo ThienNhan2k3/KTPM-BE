@@ -3,42 +3,30 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Playturn extends Model {
+  class QuizEvent extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
+    static associate({Quiz}) {
       // define association here
-      const {ItemQuantity, User} = models;
-      this.belongsTo(ItemQuantity);
 
+      //Contain lot of Quizs
+      this.hasMany(Quiz, {foreignKey: 'qeID', as: 'quizzes'});
     }
   }
-  Playturn.init({
+  QuizEvent.init({
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
       allowNull: false,
       primaryKey: true,
     },
-    idUser: {
-      primaryKey: true,
-      type: DataTypes.INTEGER
-    },
-    idEvent: {
-      primaryKey: true,
-      type: DataTypes.INTEGER
-    },
-    quantity: {
-      allowNull: false,
-      type: DataTypes.INTEGER
-    },
   }, {
     sequelize,
-    tableName: 'Playturns',
-    modelName: 'Playturn',
+    tableName:'QuizEvents',
+    modelName: 'QuizEvent',
   });
-  return Playturn;
+  return QuizEvent;
 };
