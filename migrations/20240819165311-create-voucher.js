@@ -2,29 +2,30 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Account', {
+    await queryInterface.createTable('Voucher', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      id_brand: {
+        type: Sequelize.INTEGER
+      },
+      voucher_code: {
         type: Sequelize.STRING
       },
-      email: {
+      img_url: {
         type: Sequelize.STRING
       },
-      password: {
+      value: {
+        type: Sequelize.INTEGER
+      },
+      max: {
+        type: Sequelize.INTEGER
+      },
+      description: {
         type: Sequelize.STRING
-      },
-      phone: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      type: {
-        type: Sequelize.STRING,
-        allowNull: false,
       },
       status: {
         type: Sequelize.STRING
@@ -40,6 +41,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Account');
+    await queryInterface.dropTable('Voucher');
   }
 };

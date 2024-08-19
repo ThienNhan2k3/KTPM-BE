@@ -36,12 +36,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
     },
     qeID: {
-      type: DataTypes.UUID,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     }, {
       sequelize,
-      tableName: 'Quizzes',
+      tableName: 'Quiz',
       modelName: 'Quiz',
   });
   return Quiz;

@@ -1,5 +1,5 @@
 const { where } = require('sequelize');
-const { Quiz,QuizEvent } = require('../models');
+const { Quiz, QuizEvent } = require('../models');
 
 
 // Get all quizs

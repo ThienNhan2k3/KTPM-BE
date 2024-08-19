@@ -13,7 +13,7 @@ exports.getAllAccounts = async (req, res) => {
 
 // Create an account
 exports.createAccount = async (req, res) => {
-    const { name, email, password, phone, status } = req.body;
+    const { name, email, password, phone, type, status } = req.body;
     try {
         const f_account = await Account.findOne({
             where: { email },
@@ -21,7 +21,7 @@ exports.createAccount = async (req, res) => {
         if (f_account) {
             return res.status(404).json({ error: 'Account already exist!' });
         } else {
-            const account = await Account.create({ name, email, password, phone, status });
+            const account = await Account.create({ name, email, password, phone, type, status });
             return res.json(account);
         }
         
@@ -33,10 +33,10 @@ exports.createAccount = async (req, res) => {
 
 // Find an account by UUID
 exports.getAccountByUUID = async (req, res) => {
-    const uuid = req.params.uuid;
+    const id = req.params.uuid;
     try {
         const account = await Account.findOne({
-            where: { uuid },
+            where: { id },
         });
         return res.json(account);
     } catch (err) {
@@ -47,11 +47,11 @@ exports.getAccountByUUID = async (req, res) => {
 
 // Update an account
 exports.updateAccount = async (req, res) => {
-    const uuid = req.params.uuid;
-    const { name, email, password, phone, status } = req.body;
+    const id = req.params.uuid;
+    const { name, email, password, phone, type, status } = req.body;
     try {
         const account = await Account.findOne({
-            where: { uuid },
+            where: { id },
         });
         if (!account) {
             return res.status(404).json({ error: 'Account not found' });
@@ -60,6 +60,7 @@ exports.updateAccount = async (req, res) => {
         account.email = email;
         account.password = password;
         account.phone = phone;
+        account.type = type;
         account.status = status;
 
         await account.save();
@@ -72,10 +73,10 @@ exports.updateAccount = async (req, res) => {
 
 // Delete an account
 exports.deleteAccount = async (req, res) => {
-    const uuid = req.params.uuid;
+    const id = req.params.uuid;
     try {
         const account = await Account.findOne({
-            where: { uuid },
+            where: { id },
         });
 
         if (!account) {
