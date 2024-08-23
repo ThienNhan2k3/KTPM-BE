@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Item extends Model {
+  class User_Event extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,27 +13,23 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Item.init({
+  User_Event.init({
     id: {
       allowNull: false,
       primaryKey: true,
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4
     },
-    id_game: {
+    id_user: {
       type: DataTypes.UUID,
       allowNull: false
     },
-    quantity: {
+    id_event: {
+      type: DataTypes.UUID,
+      allowNull: false
+    },
+    playthrough: {
       type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    image: {
-      type: DataTypes.STRING,
       allowNull: false
     },
     update_time: {
@@ -42,8 +38,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    tableName: 'items',
-    modelName: 'Item',
+    tableName: 'user_event',
+    modelName: 'User_Event',
     // don't add the timestamp attributes (updatedAt, createdAt)
     timestamps: false,
     // If don't want createdAt
@@ -51,5 +47,5 @@ module.exports = (sequelize, DataTypes) => {
     // If don't want updatedAt
     updatedAt: false,
   });
-  return Item;
+  return User_Event;
 };

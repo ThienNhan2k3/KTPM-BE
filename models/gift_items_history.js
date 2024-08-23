@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Item extends Model {
+  class Gift_Items_History extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,29 +11,34 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      
     }
   }
-  Item.init({
+  Gift_Items_History.init({
     id: {
       allowNull: false,
       primaryKey: true,
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4
     },
+    id_giver: {
+      type: DataTypes.UUID,
+      allowNull: false
+    },
+    id_recipient: {
+      type: DataTypes.UUID,
+      allowNull: false
+    },
+    id_item: {
+      type: DataTypes.UUID,
+      allowNull: false
+    },
     id_game: {
       type: DataTypes.UUID,
       allowNull: false
     },
-    quantity: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    image: {
-      type: DataTypes.STRING,
+    gift_time: {
+      type: DataTypes.DATE,
       allowNull: false
     },
     update_time: {
@@ -42,8 +47,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    tableName: 'items',
-    modelName: 'Item',
+    tableName: 'gift_items_history',
+    modelName: 'Gift_Items_History',
     // don't add the timestamp attributes (updatedAt, createdAt)
     timestamps: false,
     // If don't want createdAt
@@ -51,5 +56,5 @@ module.exports = (sequelize, DataTypes) => {
     // If don't want updatedAt
     updatedAt: false,
   });
-  return Item;
+  return Gift_Items_History;
 };

@@ -6,7 +6,10 @@ const config = {
       "password": process.env.DEV_DB_PASSWORD || "123",
       "database": process.env.DEV_DB_DATABASE || "KTPM",
       "host": process.env.DEV_DB_HOST || "127.0.0.1",
-      "dialect": process.env.DEV_DB_TYPE || "postgres"
+      "dialect": process.env.DEV_DB_TYPE || "postgres",
+      "define": {
+        timestamps: false,
+      },
     },
     "test": {
       "username": process.env.TEST_DB_USERNAME || "postgres",
