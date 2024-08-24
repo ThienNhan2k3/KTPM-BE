@@ -38,24 +38,29 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    instructions: {
+    introduce: {
       type: DataTypes.TEXT,
       allowNull: null
     },
-    // update_time: {
-    //   type: DataTypes.DATE,
-    //   allowNull: false
-    // }
+    award: {
+      type: DataTypes.TEXT,
+      allowNull: null
+    },
+
+    time_update: {
+      type: DataTypes.DATE,
+      allowNull: false
+    }
   }, {
     sequelize,
     tableName: 'games',
     modelName: 'Game',
     // don't add the timestamp attributes (updatedAt, createdAt)
-    timestamps: true,
+    timestamps: false,
     // If don't want createdAt
     createdAt: false,
     // If don't want updatedAt
-    updatedAt: "time_update",
+    updatedAt: false,
 
 
   });

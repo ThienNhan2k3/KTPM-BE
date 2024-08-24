@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    update_time: {
+    time_update: {
       type: DataTypes.DATE,
       allowNull: false
     }
@@ -45,11 +45,11 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'items',
     modelName: 'Item',
     // don't add the timestamp attributes (updatedAt, createdAt)
-    timestamps: true,
+    timestamps: false,
     // If don't want createdAt
     createdAt: false,
     // If don't want updatedAt
-    updatedAt: "time_update",
+    updatedAt: false,
   });
   return Item;
 };
