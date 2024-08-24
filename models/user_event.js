@@ -41,11 +41,11 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'user_event',
     modelName: 'User_Event',
     // don't add the timestamp attributes (updatedAt, createdAt)
-    timestamps: false,
+    timestamps: true,
     // If don't want createdAt
     createdAt: false,
     // If don't want updatedAt
-    updatedAt: false,
+    updatedAt: "time_update",
   });
   return User_Event;
 };

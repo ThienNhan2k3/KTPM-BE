@@ -51,13 +51,11 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'games',
     modelName: 'Game',
     // don't add the timestamp attributes (updatedAt, createdAt)
-    timestamps: false,
-
+    timestamps: true,
     // If don't want createdAt
     createdAt: false,
-
     // If don't want updatedAt
-    updatedAt: false,
+    updatedAt: "time_update",
 
 
   });
