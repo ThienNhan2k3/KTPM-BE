@@ -7,7 +7,8 @@ const upload = require("../middlewares/uploadFile.js");
 
 router.get("/", GameController.getAllGames);
 router.get("/:id", GameController.getGame);
-router.post("/:id", upload.single('image'), GameController.updateImageById);
+router.post("/:id/image", upload.single('image'), GameController.updateImageById);
+router.post("/:id", upload.single('image'), GameController.updateById);
 
 
 module.exports = router;

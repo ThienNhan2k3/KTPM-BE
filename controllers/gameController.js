@@ -12,6 +12,16 @@ class GameController {
         })
     }
 
+    static async updateById(req, res, next) {
+        const id = req.params.id || null;
+        console.log("body:::", req.body);
+
+        return res.status(200).json({
+            code: 200,
+            metadata: await GameService.updateById(id, req.body)
+        })
+    }
+
     static async getAllGames(req, res, next) {
         return res.status(200).json({
             code: 200,

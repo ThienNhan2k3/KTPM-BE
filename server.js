@@ -5,6 +5,9 @@ const expressWinston = require('express-winston')
 require("dotenv").config();
 const { sequelize } = require('./models');
 const logger = require('./logger/winstonLog');
+const passport = require("passport");
+const session = require("express-session");
+var bodyParser = require('body-parser')
 
 
 const accountRoutes = require('./routes/accountRoutes');
@@ -15,15 +18,40 @@ const EventRoutes = require ('./routes/EventRoutes')
 
 const app = express();
 
+// initalize sequelize with session store
+const SessionStore = require("connect-session-sequelize")(session.Store);
+const sessionStore = new SessionStore({
+  db: sequelize,
+});
+
+
 //Middleware
 app.use(cors());
 app.use(express.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(express.urlencoded({ extended: false }));
 app.use(expressWinston.logger({
     winstonInstance: logger,
     statusLevels: true
 }))
 
+app.use(
+    session({
+      secret: "keyboard cat",
+      store: sessionStore,
+      resave: false, // we support the touch method so per the express-session docs this should be set to false
+      saveUninitialized: false,
+      cookie: {
+        maxAge: 60000 * 60 * 24 * 30,
+      },
+    })
+);
+
+/*-----------Passport Authentication-----------*/
+app.use(passport.initialize());
+app.use(passport.session());
 
 const PORT = process.env.PORT || 5000;
 const SOCKET_PORT = process.env.SOCKET_PORT || 5001;
@@ -31,8 +59,10 @@ const SOCKET_PORT = process.env.SOCKET_PORT || 5001;
 const dir = path.join(__dirname, 'public', 'images', 'games');
 app.use('/public/images/games', express.static(dir));
 
-app.use("/login", require("./routes/authRoutes"));
+
+
 // Use the routes
+app.use("/login", require("./routes/authRoutes"));
 app.use('/account', accountRoutes);
 app.use('/quiz',quizRoutes);
 app.use('/quizEvent', quizEventRoutes);

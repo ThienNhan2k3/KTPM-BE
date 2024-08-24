@@ -7,6 +7,7 @@ const config = {
       "database": process.env.DEV_DB_DATABASE || "KTPM",
       "host": process.env.DEV_DB_HOST || "127.0.0.1",
       "dialect": process.env.DEV_DB_TYPE || "postgres",
+      "logging": false,
       "dialectOptions": {
         "ssl": {}
       }
