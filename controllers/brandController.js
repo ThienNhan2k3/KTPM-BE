@@ -4,7 +4,7 @@ const { Brand } = require('../models');
 exports.getAll = async (req, res) => {
     try {
         const brands = await Brand.findAll({
-            attributes: ['id', 'brand_name', 'industry', 'password', 'email', 'phone', 'address', 'gps', 'status', 'time_update']});
+            attributes: ['id', 'brand_name', 'industry', 'email', 'phone', 'address', 'gps', 'status', 'time_update']});
         return res.json(brands);
     } catch (err) {
         console.log(err);
@@ -12,18 +12,18 @@ exports.getAll = async (req, res) => {
     }
 };
 
-// Create an account
-exports.createAccount = async (req, res) => {
-    const { name, email, password, phone, type, status } = req.body;
+// Create a brand
+exports.create = async (req, res) => {
+    const { brand_name, industry, password, email, phone, address, gps, status, time_update} = req.body;
     try {
-        const f_account = await Account.findOne({
+        const f_brand = await Brand.findOne({
             where: { email },
         });
-        if (f_account) {
-            return res.status(404).json({ error: 'Account already exist!' });
+        if (f_brand) {
+            return res.status(404).json({ error: 'This email already been used!' });
         } else {
-            const account = await Account.create({ name, email, password, phone, type, status });
-            return res.json(account);
+            const  brand = await Brand.create({ brand_name, industry, password, email, phone, address, gps, status, time_update});
+            return res.json(brand);
         }
         
     } catch (err) {

@@ -49,3 +49,6 @@
 [2024-08-25 12:52:09.349 AM] error: 	HTTP GET /brand/getAll
 [2024-08-25 12:55:35.574 AM] error: 	HTTP GET /brand/getAll
 [2024-08-25 12:58:24.979 AM] error: 	HTTP GET /brand/getAll
+[2024-08-25 03:51:27.253 PM] error: 	HTTP POST /brand/create
+[2024-08-25 05:17:09.224 PM] error: 	HTTP POST /brand/create
+[2024-08-25 05:19:56.388 PM] error: 	HTTP POST /brand/create

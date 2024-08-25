@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       const {Brand, User} = models;
-      this.hasOne(Brand);
+      //this.hasOne(Brand);
       this.hasOne(User);
     }
   }
