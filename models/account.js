@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       const {Brand, User} = models;
       //this.hasOne(Brand);
-      this.hasOne(User);
+      //this.hasOne(User);
     }
   }
   Account.init(

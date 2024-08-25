@@ -52,3 +52,5 @@
 [2024-08-25 03:51:27.253 PM] error: 	HTTP POST /brand/create
 [2024-08-25 05:17:09.224 PM] error: 	HTTP POST /brand/create
 [2024-08-25 05:19:56.388 PM] error: 	HTTP POST /brand/create
+[2024-08-25 11:23:52.419 PM] error: 	HTTP POST /login
+[2024-08-25 11:24:53.708 PM] error: 	HTTP POST /login
