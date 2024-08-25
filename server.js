@@ -11,6 +11,7 @@ var bodyParser = require('body-parser')
 
 
 const accountRoutes = require('./routes/accountRoutes');
+const userRoutes = require('./routes/userRoutes.js');
 const brandRoutes = require('./routes/brandRoutes');
 const quizRoutes = require ('./routes/quizRoutes');
 const quizEventRoutes = require ('./routes/quizEventRoutes');
@@ -65,6 +66,7 @@ app.use('/public/images/games', express.static(dir));
 // Use the routes
 app.use("/login", require("./routes/authRoutes"));
 app.use('/account', accountRoutes);
+app.use('/user', userRoutes);
 app.use('/brand', brandRoutes);
 app.use('/quiz',quizRoutes);
 app.use('/quizEvent', quizEventRoutes);
