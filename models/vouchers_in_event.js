@@ -42,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      tableName: "voucher_in_event",
+      tableName: "vouchers_in_event",
       modelName: "Voucher_In_Event",
       // don't add the timestamp attributes (updatedAt, createdAt)
       timestamps: false,
