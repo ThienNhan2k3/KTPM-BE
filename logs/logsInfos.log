@@ -404,3 +404,24 @@
 [2024-08-24 09:16:05.124 PM] info: 	HTTP POST /login
 [2024-08-24 09:16:05.196 PM] info: 	HTTP GET /login
 [2024-08-24 09:16:18.898 PM] info: 	HTTP POST /login
+[2024-08-24 09:42:47.234 PM] error: 	404 - Not Found
+[2024-08-24 09:42:47.243 PM] warn: 	HTTP GET /
+[2024-08-24 09:42:47.420 PM] error: 	404 - Not Found
+[2024-08-24 09:42:47.422 PM] warn: 	HTTP GET /favicon.ico
+[2024-08-25 12:12:06.975 AM] error: 	HTTP GET /brand/getAll
+[2024-08-25 12:12:36.658 AM] error: 	HTTP GET /brand/getAll
+[2024-08-25 12:16:45.615 AM] error: 	HTTP GET /brand/getAll
+[2024-08-25 12:16:48.543 AM] error: 	HTTP GET /brand/getAll
+[2024-08-25 12:17:49.947 AM] error: 	HTTP GET /brand/getAll
+[2024-08-25 12:17:53.013 AM] error: 	HTTP GET /brand/getAll
+[2024-08-25 12:19:49.773 AM] error: 	HTTP GET /brand/getAll
+[2024-08-25 12:19:51.233 AM] error: 	HTTP GET /brand/getAll
+[2024-08-25 12:33:30.750 AM] error: 	HTTP GET /brand/getAll
+[2024-08-25 12:39:39.063 AM] error: 	HTTP GET /brand/getAll
+[2024-08-25 12:50:14.031 AM] error: 	HTTP GET /brand/getAll
+[2024-08-25 12:52:09.349 AM] error: 	HTTP GET /brand/getAll
+[2024-08-25 12:55:35.574 AM] error: 	HTTP GET /brand/getAll
+[2024-08-25 12:58:24.979 AM] error: 	HTTP GET /brand/getAll
+[2024-08-25 01:03:34.292 AM] info: 	HTTP GET /brand/getAll
+[2024-08-25 02:31:43.504 PM] info: 	HTTP GET /brand/getAll
+[2024-08-25 02:31:57.756 PM] info: 	HTTP GET /brand/getAll
