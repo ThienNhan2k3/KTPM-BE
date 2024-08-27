@@ -1,56 +1,72 @@
 const { where } = require('sequelize');
-const { Quiz } = require('../models');
+const { Question, Quiz  } = require('../models');
+const questions = require('../models/questions');
 
 
-// Get all quizs
+// Get all questions
 exports.getAll = async (req, res) => {
-    console.log('get all api quiz called');
     try {
-        const quizes = await Quiz.findAll();
-        return res.json(quizes);
+        const questions = await Question.findAll();
+        return res.json(questions);
     } catch (err) {
         console.log(err);
         return res.status(500).json(err);
     }
 };
 
-// Create a quiz
+// Create a question
 exports.create = async (req, res) => {
-    const { id_event, id_game } = req.body;
+    const {id_quiz, ques, choice_1, choice_2, choice_3, choice_4, answear,} = req.body;
     try {
-        const quiz = await Quiz.create(
-            { 
-                id_event, 
-                id_game,
-                time_update: new Date()
-            });
-        return res.json(quiz);
-    } catch (err) {
-        console.log(err);
-        return res.status(500).json(err);
-    }
-};
-
-// Find a quiz by ID
-exports.getQuiz = async (req, res) => {
-    const id = req.params.uuid;
-    try {
-        const quiz = await Quiz.findOne({
-            where: { id },
+        const quiz = await Quiz .findOne({
+            where: {
+                id: id_quiz,
+            }
         });
-        return res.json(quiz);
+
+        if (quiz) {
+            console.log(ques);
+            const question = await Question.create({
+                id_quiz: quiz.id, // Assuming the QuizEvent has an `id` field that relates to `id_quiz`
+                ques,
+                choice_1,
+                choice_2,
+                choice_3,
+                choice_4,
+                answear,
+                time_update: new Date() // Set the current time for `time_update`
+            });
+            return res.json(question);
+        } else {
+            return res.status(403).json({ error: 'Quiz not found' });
+        }
     } catch (err) {
         console.log(err);
         return res.status(500).json(err);
     }
 };
 
-//Find a quiz by id_event
-exports.getQuiz_byEvent = async (req, res) => {
-    const id_event = req.params.uuid;
+// Find a question by Quiz
+exports.getbyQuiz = async (req, res) => {
+    console.log('get questions by quiz api called');
+    const id_quiz = req.params.uuid;
+    try {
+        const questions = await Question.findAll({
+            where: { id_quiz },
+        });
+        return res.json(questions);
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json(err);
+    }
+};
+
+// Find an quiz by UUID
+exports.getQuizByUUID = async (req, res) => {
+    const uuid = req.params.uuid;
     try {
         const quiz = await Quiz.findOne({
-            where: { id_event },
+            where: { uuid },
         });
         return res.json(quiz);
     } catch (err) {

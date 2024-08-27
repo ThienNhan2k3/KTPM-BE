@@ -54,3 +54,46 @@
 [2024-08-25 05:19:56.388 PM] error: 	HTTP POST /brand/create
 [2024-08-25 11:23:52.419 PM] error: 	HTTP POST /login
 [2024-08-25 11:24:53.708 PM] error: 	HTTP POST /login
+[2024-08-27 11:37:08.153 AM] error: 	HTTP GET /quizEvent/getAll
+[2024-08-27 11:37:20.603 AM] error: 	HTTP GET /quizEvent/getAll
+[2024-08-27 10:10:05.545 PM] error: 	404 - Not Found
+[2024-08-27 10:32:52.916 PM] error: 	404 - Not Found
+[2024-08-27 10:33:09.990 PM] error: 	404 - Not Found
+[2024-08-27 10:33:46.161 PM] error: 	404 - Not Found
+[2024-08-27 10:34:02.316 PM] error: 	404 - Not Found
+[2024-08-27 10:34:24.871 PM] error: 	404 - Not Found
+[2024-08-27 10:34:27.954 PM] error: 	404 - Not Found
+[2024-08-27 10:34:37.652 PM] error: 	404 - Not Found
+[2024-08-27 10:34:38.441 PM] error: 	404 - Not Found
+[2024-08-27 10:35:15.579 PM] error: 	404 - Not Found
+[2024-08-27 10:35:35.771 PM] error: 	404 - Not Found
+[2024-08-27 10:35:51.902 PM] error: 	404 - Not Found
+[2024-08-27 10:36:11.210 PM] error: 	404 - Not Found
+[2024-08-27 10:36:15.454 PM] error: 	404 - Not Found
+[2024-08-27 10:36:33.805 PM] error: 	HTTP POST /questions/create
+[2024-08-27 10:36:59.413 PM] error: 	HTTP POST /questions/create
+[2024-08-27 10:37:41.455 PM] error: 	HTTP POST /questions/create
+[2024-08-27 10:39:27.793 PM] error: 	HTTP POST /questions/create
+[2024-08-27 10:48:32.324 PM] error: 	HTTP GET /quiz/get/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-27 10:49:31.187 PM] error: 	404 - Not Found
+[2024-08-27 10:49:56.519 PM] error: 	HTTP GET /quiz/get_by_event/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-27 10:51:20.835 PM] error: 	HTTP GET /quiz/get_by_event/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-27 10:51:37.920 PM] error: 	HTTP GET /quiz/get_by_event/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-27 10:53:07.740 PM] error: 	HTTP GET /quiz/get_by_event/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-27 10:55:18.733 PM] error: 	HTTP GET /quiz/get/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-27 10:55:20.396 PM] error: 	HTTP GET /quiz/get/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-27 10:55:22.368 PM] error: 	HTTP GET /quiz/get/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-27 10:56:09.159 PM] error: 	HTTP GET /quiz/get/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-27 11:04:45.465 PM] error: 	404 - Not Found
+[2024-08-27 11:06:13.570 PM] error: 	HTTP GET /questions/get_byQuiz/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-27 11:37:57.063 PM] error: 	404 - Not Found
+[2024-08-27 11:37:57.067 PM] error: 	404 - Not Found
+[2024-08-27 11:38:14.056 PM] error: 	404 - Not Found
+[2024-08-27 11:38:14.058 PM] error: 	404 - Not Found
+[2024-08-27 11:38:37.328 PM] error: 	404 - Not Found
+[2024-08-27 11:38:40.780 PM] error: 	404 - Not Found
+[2024-08-27 11:38:40.782 PM] error: 	404 - Not Found
+[2024-08-27 11:39:20.362 PM] error: 	404 - Not Found
+[2024-08-27 11:39:28.461 PM] error: 	404 - Not Found
+[2024-08-27 11:39:28.464 PM] error: 	404 - Not Found
+[2024-08-27 11:40:30.019 PM] error: 	404 - Not Found
