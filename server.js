@@ -14,8 +14,10 @@ const server = require("http").Server(app);
 const io = require("socket.io")(server);
 
 const accountRoutes = require('./routes/accountRoutes');
+const userRoutes = require('./routes/userRoutes.js');
+const brandRoutes = require('./routes/brandRoutes');
 const quizRoutes = require ('./routes/quizRoutes');
-const quizEventRoutes = require ('./routes/quizEventRoutes');
+const questionRoutes = require('./routes/questionRoutes.js');
 const EventRoutes = require ('./routes/EventRoutes')
 
 
@@ -76,8 +78,10 @@ app.use("/", require("./routes/authRoutes"));
 
 app.use(authenticate)
 app.use('/account', accountRoutes);
+app.use('/user', userRoutes);
+app.use('/brand', brandRoutes);
 app.use('/quiz',quizRoutes);
-app.use('/quizEvent', quizEventRoutes);
+app.use('/questions', questionRoutes);
 app.use('/event', EventRoutes);
 app.use('/game', require("./routes/gameRoutes.js"));
 

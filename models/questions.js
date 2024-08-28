@@ -24,8 +24,28 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.UUID,
         allowNull: false,
       },
-      question: {
+      ques: {
         type: DataTypes.STRING,
+        allowNull: false,
+      },
+      choice_1: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      choice_2: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      choice_3: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      choice_4: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      answear: {
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
       time_update: {
