@@ -8,7 +8,10 @@ const logger = require('./logger/winstonLog');
 const passport = require("passport");
 const session = require("express-session");
 var bodyParser = require('body-parser')
-
+const {authenticate, isAdmin} = require("./middlewares/authentication.js");
+const app = express();
+const server = require("http").Server(app);
+const io = require("socket.io")(server);
 
 const accountRoutes = require('./routes/accountRoutes');
 const quizRoutes = require ('./routes/quizRoutes');
@@ -16,7 +19,6 @@ const quizEventRoutes = require ('./routes/quizEventRoutes');
 const EventRoutes = require ('./routes/EventRoutes')
 
 
-const app = express();
 
 // initalize sequelize with session store
 const SessionStore = require("connect-session-sequelize")(session.Store);
@@ -26,7 +28,12 @@ const sessionStore = new SessionStore({
 
 
 //Middleware
-app.use(cors());
+app.use(cors({
+    //Allows session cookie from browser to pass through
+    credentials: true, 
+    //Sets the allowed domain to the domain where the front end is hosted, this could be http://localhost:3000 or an actual url
+    origin: process.env.FRONT_END_URL || "http://localhost:5173"
+}));
 app.use(express.json());
 app.use(bodyParser.urlencoded({
     extended: true
@@ -40,12 +47,14 @@ app.use(expressWinston.logger({
 app.use(
     session({
       secret: "keyboard cat",
-      store: sessionStore,
-      resave: false, // we support the touch method so per the express-session docs this should be set to false
-      saveUninitialized: false,
+      resave: true,
+    //   proxy: true,
+      saveUninitialized: true,
+      httpOnly: true,
       cookie: {
-        maxAge: 60000 * 60 * 24 * 30,
-      },
+          maxAge: 60000 * 60 * 24 * 30,
+        },
+      store: sessionStore,
     })
 );
 
@@ -62,13 +71,48 @@ app.use('/public/images/games', express.static(dir));
 
 
 // Use the routes
-app.use("/login", require("./routes/authRoutes"));
+app.use("/", require("./routes/authRoutes"));
+
+
+app.use(authenticate)
 app.use('/account', accountRoutes);
 app.use('/quiz',quizRoutes);
 app.use('/quizEvent', quizEventRoutes);
 app.use('/event', EventRoutes);
 app.use('/game', require("./routes/gameRoutes.js"));
 
+
+app.post("/routes", (req, res, next) => {
+    const path = req.body.path || "";
+    console.log("path:::", path);
+    if (req.user.type == null) {
+        return res.json({
+            code: 200,
+            metadata: {
+                login: true,
+                permission: path.includes("/brand"),
+                homePage: path.includes("/brand") ? "/brand" : "/admin"
+            },
+        })
+    } else if (req.user.type == "Admin") {
+        return res.json({
+            code: 200,
+            metadata:  {
+                login: true,
+                permission: path.includes("/admin"),
+                homePage: path.includes("/brand") ? "/brand" : "/admin"
+            }
+        })
+    }
+
+    return res.json({
+        code: 200,
+        metadata: {
+            login: false,
+            permission: false,
+        }
+    })
+})
 
 // Handling error
 app.use((req, res, next) => {
@@ -93,7 +137,7 @@ app.use((error, req, res, next) => {
 
 
 
-app.listen(PORT, async () => {
+server.listen(PORT, async () => {
     console.log(`Server is running on http://localhost:${PORT}`);
     try {
         await sequelize.sync();

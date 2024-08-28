@@ -1,2 +1,5 @@
 node_modules
 .env
+src/logs/logsErrors.log
+src/logs/logsInfos.log
+src/logs/logsWarnings.log
