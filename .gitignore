@@ -1,5 +1,5 @@
 node_modules
 .env
-src/logs/logsErrors.log
-src/logs/logsInfos.log
-src/logs/logsWarnings.log
+logs/logsErrors.log
+logs/logsInfos.log
+logs/logsWarnings.log

@@ -11,7 +11,14 @@ var bodyParser = require('body-parser')
 const {authenticate, isAdmin} = require("./middlewares/authentication.js");
 const app = express();
 const server = require("http").Server(app);
-const io = require("socket.io")(server);
+const io = require("socket.io")(server, {
+    cors: {
+      origin: "http://localhost:5173",
+      methods: ["GET", "POST"],
+    },
+});
+global.__io = io;
+
 
 const accountRoutes = require('./routes/accountRoutes');
 const userRoutes = require('./routes/userRoutes.js');
@@ -76,7 +83,11 @@ app.use('/public/images/games', express.static(dir));
 app.use("/", require("./routes/authRoutes"));
 
 
-app.use(authenticate)
+// app.use(authenticate)
+
+
+__io.on("connection", require("./services/socketService.js").connection);
+
 app.use('/account', accountRoutes);
 app.use('/user', userRoutes);
 app.use('/brand', brandRoutes);

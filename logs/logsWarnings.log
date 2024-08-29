@@ -1,0 +1,10 @@
+[2024-08-28 11:47:44.244 AM] error: 	404 - Not Found
+[2024-08-28 11:47:44.680 AM] warn: 	HTTP GET /quiz
+[2024-08-28 11:47:47.981 AM] error: 	404 - Not Found
+[2024-08-28 11:47:48.558 AM] warn: 	HTTP GET /favicon.ico
+[2024-08-28 11:49:56.467 AM] error: 	404 - Not Found
+[2024-08-28 11:49:56.844 AM] warn: 	HTTP GET /quiz
+[2024-08-28 11:50:56.263 AM] error: 	404 - Not Found
+[2024-08-28 11:50:56.682 AM] warn: 	HTTP GET /question/get_byQuiz/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-28 11:53:27.855 AM] error: 	404 - Not Found
+[2024-08-28 11:53:28.318 AM] warn: 	HTTP GET /question/get_byQuiz/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1

@@ -1,114 +1,201 @@
+const redis = require('../redis/redisDB');
+const { Quiz, Question } = require('../models');
 
-const rooms = {};
+function emitQuestion(io, eventId, title, question, timer) {
+  io.to(eventId).emit(title, {
+    ques: question.ques,
+    choice_1: question.choice_1,
+    choice_2: question.choice_2,
+    choice_3: question.choice_3,
+    choice_4: question.choice_4,
+    timer,
+  });
+}
 
-function askNewQuestion(room) {
-    if (rooms[room].players.length === 0) {
-      clearTimeout(rooms[room].questionTimeout);
-      delete rooms[room];
-      return;
-    }
+async function emitAnswer(io, eventId, userId, correctAnswer) {
+  // Cập nhật lại điểm của người chơi
+  const AllScores = await redis.hgetall(`eventQuizes:${eventId}:players`);
+  const playerScore = await redis.hget(`eventQuizes:${eventId}:players`, userId);    
+  const answerObject = {
+    correctAnswer,
+    AllScores,
+    playerScore
+  }
+  io.to(eventId).emit("answerOfQuestion", answerObject)
+}
+
+async function emitEventEnd(io, eventId, userId) {
+  const playerScore = await redis.hget(`eventQuizes:${eventId}:players`, userId);
+  io.to(eventId).emit("eventEnd", {
+    playerScore,
+    voucher: playerScore > 10 ? "Voucher 50%" : "Voucher 10%"
+  })
+}
+
+async function updateNewQuestionToDb(eventId, newQuestion) {
+  //Cập nhật lại câu hỏi hiện tại trong danh sách các câu hỏi vào Redis DB
+  await redis.hset(`eventQuizes:${eventId}:currentQuestion`, newQuestion);
+  await redis.incr(`eventQuizes:${eventId}:questionIndex`);
+}
+
+async function askQuestion(io, eventId, userId, timer) {
+  //Lấy câu hỏi hiện tại của event từ Redis DB
+  const question = await redis.hgetall(`eventQuizes:${eventId}:currentQuestion`);  
+  emitQuestion(io, eventId, "question", question, timer);
+
+  let endTime =  new Date(Date.now() + SocketService.timer * 1000);
+  await redis.hset(`eventQuizes:${eventId}:currentQuestion`, "endTime", endTime);  
   
-    const question = questions[questions.length - count];
-    const title = question.title;
-    const answers = question.answers;
-    const correctIndex = question.correctIndex;
-    count -= 1;
+  const correctAnswer = question[`choice_${question.answer}`];
+  //Lấy toàn bộ câu hỏi của event vào Redis DB
+  const questions = JSON.parse(await redis.get(`eventQuizes:${eventId}:questions`));
+  //Lấy vị trí của câu hỏi hiện tại trong danh sách các câu hỏi vào Redis DB
+  const questionIndex = Number(await redis.get(`eventQuizes:${eventId}:questionIndex`));
 
-    rooms[room].currentQuestion = title;
-    
-    rooms[room].correctAnswer = answers[correctIndex];
-    
-    rooms[room].shouldAskNewQuestion = true;
-    console.log(count);
-    io.to(room).emit("newQuestion", {
-      question: title,
-      answers: answers,
-      timer: 10,
-    });
-    console.log("emit newQuestion");
-  
-    rooms[room].questionTimeout = setTimeout(() => {
-        io.to(room).emit("answerResult", {
-            correctAnswer: rooms[room].correctAnswer,
-            scores: rooms[room].players.map((player) => ({
-            name: player.name,
-            score: player.score || 0,
-            }))
-        });
+  const isContinuous =  questionIndex + 1 < questions.length;
+  const newQuestion = isContinuous ? {
+    ques: questions[questionIndex + 1].ques,
+    choice_1: questions[questionIndex + 1].choice_1,
+    choice_2: questions[questionIndex + 1].choice_2,
+    choice_3: questions[questionIndex + 1].choice_3,
+    choice_4: questions[questionIndex + 1].choice_4,
+    answer: questions[questionIndex + 1].answear,
+    endTime: new Date(Date.now() + (SocketService.timer * 2 + 2) * 1000) // Phải chờ ít nhất 12s sau thì câu hỏi tiếp theo mới đc hỏi vì vậy thời gian end = 10s (trả lời) + 12s (delay)
+  } : null;
 
-        setTimeout(() => {
-            if (count > 1) {
-                askNewQuestion(room);
-            } else {
-            delete rooms[room];
-            io.to(room).emit("gameOver", "end")
-            }
-        }, 2000);
+
+  setTimeout(async (io, eventId, userId, correctAnswer, isContinuous, newQuestion) => {
+    // Cập nhật lại điểm của người chơi
+    await emitAnswer(io, eventId, userId, correctAnswer);
+
+    if (isContinuous) {
+      //Cập nhật lại câu hỏi hiện tại trong danh sách các câu hỏi vào Redis DB
+      await updateNewQuestionToDb(eventId, newQuestion);
+    
+      setTimeout(async (io, eventId, userId) => {
+        askQuestion(io, eventId, userId, timer);
+      }, 2 * 1000, io, eventId, userId);
       
-    }, 10000);
+    } else {
+      setTimeout(async () => {
+        await emitEventEnd(io, eventId, userId);
+
+        //Set voucher cho người chơi tương ứng trong SQL
+        //Code here
+      }, 2 * 1000);
+
+    }
+  }, timer * 1000, io, eventId, userId, correctAnswer, isContinuous, newQuestion);
 }
 
 
 class SocketService {
+  static timer = 10; //Được tính theo giây
+  
+  static connection( socket ) {
+    console.log("User connection id is ", socket.id);
 
-    connection( socket ) {
+    //Bỏ đi một ticket của người chơi
+    // Code here
 
-        socket.on("disconnect", () => {
-            console.log(">>>User disconnect id is ", socket.id)
-        })
+    socket.on("disconnect", () => {
+        console.log(">>>User disconnect id is ", socket.id)
+    })
+    
 
-        //event on here
 
-        socket.on("joinRoom", (room, name) => {
-            socket.join(room);
-            console.log(`${name} has joined the game!`);
-            io.to(room).emit("message", `${name} has joined the game!`);
-            if (!rooms[room]) {
-              rooms[room] = {
-                players: [],
-                currentQuestion: null,
-                correctAnswer: null,
-                questionTimeout: null,
-                shouldAskNewQuestion: true,
-              };
-            }
-            console.log("rooms:::", rooms);
-            console.log("players:::", rooms[room].players);
-            
-            rooms[room].players.push({ id: socket.id, name });
-        
-            if (!rooms[room].currentQuestion) {
-              askNewQuestion(room);
-            }
-          });
-        
-          socket.on("submitAnswer", (room, answers) => {
+    //event on here
+    socket.on("playEvent", async (eventId, userId) => {
+      socket.join(eventId);
+      console.log(`${userId} has joined the game!`);
+      __io.to(eventId).emit("message", `${userId} has joined the game!`);
       
-            console.log("room:::", rooms[room]);
-            console.log("submitAnswer:::", answers);
-            const currentPlayer = rooms[room].players.find(
-              (player) => player.id === socket.id
-            );
+      //Lưu eventId mà user đang tham gia vào Redis DB
+      await redis.set(`player:${userId}`, eventId);
+      
+      //Kiểm tra xam sự kiện đã bắt đầu hay chưa
+      const eventQuizes = await redis.get(`eventQuizes:${eventId}:questions`);
+
+      let question = null;
+      // console.log("eventQuizes:::", eventQuizes);
+      if (eventQuizes == null) { //Sự kiện chưa bắt đầu
+        //Lấy ra danh sách câu hỏi
+        const quiz = await Quiz.findOne({
+          where: { 
+              id_event: eventId
+            },
+        });
+        if (quiz == null) return;
+        const questions = await Question.findAll({
+          where: { id_quiz: quiz.id },
+        });
         
-            if (currentPlayer) {
-              const correctAnswer = rooms[room].correctAnswer;
-              const isCorrect = correctAnswer !== null && correctAnswer == answers;
-              currentPlayer.score = isCorrect
-                ? (currentPlayer.score || 0) + 1
-                : (currentPlayer.score || 0) - 1;
-            }
-          });
+        const intialIndex = 0;
+        //Lưu toàn bộ câu hỏi của event vào Redis DB
+        await redis.set(`eventQuizes:${eventId}:questions`, JSON.stringify(questions));
+        //Lưu vị trí của câu hỏi hiện tại trong danh sách các câu hỏi vào Redis DB
+        await redis.set(`eventQuizes:${eventId}:questionIndex`, intialIndex);
+
+        question = questions[intialIndex];
+        //Lưu câu hỏi hiện tại trong danh sách các câu hỏi vào Redis DB
+        await redis.hset(`eventQuizes:${eventId}:currentQuestion`, {
+          ques: question.ques,
+          choice_1: question.choice_1,
+          choice_2: question.choice_2,
+          choice_3: question.choice_3,
+          choice_4: question.choice_4,
+          answer: question.answear,
+        });
+
+      }
+
+      //Lưu danh sách người chơi và điểm số của họ vào Redis DB
+      await redis.hset(`eventQuizes:${eventId}:players`, userId, 0);
+  
+      if (question != null && question.ques) {
+        if (!eventQuizes) {
+          let countDown = 10;
+
+          while (countDown >= 1){
+            setTimeout(function(countDown){
+              __io.to(eventId).emit("eventStart", countDown)
+            }, (10 - countDown) * 1000, countDown);
+            countDown -= 1;
+          }
+
+          setTimeout((__io, eventId, userId, timer) => {
+            askQuestion(__io, eventId, userId, timer);
+          }, 11 * 1000, __io, eventId, userId, SocketService.timer);
+        } else {
+          askQuestion(__io, eventId, userId, SocketService.timer);
+        }
         
-          socket.on("disconnect", () => {
-            for (const room in rooms) {
-              rooms[room].players = rooms[room].players.filter(
-                (player) => player.id !== socket.id
-              );
-            }
+      }
+    });
         
-            console.log("A user disconnected");
-          });
-    }
+    socket.on("submitAnswer", async (userId, answer) => {
+
+      //Lấy ra eventId từ userId 
+      const eventId = await redis.get(`player:${userId}`);
+
+      if (eventId != null) {
+        //Lấy câu hỏi hiện tại của event vào Redis DB
+        const question = await redis.hgetall(`eventQuizes:${eventId}:currentQuestion`);
+        const correctAnswer = question[`choice_${question.answer}`];
+        const isCorrect = correctAnswer != null && correctAnswer == answer;
+
+        if (isCorrect) {
+          let remainingTime = (new Date(question.endTime) - Date.now()) / 1000;
+          remainingTime = remainingTime > 0 ? Math.round(remainingTime) : 0;
+          
+          // Cập nhật lại điểm của người chơi
+          await redis.hincrby(`eventQuizes:${eventId}:players`, userId, remainingTime * 10);
+          const point = await redis.hget(`eventQuizes:c4fb5c4d-4ef7-4c43-b978-4bfab379dce1:players`, 'nhan');
+        }
+      }
+    });   
+  }
+
 }
 
-module.exports = new SocketService();
+module.exports = SocketService;
