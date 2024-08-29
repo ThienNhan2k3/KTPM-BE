@@ -5,8 +5,9 @@ const router = express.Router();
 
 router.get('/getAll', brandController.getAll);
 router.post('/create', brandController.create);
-//router.get('/get/:uuid', brandController.getbrandByUUID);
-//router.put('/update/:uuid', brandController.updatebrand);
-//router.delete('/delete/:uuid', brandController.deletebrand);
+router.post('/activate/:uuid', brandController.activate);
+router.get('/get/:uuid', brandController.getByUUID);
+router.put('/update/:uuid', brandController.update);
+router.delete('/delete/:uuid', brandController.delete);
 
 module.exports = router;

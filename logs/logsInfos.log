@@ -683,3 +683,17 @@
 [2024-08-27 11:52:52.083 PM] info: 	HTTP GET /quiz/get_by_event/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
 [2024-08-27 11:52:52.258 PM] info: 	HTTP GET /questions/get_byQuiz/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1
 [2024-08-27 11:52:52.434 PM] info: 	HTTP GET /questions/get_byQuiz/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-30 12:18:29.427 AM] info: 	HTTP GET /brand/getAll
+[2024-08-30 12:19:37.153 AM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-08-30 12:19:55.751 AM] info: 	HTTP POST /brand/activate/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-08-30 12:20:44.591 AM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-08-30 12:22:58.510 AM] info: 	HTTP GET /brand/getAll
+[2024-08-30 12:22:58.827 AM] info: 	HTTP GET /brand/getAll
+[2024-08-30 12:39:12.910 AM] info: 	HTTP GET /brand/getAll
+[2024-08-30 12:39:17.143 AM] info: 	HTTP POST /brand/activate/adfae27d-a283-441e-9d70-15bfedbbe7e8
+[2024-08-30 12:40:30.865 AM] info: 	HTTP GET /brand/getAll
+[2024-08-30 12:40:35.406 AM] info: 	HTTP GET /brand/getAll
+[2024-08-30 12:40:35.590 AM] info: 	HTTP GET /brand/getAll
+[2024-08-30 12:40:40.231 AM] info: 	HTTP POST /brand/activate/838528c6-e452-4d7f-abf7-68212d681d31
+[2024-08-30 12:44:25.786 AM] info: 	HTTP GET /event/getAll
+[2024-08-30 12:44:25.961 AM] info: 	HTTP GET /event/getAll

@@ -32,60 +32,88 @@ exports.create = async (req, res) => {
     }
 };
 
-// Find an account by UUID
-exports.getAccountByUUID = async (req, res) => {
+// Activate a brand
+exports.activate = async (req, res) => {
     const id = req.params.uuid;
     try {
-        const account = await Account.findOne({
+        const brand = await Brand.findOne({
             where: { id },
         });
-        return res.json(account);
+        if (!brand) {
+            return res.status(404).json({ error: 'Brand not found' });
+        }
+        if (brand.status === 'Active') {
+            return res.status(400).json({ error: 'Brand is already active' });
+        }
+
+        brand.status = 'Active';
+        brand.time_update = new Date(); // Update the time_update field to the current time
+        await brand.save();
+
+        return res.json({ message: 'Brand activated successfully', brand });
     } catch (err) {
         console.log(err);
         return res.status(500).json(err);
     }
 };
 
-// Update an account
-exports.updateAccount = async (req, res) => {
+// Find an brand by UUID
+exports.getByUUID = async (req, res) => {
     const id = req.params.uuid;
-    const { name, email, password, phone, type, status } = req.body;
     try {
-        const account = await Account.findOne({
+        const brand = await Brand.findOne({
             where: { id },
         });
-        if (!account) {
-            return res.status(404).json({ error: 'Account not found' });
-        }
-        account.name = name;
-        account.email = email;
-        account.password = password;
-        account.phone = phone;
-        account.type = type;
-        account.status = status;
-
-        await account.save();
-        return res.json(account);
+        return res.json(brand);
     } catch (err) {
         console.log(err);
         return res.status(500).json(err);
     }
 };
 
-// Delete an account
-exports.deleteAccount = async (req, res) => {
+// Update an brand
+exports.update = async (req, res) => {
+    const id = req.params.uuid;
+    const { brand_name, industry, password, email, phone, address, gps, status, time_update } = req.body;
+    try {
+        const brand = await Brand.findOne({
+            where: { id },
+        });
+        if (!brand) {
+            return res.status(404).json({ error: 'brand not found' });
+        }
+        brand.brand_name = brand_name;
+        brand.industry = industry;
+        brand.password = password;
+        brand.email = email;
+        brand.phone = phone;
+        brand.address = address;
+        brand.gps = gps;
+        brand.status = status;
+        brand.time_update = time_update;
+
+        await brand.save();
+        return res.json(brand);
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json(err);
+    }
+};
+
+// Delete an brand
+exports.delete = async (req, res) => {
     const id = req.params.uuid;
     try {
-        const account = await Account.findOne({
+        const brand = await Brand.findOne({
             where: { id },
         });
 
-        if (!account) {
-            return res.status(404).json({ error: 'Account not found' });
+        if (!brand) {
+            return res.status(404).json({ error: 'brand not found' });
         }
 
-        await account.destroy();
-        return res.json({ message: 'Account deleted successfully' });
+        await brand.destroy();
+        return res.json({ message: 'brand deleted successfully' });
     } catch (err) {
         console.log(err);
         return res.status(500).json(err);
