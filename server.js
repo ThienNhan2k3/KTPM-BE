@@ -17,6 +17,7 @@ const quizRoutes = require ('./routes/quizRoutes');
 const questionRoutes = require('./routes/questionRoutes.js');
 const EventRoutes = require ('./routes/EventRoutes')
 
+const voucherRoutes = require ('./routes/voucherRoutes.js');
 
 const app = express();
 
@@ -72,6 +73,7 @@ app.use('/quiz',quizRoutes);
 app.use('/questions', questionRoutes);
 app.use('/event', EventRoutes);
 app.use('/game', require("./routes/gameRoutes.js"));
+app.use('/voucher', voucherRoutes);
 
 
 // Handling error

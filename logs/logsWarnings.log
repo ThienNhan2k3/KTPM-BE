@@ -161,3 +161,13 @@
 [2024-08-27 11:39:28.465 PM] warn: 	HTTP GET /quiz/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
 [2024-08-27 11:40:30.019 PM] error: 	404 - Not Found
 [2024-08-27 11:40:30.021 PM] warn: 	HTTP GET /quiz/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-30 04:05:25.088 PM] error: 	404 - Not Found
+[2024-08-30 04:05:25.099 PM] warn: 	HTTP GET /voucher/getAll
+[2024-08-30 04:05:39.611 PM] error: 	404 - Not Found
+[2024-08-30 04:05:39.618 PM] warn: 	HTTP GET /voucher/getAll
+[2024-08-30 04:06:25.198 PM] error: 	404 - Not Found
+[2024-08-30 04:06:25.201 PM] warn: 	HTTP GET /voucher/getAll
+[2024-08-30 04:06:25.907 PM] error: 	404 - Not Found
+[2024-08-30 04:06:25.908 PM] warn: 	HTTP GET /voucher/getAll
+[2024-08-30 04:06:26.197 PM] error: 	404 - Not Found
+[2024-08-30 04:06:26.203 PM] warn: 	HTTP GET /voucher/getAll

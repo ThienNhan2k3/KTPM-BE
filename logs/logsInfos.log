@@ -697,3 +697,36 @@
 [2024-08-30 12:40:40.231 AM] info: 	HTTP POST /brand/activate/838528c6-e452-4d7f-abf7-68212d681d31
 [2024-08-30 12:44:25.786 AM] info: 	HTTP GET /event/getAll
 [2024-08-30 12:44:25.961 AM] info: 	HTTP GET /event/getAll
+[2024-08-30 04:05:25.088 PM] error: 	404 - Not Found
+[2024-08-30 04:05:25.099 PM] warn: 	HTTP GET /voucher/getAll
+[2024-08-30 04:05:39.611 PM] error: 	404 - Not Found
+[2024-08-30 04:05:39.618 PM] warn: 	HTTP GET /voucher/getAll
+[2024-08-30 04:06:25.198 PM] error: 	404 - Not Found
+[2024-08-30 04:06:25.201 PM] warn: 	HTTP GET /voucher/getAll
+[2024-08-30 04:06:25.907 PM] error: 	404 - Not Found
+[2024-08-30 04:06:25.908 PM] warn: 	HTTP GET /voucher/getAll
+[2024-08-30 04:06:26.197 PM] error: 	404 - Not Found
+[2024-08-30 04:06:26.203 PM] warn: 	HTTP GET /voucher/getAll
+[2024-08-30 04:07:45.726 PM] info: 	HTTP GET /voucher/getAll
+[2024-08-30 04:09:47.373 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-08-30 04:15:54.736 PM] info: 	HTTP GET /event/getAll
+[2024-08-30 04:15:54.918 PM] info: 	HTTP GET /event/getAll
+[2024-08-30 04:15:57.234 PM] info: 	HTTP GET /quiz/get_by_event/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-30 04:15:57.557 PM] info: 	HTTP GET /quiz/get_by_event/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-30 04:15:57.736 PM] info: 	HTTP GET /questions/get_byQuiz/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-30 04:15:57.931 PM] info: 	HTTP GET /questions/get_byQuiz/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-30 04:21:27.364 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-08-30 04:21:27.396 PM] info: 	HTTP GET /quiz/get_by_event/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-30 04:21:27.572 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-08-30 04:21:27.640 PM] info: 	HTTP GET /quiz/get_by_event/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-30 04:21:27.759 PM] info: 	HTTP GET /questions/get_byQuiz/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-30 04:21:27.954 PM] info: 	HTTP GET /quiz/get_by_event/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-30 04:21:28.019 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-08-30 04:21:28.357 PM] info: 	HTTP GET /questions/get_byQuiz/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-30 04:21:28.577 PM] info: 	HTTP GET /questions/get_byQuiz/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-30 04:21:31.403 PM] info: 	HTTP GET /quiz/get_by_event/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-30 04:21:31.565 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-08-30 04:21:31.615 PM] info: 	HTTP GET /questions/get_byQuiz/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-30 04:21:31.623 PM] info: 	HTTP GET /quiz/get_by_event/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-08-30 04:21:31.769 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-08-30 04:21:31.827 PM] info: 	HTTP GET /questions/get_byQuiz/c4fb5c7d-4ef7-4c43-b978-4bfab379dce1
