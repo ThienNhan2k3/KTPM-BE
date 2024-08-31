@@ -15,9 +15,9 @@ exports.getAll = async (req, res) => {
 
 //Create an event
 exports.create = async (req, res) => {
-    const { name, brand_id, started_date, end_date } = req.body;
+    const { type, id_game, id_brand, name, image, start_time, end_time } = req.body;
     try {
-        const brand = await event.findOne({
+        /*const brand = await event.findOne({
             where: {
                 uuid: brand_id,
             }
@@ -25,7 +25,12 @@ exports.create = async (req, res) => {
         if(brand) {
             const event = await Event.create({ name, brand_id, started_date, end_date  });
             return res.json(event);
-        } else return res.status(404).json({ error: 'Brand not found!' });
+        } else return res.status(404).json({ error: 'Brand not found!' });*/
+        const new_event = await Event.create({
+            type, id_game, id_brand, name, image, start_time, end_time,
+            time_update: new Date(),
+        });
+        return res.json(new_event);
     } catch (err) {
         console.log(err);
         return res.status(500).json(err);
