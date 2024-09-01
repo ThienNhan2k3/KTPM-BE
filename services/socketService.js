@@ -1,5 +1,9 @@
 const redis = require('../redis/redisDB');
 const { Quiz, Question } = require('../models');
+const UserService = require('./userService');
+const EventService = require('./eventService');
+const uuid = require("uuid");
+const VoucherService = require('./voucherService');
 
 function emitQuestion(io, eventId, title, question, timer) {
   io.to(eventId).emit(title, {
@@ -25,10 +29,26 @@ async function emitAnswer(io, eventId, userId, correctAnswer) {
 }
 
 async function emitEventEnd(io, eventId, userId) {
-  const playerScore = await redis.hget(`eventQuizes:${eventId}:players`, userId);
+  // const vouchers = await VoucherService.findVouchersByEventId(eventId);
+
+  const allPlayerScore = await redis.hgetall(`eventQuizes:${eventId}:players`);
+  // const sortable = Object.entries(allPlayerScore)
+  //   .sort(([,a],[,b]) => a-b)
+  //   .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
+  
+  // for (let key of sortable.keys()) {
+  //   console.log(key);
+  //   // VoucherService.setVoucherToUser(key); 
+  // }
+
+  // vouchers.sort(function(a, b) {
+  //   return b["value"] - a["value"];
+  // });
+
+
   io.to(eventId).emit("eventEnd", {
-    playerScore,
-    voucher: playerScore > 10 ? "Voucher 50%" : "Voucher 10%"
+    allPlayerScore,
+    voucher: "Voucher 50%"
   })
 }
 
@@ -89,14 +109,12 @@ async function askQuestion(io, eventId, userId, timer) {
 }
 
 
+
 class SocketService {
   static timer = 10; //Được tính theo giây
   
   static connection( socket ) {
     console.log("User connection id is ", socket.id);
-
-    //Bỏ đi một ticket của người chơi
-    // Code here
 
     socket.on("disconnect", () => {
         console.log(">>>User disconnect id is ", socket.id)
@@ -106,6 +124,31 @@ class SocketService {
 
     //event on here
     socket.on("playEvent", async (eventId, userId) => {
+      if (!uuid.validate(eventId) || !uuid.validate(userId)) {
+        socket.disconnect();
+        return;
+      }
+
+      const event = await EventService.findQuizById(eventId);
+      const currentDate = new Date();
+      if (!event || currentDate < new Date(event.start_time) || currentDate > new Date(event.end_time)) {
+        socket.disconnect();
+        return;
+      } 
+
+      const player = await UserService.findPlayerWithTicketOfEventById(userId, eventId);
+      if (!player || (!player.User_Events && player.User_Events.length > 0 && player.User_Events[0].playthrough <= 0)) {
+        socket.disconnect();
+        return;
+      }
+
+      //Bỏ đi một ticket của người chơi
+      player.User_Events[0].playthrough -= 1;
+      // console.log("ticket:::", player.User_Events[0].playthrough);
+      await player.User_Events[0].save();
+
+
+      
       socket.join(eventId);
       console.log(`${userId} has joined the game!`);
       __io.to(eventId).emit("message", `${userId} has joined the game!`);
@@ -114,11 +157,19 @@ class SocketService {
       await redis.set(`player:${userId}`, eventId);
       
       //Kiểm tra xam sự kiện đã bắt đầu hay chưa
-      const eventQuizes = await redis.get(`eventQuizes:${eventId}:questions`);
+      let eventQuizes = await redis.get(`eventQuizes:${eventId}:questions`);
 
       let question = null;
       // console.log("eventQuizes:::", eventQuizes);
-      if (eventQuizes == null) { //Sự kiện chưa bắt đầu
+      if (eventQuizes != null) {
+        const tempEventQuizes = JSON.parse(eventQuizes);
+        const questionIndex = Number(await redis.get(`eventQuizes:${eventId}:questionIndex`));
+
+        if (questionIndex + 1 >= tempEventQuizes.length) {
+          socket.disconnect();
+        }
+      }
+      else { //Sự kiện chưa bắt đầu
         //Lấy ra danh sách câu hỏi
         const quiz = await Quiz.findOne({
           where: { 
@@ -174,7 +225,9 @@ class SocketService {
     });
         
     socket.on("submitAnswer", async (userId, answer) => {
-
+      if (!uuid.validate(userId)) {
+        return;
+      }
       //Lấy ra eventId từ userId 
       const eventId = await redis.get(`player:${userId}`);
 
