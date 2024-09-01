@@ -33,3 +33,167 @@
 [2024-08-24 08:48:03.142 PM] error: 	404 - Not Found
 [2024-08-24 08:51:24.621 PM] error: 	404 - Not Found
 [2024-08-24 08:55:44.395 PM] error: 	HTTP POST /login
+[2024-08-25 12:39:58.240 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:39:58.250 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:39:58.256 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:39:58.262 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:40:02.992 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:40:02.998 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:40:03.004 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:40:03.008 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:40:17.893 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:40:17.897 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:40:17.902 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:40:17.906 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:42:13.579 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:42:13.583 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:42:13.593 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:42:13.600 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:42:17.121 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:42:17.126 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:42:17.140 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:42:17.148 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:49:08.965 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:49:08.972 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:49:08.977 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-25 12:49:08.983 PM] error: 	HTTP GET /account/getAll/brand
+[2024-08-29 12:16:44.951 PM] error: 	HTTP GET /voucher/getVoucherByIdBrand/05e44252-ff08-4a0a-b238-93cf3c5382a6
+[2024-08-29 12:16:44.970 PM] error: 	HTTP GET /voucher/getVoucherByIdBrand/05e44252-ff08-4a0a-b238-93cf3c5382a6
+[2024-08-29 12:16:50.722 PM] error: 	HTTP GET /voucher/getVoucherByIdBrand/05e44252-ff08-4a0a-b238-93cf3c5382a6
+[2024-08-29 12:16:50.733 PM] error: 	HTTP GET /voucher/getVoucherByIdBrand/05e44252-ff08-4a0a-b238-93cf3c5382a6
+[2024-08-29 04:45:38.904 PM] error: 	HTTP POST /account/create/user
+[2024-08-29 04:48:01.899 PM] error: 	HTTP POST /account/create/user
+[2024-08-29 04:51:15.346 PM] error: 	HTTP POST /account/create/user
+[2024-08-29 04:52:38.689 PM] error: 	HTTP POST /account/create/user
+[2024-08-29 05:05:09.961 PM] error: 	HTTP POST /account/create/user
+[2024-08-30 08:33:28.785 PM] error: 	HTTP POST /account/create/user
+[2024-08-30 08:36:39.980 PM] error: 	HTTP POST /account/create/user
+[2024-08-30 08:38:33.794 PM] error: 	HTTP POST /account/create/user
+[2024-08-30 08:39:46.178 PM] error: 	HTTP POST /account/createUser
+[2024-08-30 08:43:26.645 PM] error: 	HTTP POST /account/createUser
+[2024-08-30 08:46:14.337 PM] error: 	HTTP POST /account/createUser
+[2024-08-30 08:49:06.503 PM] error: 	HTTP POST /account/createUser
+[2024-08-30 08:52:33.690 PM] error: 	HTTP POST /account/createUser
+[2024-09-01 01:14:53.134 PM] error: 	404 - SyntaxError: Unexpected token " in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:86:15)
+    at E:\KTPM\KTPM-BE\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:238:16)
+    at done (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+[2024-09-01 01:15:26.765 PM] error: 	404 - SyntaxError: Unexpected token " in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:86:15)
+    at E:\KTPM\KTPM-BE\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:238:16)
+    at done (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+[2024-09-01 01:26:17.146 PM] error: 	404 - SyntaxError: Unexpected token " in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:86:15)
+    at E:\KTPM\KTPM-BE\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:238:16)
+    at done (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+[2024-09-01 01:27:15.397 PM] error: 	404 - SyntaxError: Unexpected token " in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:86:15)
+    at E:\KTPM\KTPM-BE\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:238:16)
+    at done (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+[2024-09-01 01:28:41.791 PM] error: 	404 - SyntaxError: Unexpected token " in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:86:15)
+    at E:\KTPM\KTPM-BE\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:238:16)
+    at done (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+[2024-09-01 01:30:22.162 PM] error: 	404 - SyntaxError: Unexpected token " in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:86:15)
+    at E:\KTPM\KTPM-BE\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:238:16)
+    at done (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+[2024-09-01 01:35:51.304 PM] error: 	404 - SyntaxError: Unexpected token " in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:86:15)
+    at E:\KTPM\KTPM-BE\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:238:16)
+    at done (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+[2024-09-01 01:46:46.441 PM] error: 	404 - SyntaxError: Unexpected token " in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:86:15)
+    at E:\KTPM\KTPM-BE\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:238:16)
+    at done (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+[2024-09-01 01:47:08.126 PM] error: 	404 - SyntaxError: Unexpected token " in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:86:15)
+    at E:\KTPM\KTPM-BE\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:238:16)
+    at done (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+[2024-09-01 02:30:34.625 PM] error: 	404 - SyntaxError: Unexpected token " in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:86:15)
+    at E:\KTPM\KTPM-BE\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:238:16)
+    at done (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+[2024-09-01 02:34:18.684 PM] error: 	404 - SyntaxError: Unexpected token " in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at createStrictSyntaxError (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:169:10)
+    at parse (E:\KTPM\KTPM-BE\node_modules\body-parser\lib\types\json.js:86:15)
+    at E:\KTPM\KTPM-BE\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:203:9)
+    at invokeCallback (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:238:16)
+    at done (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (E:\KTPM\KTPM-BE\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+[2024-09-01 02:38:08.733 PM] error: 	HTTP PUT /account/update/user/bf4ea094-819d-4764-8ee8-92b9605a9bc7
+[2024-09-01 02:41:45.589 PM] error: 	HTTP PUT /account/update/user/9f061fa4-481b-4374-b705-af635f65a174
