@@ -10,6 +10,9 @@ module.exports = (sequelize, DataTypes) => {
 
     static associate(models) {
       // define association here
+      const {User_Event, Voucher_In_Event} = models;
+      this.hasMany(User_Event, {foreignKey: 'id_event'});
+      this.hasMany(Voucher_In_Event, {foreignKey: "id_event"});
     }
   }
   Event.init(
@@ -19,6 +22,10 @@ module.exports = (sequelize, DataTypes) => {
         primaryKey: true,
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
+      },
+      type: {
+        type: DataTypes.STRING,
+        allowNull: false,
       },
       id_game: {
         type: DataTypes.UUID,

@@ -6,13 +6,16 @@ const {User, Brand} = require("../models")
 const router = express.Router();
 
 
-router.post("/", passport.authenticate('local', {
+router.post("/login", passport.authenticate('local', {
     failureRedirect: "/login",
 }), authController.postLogin);
 
-router.get("/", (req, res) => {
+router.get("/login", (req, res) => {
     res.json("Login get")
 })
+
+
+router.get("/logout", authController.logout)
 
 
 passport.serializeUser(function(account, done) {
@@ -72,6 +75,7 @@ const verifyCallback = async (email, password, done) => {
         if (!account) {
             return done(null, false);
         }
+        console.log(account);
         // const isMatch = await bcrypt.compare(password, account.password);
         const isMatch = password === account.password;
         if (!isMatch) {

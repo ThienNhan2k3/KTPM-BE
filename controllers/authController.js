@@ -27,6 +27,16 @@ class AuthController {
         })
        
     };
+
+    static logout = async (req, res, next) => {
+        req.logout(function(err) {
+            if (err) { return next(err); }
+            res.json({
+                code: 200,
+                metadate: "Logout successfully"
+            });
+        });
+    }
   
 }
 
