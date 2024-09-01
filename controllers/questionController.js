@@ -54,6 +54,8 @@ exports.getbyQuiz = async (req, res) => {
         const questions = await Question.findAll({
             where: { id_quiz },
         });
+        console.log(questions);
+        
         return res.json(questions);
     } catch (err) {
         console.log(err);
