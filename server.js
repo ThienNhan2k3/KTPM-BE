@@ -25,8 +25,7 @@ const brandRoutes = require("./routes/brandRoutes");
 const quizRoutes = require("./routes/quizRoutes");
 const questionRoutes = require("./routes/questionRoutes.js");
 const EventRoutes = require("./routes/EventRoutes");
-
-const voucherRoutes = require("./routes/voucherRoutes.js");
+const voucherRoutes = require("./routes/voucherRouters");
 
 // initalize sequelize with session store
 const SessionStore = require("connect-session-sequelize")(session.Store);

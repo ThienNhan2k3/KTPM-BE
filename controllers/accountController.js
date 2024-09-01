@@ -109,11 +109,19 @@ class accountController {
 
   // Delete an account
   static deleteAccount = async (req, res) => {
+    const type = req.params.type;
     const id = req.params.uuid;
+
     try {
-      const account = await Users.findOne({
-        where: { id },
-      });
+      if (type == "user") {
+        account = await Users.findOne({
+          where: { id },
+        });
+      } else {
+        account = await Brands.findOne({
+          where: { id },
+        });
+      }
 
       if (!account) {
         return res.status(404).json({ error: "Account not found" });
@@ -127,4 +135,5 @@ class accountController {
     }
   };
 }
+
 module.exports = accountController;
