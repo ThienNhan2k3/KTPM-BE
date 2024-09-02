@@ -1,31 +1,7 @@
-// const { where } = require("sequelize");
-// const { Voucher } = require("../models");
+//const { where } = require("sequelize");
+//const { Voucher } = require("../models");
 
-// // Get all vouchers
-// exports.getAll = async (req, res) => {
-//   try {
-//     const vouchers = await Voucher.findAll();
-//     return res.json(vouchers);
-//   } catch (err) {
-//     console.log(err);
-//     return res.status(500).json(err);
-//   }
-// };
 
-// // Get all vouchers that still active
-// exports.getAll_active = async (req, res) => {
-//   try {
-//     const vouchers = await Voucher.findAll({
-//       where: {
-//         status: "Active",
-//       },
-//     });
-//     return res.json(vouchers);
-//   } catch (err) {
-//     console.log(err);
-//     return res.status(500).json(err);
-//   }
-// };
 
 // // Create a voucher
 // exports.create = async (req, res) => {
@@ -167,7 +143,7 @@
 const { Vouchers } = require("../models");
 
 class voucherController {
-  // Get all accounts
+  // Get all by accounts
   static getVoucherByIdBrand = async (req, res) => {
     const id_brand = req.params.id_brand;
     let vouchers = null;
@@ -175,6 +151,35 @@ class voucherController {
     try {
       vouchers = await Vouchers.findAll({ where: { id_brand } });
       return res.send(vouchers);
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
+  };
+
+  // Get all vouchers
+  static getAll = async (req, res) => {
+    //let vouchers = null;
+
+    try {
+      const vouchers = await Vouchers.findAll();
+      return res.json(vouchers);
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
+  };
+
+  // Get all vouchers that still active
+  static getAll_active = async (req, res) => {
+    let vouchers = null;
+    try {
+      vouchers = await Vouchers.findAll({
+        where: {
+          status: "Active",
+        },
+      });
+      return res.json(vouchers);
     } catch (err) {
       console.log(err);
       return res.status(500).json(err);

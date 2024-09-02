@@ -1,5 +1,5 @@
 const { where } = require('sequelize');
-const { Event, event } = require('../models');
+const { Event } = require('../models');
 
 
 // Get all events
@@ -57,25 +57,25 @@ exports.getByUUID = async (req, res) => {
 };
 
 // Update an event
-exports.updateAccount = async (req, res) => {
-    const uuid = req.params.uuid;
-    const { name, brand_id, started_date, end_date } = req.body;
+exports.update = async (req, res) => {
+    const id = req.params.uuid;
+    const { type, id_game, id_brand, name, image, start_time, end_time } = req.body;
     try {
-        const event = await Event.findOne({
-            where: { uuid },
+        const update_event = await Event.findOne({
+            where: { id },
         });
-
-        if (!event) {
+        if (!update_event) {
             return res.status(404).json({ error: 'Event not found' });
         }
 
-        event.name = name;
-        event.brand_id = brand_id;
-        event.started_date = started_date;
-        event.end_date = end_date;
+        update_event.name = name;
+        update_event.image = image;
+        update_event.start_time = start_time;
+        update_event.end_time = end_time;
+        update_event.time_update= new Date();
 
-        await event.save();
-        return res.json(event);
+        await update_event.save();
+        return res.json(update_event);
     } catch (err) {
         console.log(err);
         return res.status(500).json(err);
