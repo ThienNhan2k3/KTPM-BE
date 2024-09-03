@@ -140,7 +140,7 @@
 //   }
 // };
 
-const { Vouchers } = require("../models");
+const { Voucher } = require("../models");
 
 class voucherController {
   // Get all by accounts
@@ -149,7 +149,7 @@ class voucherController {
     let vouchers = null;
 
     try {
-      vouchers = await Vouchers.findAll({ where: { id_brand } });
+      vouchers = await Voucher.findAll({ where: { id_brand } });
       return res.send(vouchers);
     } catch (err) {
       console.log(err);
@@ -162,7 +162,7 @@ class voucherController {
     //let vouchers = null;
 
     try {
-      const vouchers = await Vouchers.findAll();
+      const vouchers = await Voucher.findAll();
       return res.json(vouchers);
     } catch (err) {
       console.log(err);
@@ -174,7 +174,7 @@ class voucherController {
   static getAll_active = async (req, res) => {
     let vouchers = null;
     try {
-      vouchers = await Vouchers.findAll({
+      vouchers = await Voucher.findAll({
         where: {
           status: "Active",
         },

@@ -61,5 +61,5 @@ module.exports = (sequelize, DataTypes) => {
       updatedAt: false,
     }
   );
-  return Vouchers;
+  return Voucher;
 };
