@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4
     },
-    id_game: {
+    id_event: {
       type: DataTypes.UUID,
       allowNull: false
     },

@@ -1,7 +1,7 @@
 "use strict";
 const { Model, Table } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class Users extends Model {
+  class User extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       this.hasMany(User_Voucher, {foreignKey: 'id_user'});
     }
   }
-  Users.init(
+  User.init(
     {
       id: {
         allowNull: false,
@@ -75,7 +75,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       tableName: "users",
-      modelName: "Users",
+      modelName: "User",
       // don't add the timestamp attributes (updatedAt, createdAt)
       timestamps: false,
       // If don't want createdAt
@@ -84,5 +84,5 @@ module.exports = (sequelize, DataTypes) => {
       updatedAt: false,
     }
   );
-  return Users;
+  return User;
 };

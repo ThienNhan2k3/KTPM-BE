@@ -137,7 +137,7 @@ CREATE TABLE "user_vouchers" (
 
 CREATE TABLE "items" (
   "id" uuid PRIMARY KEY,
-  "id_game" uuid,
+  "id_event" uuid,
   "quantity" integer,
   "name" varchar,
   "image" varchar,
@@ -200,7 +200,7 @@ ALTER TABLE "user_vouchers" ADD FOREIGN KEY ("id_voucher") REFERENCES "vouchers_
 
 ALTER TABLE "user_vouchers" ADD FOREIGN KEY ("id_user") REFERENCES "users" ("id");
 
-ALTER TABLE "items" ADD FOREIGN KEY ("id_game") REFERENCES "games" ("id");
+ALTER TABLE "items" ADD FOREIGN KEY ("id_event") REFERENCES "events" ("id");
 
 ALTER TABLE "user_items" ADD FOREIGN KEY ("id_user") REFERENCES "users" ("id");
 

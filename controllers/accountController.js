@@ -1,4 +1,4 @@
-const { Users, Brands } = require("../models");
+const { User, Brands } = require("../models");
 const { Op } = require("@sequelize/core");
 
 class accountController {
@@ -9,7 +9,7 @@ class accountController {
 
     try {
       if (type == "user") {
-        accounts = await Users.findAll();
+        accounts = await User.findAll();
       } else {
         accounts = await Brands.findAll();
       }
@@ -35,7 +35,7 @@ class accountController {
       status,
     } = req.body;
     try {
-      const [user, created] = await Users.findOrCreate({
+      const [user, created] = await User.findOrCreate({
         where: { [Op.or]: { user_name, email } },
         defaults: {
           full_name,
@@ -63,7 +63,7 @@ class accountController {
   static getAccountByUUID = async (req, res) => {
     const id = req.params.uuid;
     try {
-      const account = await Users.findOne({
+      const account = await User.findOne({
         where: { id },
       });
       return res.json(account);
@@ -83,7 +83,7 @@ class accountController {
 
     try {
       if (type == "user") {
-        account = await Users.findOne({
+        account = await User.findOne({
           where: { id },
         });
       } else {
@@ -114,7 +114,7 @@ class accountController {
 
     try {
       if (type == "user") {
-        account = await Users.findOne({
+        account = await User.findOne({
           where: { id },
         });
       } else {

@@ -81,11 +81,11 @@ const dir = path.join(__dirname, "public", "images", "games");
 app.use("/public/images/games", express.static(dir));
 
 // Use the routes
-app.use("/", require("./routes/authRoutes"));
 
 __io.on("connection", require("./services/socketService.js").connection);
-
 app.use(authenticate)
+
+app.use("/", require("./routes/authRoutes"));
 
 app.use('/account', accountRoutes);
 app.use('/user', userRoutes);
@@ -95,7 +95,6 @@ app.use('/questions', questionRoutes);
 app.use('/event', EventRoutes);
 app.use('/game', require("./routes/gameRoutes.js"));
 app.use('/voucher', voucherRoutes);
-
 
 app.post("/routes", (req, res, next) => {
     const path = req.body.path || "";
