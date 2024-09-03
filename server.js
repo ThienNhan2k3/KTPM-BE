@@ -83,11 +83,9 @@ app.use('/public/images/games', express.static(dir));
 // Use the routes
 app.use("/", require("./routes/authRoutes"));
 
-
-// app.use(authenticate)
-
-
 __io.on("connection", require("./services/socketService.js").connection);
+
+app.use(authenticate)
 
 app.use('/account', accountRoutes);
 app.use('/user', userRoutes);
@@ -122,13 +120,13 @@ app.post("/routes", (req, res, next) => {
         })
     }
 
-    return res.json({
-        code: 200,
-        metadata: {
-            login: false,
-            permission: false,
-        }
-    })
+    req.logout(function(err) {
+        if (err) { return next(err); }
+        res.json({
+            code: 200,
+            metadate: "Logout successfully"
+        });
+    });
 })
 
 // Handling error
