@@ -83,9 +83,9 @@ app.use("/public/images/games", express.static(dir));
 // Use the routes
 
 __io.on("connection", require("./services/socketService.js").connection);
-app.use(authenticate)
-
 app.use("/", require("./routes/authRoutes"));
+
+app.use(authenticate)
 
 app.use('/account', accountRoutes);
 app.use('/user', userRoutes);

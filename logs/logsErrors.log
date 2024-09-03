@@ -356,3 +356,9 @@
     at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
     at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
     at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 01:47:17.731 PM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Strategy.verifyCallback [as _verify] (D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:68:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-09-03 01:48:57.205 PM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Strategy.verifyCallback [as _verify] (D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:69:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
