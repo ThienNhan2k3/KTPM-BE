@@ -1,7 +1,7 @@
 "use strict";
 const { Model, Table } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class Brands extends Model {
+  class Brand extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Brands.init(
+  Brand.init(
     {
       id: {
         allowNull: false,
@@ -60,7 +60,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       tableName: "brands",
-      modelName: "Brands",
+      modelName: "Brand",
       // don't add the timestamp attributes (updatedAt, createdAt)
       timestamps: false,
       // If don't want createdAt
@@ -69,5 +69,5 @@ module.exports = (sequelize, DataTypes) => {
       updatedAt: false,
     }
   );
-  return Brands;
+  return Brand;
 };

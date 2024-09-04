@@ -1,0 +1,43 @@
+[2024-09-01 11:44:24.325 PM] error: 	HTTP DELETE /account/delete/brand/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-01 11:45:18.074 PM] error: 	HTTP DELETE /account/delete/brand/1cf90e05-5608-4e7c-8288-13fb36d9089e
+[2024-09-02 02:43:25.907 AM] error: 	404 - URIError: Failed to decode param 'MungLeQuocKhanh2-9GiamGia15%'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (E:\KTPM\KTPM-BE\node_modules\express\lib\router\layer.js:172:12)
+    at Layer.match (E:\KTPM\KTPM-BE\node_modules\express\lib\router\layer.js:148:15)
+    at matchLayer (E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:585:18)
+    at next (E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:226:15)
+    at Function.handle (E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:175:3)
+    at router (E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\KTPM\KTPM-BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:328:13)
+    at E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:286:9
+[2024-09-02 02:45:15.723 AM] error: 	404 - URIError: Failed to decode param 'MungLeQuocKhanh2-9GiamGia15%'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (E:\KTPM\KTPM-BE\node_modules\express\lib\router\layer.js:172:12)
+    at Layer.match (E:\KTPM\KTPM-BE\node_modules\express\lib\router\layer.js:148:15)
+    at matchLayer (E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:585:18)
+    at next (E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:226:15)
+    at Function.handle (E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:175:3)
+    at router (E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\KTPM\KTPM-BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:328:13)
+    at E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:286:9
+[2024-09-02 02:48:42.151 AM] error: 	404 - URIError: Failed to decode param 'MungLeQuocKhanh2-9GiamGia15%'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (E:\KTPM\KTPM-BE\node_modules\express\lib\router\layer.js:172:12)
+    at Layer.match (E:\KTPM\KTPM-BE\node_modules\express\lib\router\layer.js:148:15)
+    at matchLayer (E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:585:18)
+    at next (E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:226:15)
+    at Function.handle (E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:175:3)
+    at router (E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:47:12)
+    at Layer.handle [as handle_request] (E:\KTPM\KTPM-BE\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:328:13)
+    at E:\KTPM\KTPM-BE\node_modules\express\lib\router\index.js:286:9
+[2024-09-02 03:00:19.508 AM] error: 	HTTP GET /voucher/getVoucherByIdBrand/05e44252-ff08-4a0a-b238-93cf3c5382a6
+[2024-09-02 03:00:19.717 AM] error: 	HTTP GET /voucher/getVoucherByIdBrand/05e44252-ff08-4a0a-b238-93cf3c5382a6
+[2024-09-02 11:04:44.189 PM] error: 	HTTP POST /account/create/brand
+[2024-09-03 01:12:11.280 AM] error: 	HTTP POST /account/create/brand
+[2024-09-03 01:14:24.314 AM] error: 	HTTP POST /account/create/brand
+[2024-09-03 10:53:50.633 PM] error: 	HTTP POST /account/create/user
+[2024-09-03 10:55:02.461 PM] error: 	HTTP POST /account/create/user
+[2024-09-03 11:01:21.122 PM] error: 	HTTP POST /account/create/user
