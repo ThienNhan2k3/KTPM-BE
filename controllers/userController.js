@@ -17,15 +17,15 @@ exports.getAll = async (req, res) => {
 
 // Create a user
 exports.createuser = async (req, res) => {
-    const { name, email, password, phone, type, status } = req.body;
+    const { full_name, email, password, phone, type, status, user_name, avatar } = req.body;
     try {
         const existingUser = await User.findOne({
-            where: { email },
+            where: { phone },
         });
         if (existingUser) {
             return res.status(400).json({ error: 'User already exists!' });
         } else {
-            const newUser = await User.create({ name, email, password, phone, type, status });
+            const newUser = await User.create({ full_name, email, password, phone, type, status, user_name, avatar, time_update: new Date() });
             return res.json(newUser);
         }
     } catch (err) {

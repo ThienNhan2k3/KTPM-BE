@@ -6,6 +6,7 @@ exports.getAll = async (req, res) => {
     try {
         const brands = await Brand.findAll({
             where: { status: "Active" },
+            order: [['time_update', 'DESC']], 
         });
         return res.json(brands);
     } catch (err) {
