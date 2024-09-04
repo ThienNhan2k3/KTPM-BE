@@ -16,7 +16,7 @@ exports.getAll = async (req, res) => {
 
 // Create a question
 exports.create = async (req, res) => {
-    const {id_quiz, ques, choice_1, choice_2, choice_3, choice_4, answear,} = req.body;
+    const {id_quiz, ques, choice_1, choice_2, choice_3, choice_4, answer,} = req.body;
     try {
         const quiz = await Quiz .findOne({
             where: {
@@ -25,7 +25,8 @@ exports.create = async (req, res) => {
         });
 
         if (quiz) {
-            console.log(ques);
+            console.log(answer.type);
+            console.log(answer);
             const question = await Question.create({
                 id_quiz: quiz.id, // Assuming the QuizEvent has an `id` field that relates to `id_quiz`
                 ques,
@@ -33,7 +34,7 @@ exports.create = async (req, res) => {
                 choice_2,
                 choice_3,
                 choice_4,
-                answear,
+                answer,
                 time_update: new Date() // Set the current time for `time_update`
             });
             return res.json(question);
@@ -54,7 +55,7 @@ exports.getbyQuiz = async (req, res) => {
         const questions = await Question.findAll({
             where: { id_quiz },
         });
-        console.log(questions);
+        //console.log(questions);
         
         return res.json(questions);
     } catch (err) {

@@ -25,7 +25,8 @@ const brandRoutes = require("./routes/brandRoutes");
 const quizRoutes = require("./routes/quizRoutes");
 const questionRoutes = require("./routes/questionRoutes.js");
 const EventRoutes = require("./routes/EventRoutes");
-const voucherRoutes = require("./routes/voucherRouters");
+const voucherRoutes = require("./routes/voucherRoutes.js");
+const voucher_in_eventRoutes = require("./routes/voucher_in_eventRoutes.js");
 const userVoucherRoutes = require("./routes/userVoucherRoutes.js")
 
 // initalize sequelize with session store
@@ -96,6 +97,8 @@ app.use('/question', questionRoutes);
 app.use('/event', EventRoutes);
 app.use('/game', require("./routes/gameRoutes.js"));
 app.use('/voucher', voucherRoutes);
+app.use('/voucher_in_event', voucher_in_eventRoutes);
+
 app.use('/warehouse', userVoucherRoutes);
 
 app.post("/routes", (req, res, next) => {

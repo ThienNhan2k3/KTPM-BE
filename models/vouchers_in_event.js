@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       total_quantity: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DECIMAL,
         allowNull: false,
       },
       time_update: {
