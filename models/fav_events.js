@@ -14,12 +14,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   Fav_Event.init(
     {
-      id: {
-        allowNull: false,
-        primaryKey: true,
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
-      },
       id_event: {
         type: DataTypes.UUID,
         allowNull: false,

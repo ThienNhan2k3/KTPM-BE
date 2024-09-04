@@ -362,14 +362,27 @@
 [2024-09-03 01:48:57.205 PM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
     at Strategy.verifyCallback [as _verify] (D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:69:35)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-[2024-09-03 06:21:50.849 PM] error: 	HTTP GET /event/checkFabEvent?eventId=c4fb5c4d-4ef7-4c43-b978-4bfab379dce1&userId=01724dc6-775a-4f52-95fd-245c615f2e77
-[2024-09-03 06:24:49.211 PM] error: 	HTTP GET /event/checkFabEvent?eventId=c4fb5c4d-4ef7-4c43-b978-4bfab379dce1&userId=01724dc6-775a-4f52-95fd-245c615f2e77
-[2024-09-03 06:27:59.996 PM] error: 	HTTP GET /event/checkFabEvent?eventId=c4fb5c4d-4ef7-4c43-b978-4bfab379dce1&userId=01724dc6-775a-4f52-95fd-245c615f2e77
-[2024-09-03 06:30:49.076 PM] error: 	HTTP GET /event/checkFabEvent?eventId=c4fb5c4d-4ef7-4c43-b978-4bfab379dce1&userId=01724dc6-775a-4f52-95fd-245c615f2e77
-[2024-09-03 06:33:12.344 PM] error: 	HTTP GET /event/checkFabEvent?eventId=c4fb5c4d-4ef7-4c43-b978-4bfab379dce1&userId=01724dc6-775a-4f52-95fd-245c615f2e77
-[2024-09-03 06:40:19.226 PM] error: 	HTTP GET /event/checkFabEvent?eventId=c4fb5c4d-4ef7-4c43-b978-4bfab379dce1&userId=01724dc6-775a-4f52-95fd-245c615f2e77
-[2024-09-03 06:42:15.732 PM] error: 	HTTP GET /event/checkFabEvent?eventId=c4fb5c4d-4ef7-4c43-b978-4bfab379dce1&userId=01724dc6-775a-4f52-95fd-245c615f2e77
-[2024-09-03 06:44:05.515 PM] error: 	HTTP GET /event/checkFabEvent?eventId=c4fb5c4d-4ef7-4c43-b978-4bfab379dce1&userId=01724dc6-775a-4f52-95fd-245c615f2e77
-[2024-09-03 06:44:29.600 PM] error: 	HTTP GET /event/checkFabEvent?eventId=c4fb5c4d-4ef7-4c43-b978-4bfab379dce1&userId=01724dc6-775a-4f52-95fd-245c615f2e77
-[2024-09-04 09:38:33.601 AM] error: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
-[2024-09-04 03:00:01.293 PM] error: 	HTTP POST /event/addFavEvent
+[2024-09-03 06:25:10.960 PM] error: 	HTTP GET /user/get/:01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:25:18.296 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:27:53.580 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:28:30.712 PM] error: 	HTTP GET /user/get/8fb6b6b8-defe-4073-80b8-64b6d0f20663
+[2024-09-03 06:30:18.113 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:31:46.591 PM] error: 	HTTP GET /user/get/:01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:33:12.003 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:35:18.347 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:36:13.089 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:38:03.088 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:31:12.908 AM] error: 	HTTP GET /warehouse/getAll
+[2024-09-04 01:36:28.730 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=abc&id_user=acb&quantity=1&time_update=2024-08-31T22:57:04.135Z
+[2024-09-04 01:37:06.523 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=%22abc%22&id_user=%22asf%22&quantity=1&time_update=%222024-08-31T22:57:04.135Z%22
+[2024-09-04 01:38:04.569 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=%220665b99d-13f5-48a5-a416-14b43b47d690%22&id_user=%220665b99d-13f5-48a5-a416-14b43b47d693%22&quantity=1&time_update=%222024-08-31T22:57:04.135Z%22
+[2024-09-04 01:38:27.092 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=0665b99d-13f5-48a5-a416-14b43b47d690&id_user=0665b99d-13f5-48a5-a416-14b43b47d693&quantity=1&time_update=2024-08-31T22:57:04.135Z
+[2024-09-04 01:39:03.104 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=%220665b99d-13f5-48a5-a416-14b43b47d690%22&id_user=0665b99d-13f5-48a5-a416-14b43b47d693&quantity=1&time_update=2024-08-31T22:57:04.135Z
+[2024-09-04 01:40:08.987 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=0665b99d-13f5-48a5-a416-14b43b47d691&id_user=0665b99d-13f5-48a5-a416-14b43b47d693&quantity=1&time_update=2024-08-31T22:57:04.135Z
+[2024-09-04 01:43:09.559 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=0665b99d-13f5-48a5-a416-14b43b47d690&id_user=a9e61e61-f8d3-4640-9217-f7c37654899e&quantity=1
+[2024-09-04 01:46:56.205 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=0665b99d-13f5-48a5-a416-14b43b47d690&id_user=a9e61e61-f8d3-4640-9217-f7c37654899e
+[2024-09-04 02:28:06.475 AM] error: 	HTTP POST /warehouse/addVoucher
+[2024-09-04 02:30:25.368 AM] error: 	HTTP POST /warehouse/addVoucher
+[2024-09-04 01:48:00.717 PM] error: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:49:14.779 PM] error: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:52:26.800 PM] error: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
