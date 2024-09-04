@@ -470,3 +470,17 @@
 [2024-09-04 01:48:00.717 PM] error: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
 [2024-09-04 01:49:14.779 PM] error: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
 [2024-09-04 01:52:26.800 PM] error: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 04:24:59.619 PM] error: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 04:31:42.087 PM] warn: 	HTTP GET /warehouse/getuUsed/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:05:12.351 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:05:34.285 PM] warn: 	HTTP POST /event/addFavEvent
+[2024-09-04 05:05:34.351 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:05:37.491 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:05:37.530 PM] warn: 	HTTP POST /event/addFavEvent
+[2024-09-04 05:05:48.274 PM] warn: 	HTTP POST /event/addFavEvent
+[2024-09-04 05:05:48.448 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:06:06.660 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:09:37.043 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:14:00.312 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:14:20.251 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:15:16.911 PM] error: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77

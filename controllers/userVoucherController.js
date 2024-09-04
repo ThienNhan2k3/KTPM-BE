@@ -1,12 +1,56 @@
 const { User_Voucher, Voucher, Voucher_In_Event } = require('../models');
-
+const { Op } = require('sequelize');
 
 exports.getAllByUserUuid = async (req, res) => {
     const uuid = req.params.uuid;
     try {
         // Lấy tất cả các id_voucher từ bảng User_Voucher theo id_user
         const userVouchers = await User_Voucher.findAll({
-            where: { id_user: uuid },
+            where: { 
+                id_user: uuid , 
+                quantity: {
+                    [Op.gt]: 0
+                }
+            },
+            attributes: ['id_voucher'], // Chỉ lấy id_voucher
+        });
+
+        // Trích xuất danh sách id_voucher
+        const voucherIds = userVouchers.map(v => v.id_voucher);
+
+        // So khớp id_voucher với bảng Voucher_In_Event để lấy voucher_code
+        const voucherInEvents = await Voucher_In_Event.findAll({
+            where: { id: voucherIds },
+            attributes: ['id_voucher_code'], // Chỉ lấy voucher_code
+        });
+
+        // Trích xuất danh sách voucher_code
+        const voucherCodes = voucherInEvents.map(v => v.id_voucher_code);
+
+        // So khớp voucher_code với bảng Voucher để lấy thông tin voucher tương ứng
+        const vouchers = await Voucher.findAll({
+            where: { voucher_code: voucherCodes, status: "Active" },
+        });
+
+        // // Trả về danh sách voucher
+        return res.json(vouchers);
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json({ error: 'Internal Server Error' });
+    }
+};
+
+exports.getAllUsedByUserUuid = async (req, res) => {
+    const uuid = req.params.uuid;
+    try {
+        // Lấy tất cả các id_voucher từ bảng User_Voucher theo id_user
+        const userVouchers = await User_Voucher.findAll({
+            where: { 
+                id_user: uuid , 
+                used: {
+                    [Op.gt]: 0
+                }
+            },
             attributes: ['id_voucher'], // Chỉ lấy id_voucher
         });
 
