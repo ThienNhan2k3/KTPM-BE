@@ -23,6 +23,7 @@ passport.serializeUser(function(account, done) {
 });
   
 passport.deserializeUser(async function(accountId, done) {
+    console.log(User);
     try {
         let user = await User.findOne({
             where: {

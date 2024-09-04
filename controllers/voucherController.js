@@ -189,6 +189,35 @@ class voucherController {
     }
   };
 
+  // Get all vouchers
+  static getAll = async (req, res) => {
+    //let vouchers = null;
+
+    try {
+      const vouchers = await Voucher.findAll();
+      return res.json(vouchers);
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
+  };
+
+  // Get all vouchers that still active
+  static getAll_active = async (req, res) => {
+    let vouchers = null;
+    try {
+      vouchers = await Voucher.findAll({
+        where: {
+          status: "Active",
+        },
+      });
+      return res.json(vouchers);
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
+  };
+
   // Create a voucher
   static createVoucher = async (req, res) => {
     const { voucher_code, max_discount, value, description, status } = req.body;

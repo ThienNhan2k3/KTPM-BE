@@ -1,10 +1,13 @@
+const { where } = require('sequelize');
 const { Brand } = require('../models');
 
 // Get all brands
 exports.getAll = async (req, res) => {
     try {
         const brands = await Brand.findAll({
-            attributes: ['id', 'brand_name', 'industry', 'email', 'phone', 'address', 'gps', 'status', 'time_update']});
+            where: { status: "Active" },
+            order: [['time_update', 'DESC']], 
+        });
         return res.json(brands);
     } catch (err) {
         console.log(err);

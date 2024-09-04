@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [2024-09-01 09:29:55.686 PM] warn: 	HTTP DELETE /delete/brand/a27567ac-9853-4805-bc62-fd2ca4cfd568
 [2024-09-01 09:29:55.690 PM] warn: 	HTTP DELETE /delete/brand/a27567ac-9853-4805-bc62-fd2ca4cfd568
 [2024-09-01 09:29:55.715 PM] warn: 	HTTP DELETE /delete/brand/a27567ac-9853-4805-bc62-fd2ca4cfd568
@@ -1099,3 +1100,512 @@
 [2024-09-03 10:53:50.633 PM] error: 	HTTP POST /account/create/user
 [2024-09-03 10:55:02.461 PM] error: 	HTTP POST /account/create/user
 [2024-09-03 11:01:21.122 PM] error: 	HTTP POST /account/create/user
+=======
+[2024-09-01 11:51:56.155 PM] warn: 	HTTP GET /voucher/getAll_active
+[2024-09-01 11:51:56.277 PM] warn: 	HTTP GET /voucher/getAll_active
+[2024-09-02 11:17:46.400 PM] warn: 	HTTP GET /voucher/getAll_active
+[2024-09-02 11:17:46.576 PM] warn: 	HTTP GET /voucher/getAll_active
+[2024-09-02 11:19:15.423 PM] warn: 	HTTP GET /voucher/getAll_active
+[2024-09-02 11:19:15.700 PM] warn: 	HTTP GET /voucher/getAll_active
+[2024-09-02 11:19:33.281 PM] warn: 	HTTP GET /
+[2024-09-02 11:21:23.441 PM] warn: 	HTTP GET /voucher/getAll_active
+[2024-09-02 11:21:23.495 PM] warn: 	HTTP GET /voucher/getAll_active
+[2024-09-02 11:22:59.919 PM] warn: 	HTTP GET /voucher/getAll_active
+[2024-09-02 11:22:59.970 PM] warn: 	HTTP GET /voucher/getAll_active
+[2024-09-02 11:26:17.066 PM] error: 	HTTP GET /voucher/getAll_active
+[2024-09-02 11:26:17.165 PM] error: 	HTTP GET /voucher/getAll_active
+[2024-09-02 11:27:35.539 PM] error: 	HTTP GET /voucher/getAll_active
+[2024-09-02 11:27:35.624 PM] error: 	HTTP GET /voucher/getAll_active
+[2024-09-02 11:28:06.229 PM] error: 	HTTP GET /voucher/getAll
+[2024-09-02 11:28:25.776 PM] error: 	HTTP GET /voucher/getAll
+[2024-09-02 11:53:10.137 PM] warn: 	HTTP POST /Event/update
+[2024-09-02 11:54:35.702 PM] warn: 	HTTP POST /Event/update
+[2024-09-03 12:21:01.229 AM] warn: 	HTTP POST /Event/update
+[2024-09-03 12:22:09.017 AM] warn: 	HTTP PUT /Event/update/e3936ef4-9e8a-452a-8c01-b723314119ea
+[2024-09-03 12:22:12.486 AM] warn: 	HTTP GET /Event/update/$%7BitemData.id%7D
+[2024-09-03 12:39:04.764 AM] warn: 	HTTP GET /favicon.ico
+[2024-09-03 12:40:42.519 AM] warn: 	HTTP PUT /Event/update/e3936ef4-9e8a-452a-8c01-b723314119ea
+[2024-09-03 12:40:58.934 AM] warn: 	HTTP PUT /Event/update/e3936ef4-9e8a-452a-8c01-b723314119ea
+[2024-09-03 12:43:24.107 AM] warn: 	HTTP PUT /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:43:40.318 AM] warn: 	HTTP PUT /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:43:44.062 AM] warn: 	HTTP PUT /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:43:50.346 AM] warn: 	HTTP PUT /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:47:11.330 AM] warn: 	HTTP GET /
+[2024-09-03 12:50:14.706 AM] warn: 	HTTP POST /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:53:40.039 AM] warn: 	HTTP POST /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:54:54.614 AM] warn: 	HTTP POST /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:55:26.162 AM] warn: 	HTTP GET /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:56:03.170 AM] warn: 	HTTP GET /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:57:20.303 AM] warn: 	HTTP POST /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:57:25.393 AM] warn: 	HTTP POST /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:57:57.677 AM] warn: 	HTTP POST /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:58:02.374 AM] warn: 	HTTP POST /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:58:03.427 AM] warn: 	HTTP POST /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:58:04.208 AM] warn: 	HTTP POST /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:58:04.646 AM] warn: 	HTTP POST /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:58:05.130 AM] warn: 	HTTP POST /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:58:05.318 AM] warn: 	HTTP POST /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:58:05.515 AM] warn: 	HTTP POST /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 12:58:14.688 AM] warn: 	HTTP GET /Event/update/db65e23d-a497-49a1-ae54-08a311028fa1
+[2024-09-03 11:26:52.687 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:26:52.714 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:26:53.086 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:26:53.097 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:27:16.692 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:27:16.715 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:27:17.097 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:27:17.118 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:27:23.210 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:27:23.232 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:27:23.643 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:27:23.646 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:29:37.274 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:29:37.323 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:29:37.695 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:29:37.699 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:30:59.573 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:30:59.733 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:31:00.108 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:31:00.118 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:32:40.855 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:32:40.872 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:32:41.227 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:32:41.249 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:35:02.440 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:35:02.504 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:35:03.142 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:35:03.150 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:35:37.125 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:35:37.692 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:35:38.365 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:35:38.373 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:36:18.917 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:36:19.097 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:36:19.647 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:36:19.763 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:36:22.086 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:36:22.180 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:36:22.495 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:36:22.573 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:39:56.839 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:39:57.016 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:39:57.390 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:39:57.535 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:40:25.518 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:40:25.873 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:40:26.604 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:40:26.788 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:43:30.856 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:43:31.460 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:43:32.825 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:43:33.049 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:43:34.311 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:43:34.340 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:43:34.720 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:43:34.734 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:43:47.999 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:43:48.021 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:43:48.401 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:43:48.518 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:44:02.916 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:44:03.272 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:44:04.018 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:44:04.193 AM] warn: 	HTTP POST /routes
+[2024-09-03 01:47:17.731 PM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Strategy.verifyCallback [as _verify] (D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:68:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-09-03 01:47:18.101 PM] warn: 	HTTP POST /login
+[2024-09-03 01:48:57.205 PM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Strategy.verifyCallback [as _verify] (D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:69:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-09-03 01:48:57.687 PM] warn: 	HTTP POST /login
+[2024-09-03 03:33:55.904 PM] warn: 	HTTP GET /
+[2024-09-03 06:23:06.173 PM] warn: 	HTTP GET /
+[2024-09-03 06:25:10.960 PM] error: 	HTTP GET /user/get/:01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:25:18.296 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:26:28.403 PM] warn: 	HTTP GET /user/get?id=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:27:53.580 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:28:08.952 PM] warn: 	HTTP GET /user/get?id=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:28:30.712 PM] error: 	HTTP GET /user/get/8fb6b6b8-defe-4073-80b8-64b6d0f20663
+[2024-09-03 06:29:06.497 PM] warn: 	HTTP GET /user/get?uuid=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:29:13.795 PM] warn: 	HTTP GET /user/get?id=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:30:18.113 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:31:46.591 PM] error: 	HTTP GET /user/get/:01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:33:12.003 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:35:18.347 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:36:13.089 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:38:03.088 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 11:54:30.168 PM] warn: 	HTTP GET /voucher/getAll_acctive
+[2024-09-04 01:31:12.908 AM] error: 	HTTP GET /warehouse/getAll
+[2024-09-04 01:36:28.730 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=abc&id_user=acb&quantity=1&time_update=2024-08-31T22:57:04.135Z
+[2024-09-04 01:37:06.523 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=%22abc%22&id_user=%22asf%22&quantity=1&time_update=%222024-08-31T22:57:04.135Z%22
+[2024-09-04 01:38:04.569 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=%220665b99d-13f5-48a5-a416-14b43b47d690%22&id_user=%220665b99d-13f5-48a5-a416-14b43b47d693%22&quantity=1&time_update=%222024-08-31T22:57:04.135Z%22
+[2024-09-04 01:38:27.092 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=0665b99d-13f5-48a5-a416-14b43b47d690&id_user=0665b99d-13f5-48a5-a416-14b43b47d693&quantity=1&time_update=2024-08-31T22:57:04.135Z
+[2024-09-04 01:39:03.104 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=%220665b99d-13f5-48a5-a416-14b43b47d690%22&id_user=0665b99d-13f5-48a5-a416-14b43b47d693&quantity=1&time_update=2024-08-31T22:57:04.135Z
+[2024-09-04 01:40:08.987 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=0665b99d-13f5-48a5-a416-14b43b47d691&id_user=0665b99d-13f5-48a5-a416-14b43b47d693&quantity=1&time_update=2024-08-31T22:57:04.135Z
+[2024-09-04 01:43:09.559 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=0665b99d-13f5-48a5-a416-14b43b47d690&id_user=a9e61e61-f8d3-4640-9217-f7c37654899e&quantity=1
+[2024-09-04 01:46:56.205 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=0665b99d-13f5-48a5-a416-14b43b47d690&id_user=a9e61e61-f8d3-4640-9217-f7c37654899e
+[2024-09-04 01:51:26.869 AM] warn: 	HTTP POST /warehouse/addVoucher?id_voucher=0665b99d-13f5-48a5-a416-14b43b47d690&id_user=a9e61e61-f8d3-4640-9217-f7c37654899e
+[2024-09-04 01:53:37.330 AM] warn: 	HTTP POST /warehouse/addVoucher?id_voucher=0665b99d-13f5-48a5-a416-14b43b47d690&id_user=a9e61e61-f8d3-4640-9217-f7c37654899e
+[2024-09-04 02:28:06.475 AM] error: 	HTTP POST /warehouse/addVoucher
+[2024-09-04 02:30:25.368 AM] error: 	HTTP POST /warehouse/addVoucher
+[2024-09-04 01:25:48.161 PM] warn: 	HTTP GET /voucher/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:48:00.717 PM] error: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:49:14.779 PM] error: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:52:26.800 PM] error: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 04:24:59.619 PM] error: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 04:31:42.087 PM] warn: 	HTTP GET /warehouse/getuUsed/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:05:12.351 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:05:34.285 PM] warn: 	HTTP POST /event/addFavEvent
+[2024-09-04 05:05:34.351 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:05:37.491 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:05:37.530 PM] warn: 	HTTP POST /event/addFavEvent
+[2024-09-04 05:05:48.274 PM] warn: 	HTTP POST /event/addFavEvent
+[2024-09-04 05:05:48.448 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:06:06.660 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:09:37.043 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:14:00.312 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:14:20.251 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:15:16.911 PM] error: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:40:57.298 PM] warn: 	HTTP POST /user/create
+[2024-09-04 06:41:16.574 PM] error: 	HTTP POST /user/create
+[2024-09-04 06:41:53.101 PM] error: 	HTTP POST /user/create
+[2024-09-04 06:42:38.063 PM] error: 	HTTP POST /user/create
+[2024-09-04 06:43:09.600 PM] error: 	404 - SyntaxError: Expected double-quoted property name in JSON at position 325 (line 10 column 1)
+    at JSON.parse (<anonymous>)
+    at parse (/Users/nguyenthanh/Downloads/SOURCE/Kiến Trúc Phần Mềm/KTPM-BE/node_modules/body-parser/lib/types/json.js:92:19)
+    at /Users/nguyenthanh/Downloads/SOURCE/Kiến Trúc Phần Mềm/KTPM-BE/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (/Users/nguyenthanh/Downloads/SOURCE/Kiến Trúc Phần Mềm/KTPM-BE/node_modules/raw-body/index.js:238:16)
+    at done (/Users/nguyenthanh/Downloads/SOURCE/Kiến Trúc Phần Mềm/KTPM-BE/node_modules/raw-body/index.js:227:7)
+    at IncomingMessage.onEnd (/Users/nguyenthanh/Downloads/SOURCE/Kiến Trúc Phần Mềm/KTPM-BE/node_modules/raw-body/index.js:287:7)
+    at IncomingMessage.emit (node:events:519:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[2024-09-04 06:44:05.596 PM] error: 	HTTP POST /user/create
+[2024-09-04 06:45:24.443 PM] error: 	HTTP POST /user/create
+[2024-09-04 06:46:08.118 PM] error: 	HTTP POST /user/create
+[2024-09-04 06:47:41.562 PM] warn: 	HTTP POST /user/create
+[2024-09-04 06:47:56.751 PM] error: 	HTTP POST /user/create
+[2024-09-04 07:09:45.920 PM] warn: 	HTTP POST /brand/getAll
+>>>>>>> main

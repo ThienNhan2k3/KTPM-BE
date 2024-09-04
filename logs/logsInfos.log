@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [2024-09-01 08:19:31.665 PM] info: 	HTTP GET /account/getAll/brand
 [2024-09-01 08:19:33.294 PM] info: 	HTTP GET /account/getAll/brand
 [2024-09-01 08:19:44.033 PM] info: 	HTTP PUT /account/update/brand/f80656de-da17-4d20-a43e-7b7211b962f6
@@ -1546,3 +1547,1615 @@
 [2024-09-04 12:01:05.912 AM] info: 	HTTP PUT /voucher/update/KhuyenMaiQuocKhanhNam2024
 [2024-09-04 12:01:14.806 AM] info: 	HTTP DELETE /voucher/delete/KhuyenMaiQuocKhanhNam2024
 [2024-09-04 12:01:15.582 AM] info: 	HTTP GET /voucher/getVoucherByIdBrand/05e44252-ff08-4a0a-b238-93cf3c5382a6
+=======
+[2024-09-03 11:26:52.687 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:26:52.714 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:26:53.086 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:26:53.097 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:27:16.692 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:27:16.715 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:27:17.097 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:27:17.118 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:27:23.210 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:27:23.232 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:27:23.643 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:27:23.646 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:29:37.274 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:29:37.323 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:29:37.695 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:29:37.699 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:30:59.573 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:30:59.733 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:31:00.108 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:31:00.118 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:32:40.855 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:32:40.872 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:32:41.227 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:32:41.249 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:35:02.440 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:35:02.504 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:35:03.142 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:35:03.150 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:35:37.125 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:35:37.692 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:35:38.365 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:35:38.373 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:36:18.917 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:36:19.097 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:36:19.647 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:36:19.763 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:36:22.086 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:36:22.180 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:36:22.495 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:36:22.573 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:39:56.839 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:39:57.016 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:39:57.390 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:39:57.535 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:40:25.518 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:40:25.873 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:40:26.604 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:40:26.788 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:43:30.856 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:43:31.460 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:43:32.825 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:43:33.049 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:43:34.311 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:43:34.340 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:43:34.720 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:43:34.734 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:43:47.999 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:43:48.021 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:43:48.401 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:43:48.518 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:44:02.916 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:44:03.272 AM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:27:31
+    at pass (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:372:9)
+    at Authenticator.deserializeUser (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\authenticator.js:377:5)
+    at SessionStrategy.authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\strategies\session.js:112:10)
+    at attempt (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:378:16)
+    at authenticate (D:\Code\Web Project\KTPM-Backend\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:328:13)
+    at D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (D:\Code\Web Project\KTPM-Backend\node_modules\express\lib\router\index.js:346:12)
+[2024-09-03 11:44:04.018 AM] warn: 	HTTP POST /routes
+[2024-09-03 11:44:04.193 AM] warn: 	HTTP POST /routes
+[2024-09-03 12:01:16.177 PM] info: 	HTTP POST /routes
+[2024-09-03 12:01:16.201 PM] info: 	HTTP POST /routes
+[2024-09-03 12:01:17.019 PM] info: 	HTTP POST /routes
+[2024-09-03 12:01:20.635 PM] info: 	HTTP POST /routes
+[2024-09-03 12:01:20.970 PM] info: 	HTTP GET /game
+[2024-09-03 12:01:21.003 PM] info: 	HTTP GET /game
+[2024-09-03 12:01:21.782 PM] info: 	HTTP GET /public/images/games/1724443331073-mountains-best-for-desktop-background-wallpaper-preview.jpg
+[2024-09-03 12:01:21.895 PM] info: 	HTTP GET /public/images/games/1724511684195-18886-cat-cyan-blue-748x430.png
+[2024-09-03 12:01:24.068 PM] info: 	HTTP POST /routes
+[2024-09-03 12:01:59.643 PM] info: 	HTTP POST /routes
+[2024-09-03 12:01:59.647 PM] info: 	HTTP POST /routes
+[2024-09-03 12:02:01.054 PM] info: 	HTTP POST /routes
+[2024-09-03 12:02:01.118 PM] info: 	HTTP POST /routes
+[2024-09-03 12:25:52.223 PM] info: 	HTTP POST /routes
+[2024-09-03 12:25:52.263 PM] info: 	HTTP POST /routes
+[2024-09-03 12:25:53.085 PM] info: 	HTTP POST /routes
+[2024-09-03 12:25:53.092 PM] info: 	HTTP POST /routes
+[2024-09-03 12:26:23.442 PM] info: 	HTTP POST /routes
+[2024-09-03 12:26:23.609 PM] info: 	HTTP POST /routes
+[2024-09-03 12:26:24.450 PM] info: 	HTTP POST /routes
+[2024-09-03 12:26:24.455 PM] info: 	HTTP POST /routes
+[2024-09-03 12:28:35.791 PM] info: 	HTTP POST /routes
+[2024-09-03 12:28:36.152 PM] info: 	HTTP POST /routes
+[2024-09-03 12:40:11.941 PM] info: 	HTTP POST /routes
+[2024-09-03 12:40:12.229 PM] info: 	HTTP POST /routes
+[2024-09-03 12:41:44.160 PM] info: 	HTTP POST /routes
+[2024-09-03 12:41:44.196 PM] info: 	HTTP POST /routes
+[2024-09-03 12:43:18.530 PM] info: 	HTTP POST /routes
+[2024-09-03 12:43:18.879 PM] info: 	HTTP POST /routes
+[2024-09-03 12:43:20.007 PM] info: 	HTTP GET /game/550e8400-e29b-41d4-a716-446655440001
+[2024-09-03 12:43:20.055 PM] info: 	HTTP GET /game/550e8400-e29b-41d4-a716-446655440001
+[2024-09-03 12:43:20.894 PM] info: 	HTTP GET /public/images/games/1724443331073-mountains-best-for-desktop-background-wallpaper-preview.jpg
+[2024-09-03 12:47:13.225 PM] info: 	HTTP POST /routes
+[2024-09-03 12:53:17.731 PM] info: 	HTTP POST /routes
+[2024-09-03 12:53:21.621 PM] info: 	HTTP POST /routes
+[2024-09-03 12:53:21.771 PM] info: 	HTTP POST /routes
+[2024-09-03 12:53:22.796 PM] info: 	HTTP POST /routes
+[2024-09-03 12:53:22.929 PM] info: 	HTTP POST /routes
+[2024-09-03 12:54:06.993 PM] info: 	HTTP POST /routes
+[2024-09-03 12:54:07.181 PM] info: 	HTTP POST /routes
+[2024-09-03 12:54:07.967 PM] info: 	HTTP POST /routes
+[2024-09-03 12:54:08.214 PM] info: 	HTTP POST /routes
+[2024-09-03 12:54:45.497 PM] info: 	HTTP POST /routes
+[2024-09-03 12:54:45.937 PM] info: 	HTTP POST /routes
+[2024-09-03 12:54:46.875 PM] info: 	HTTP POST /routes
+[2024-09-03 12:54:46.929 PM] info: 	HTTP POST /routes
+[2024-09-03 12:56:08.106 PM] info: 	HTTP POST /routes
+[2024-09-03 12:56:08.108 PM] info: 	HTTP POST /routes
+[2024-09-03 12:56:09.010 PM] info: 	HTTP POST /routes
+[2024-09-03 12:56:09.118 PM] info: 	HTTP POST /routes
+[2024-09-03 12:56:26.669 PM] info: 	HTTP POST /routes
+[2024-09-03 12:56:26.978 PM] info: 	HTTP POST /routes
+[2024-09-03 12:56:28.114 PM] info: 	HTTP POST /routes
+[2024-09-03 12:56:28.371 PM] info: 	HTTP POST /routes
+[2024-09-03 12:56:49.264 PM] info: 	HTTP POST /routes
+[2024-09-03 12:56:49.277 PM] info: 	HTTP POST /routes
+[2024-09-03 12:56:50.067 PM] info: 	HTTP POST /routes
+[2024-09-03 12:56:50.154 PM] info: 	HTTP POST /routes
+[2024-09-03 12:57:23.233 PM] info: 	HTTP POST /routes
+[2024-09-03 12:57:23.273 PM] info: 	HTTP POST /routes
+[2024-09-03 12:57:24.100 PM] info: 	HTTP POST /routes
+[2024-09-03 01:00:24.920 PM] info: 	HTTP POST /routes
+[2024-09-03 01:00:28.926 PM] info: 	HTTP POST /routes
+[2024-09-03 01:00:29.024 PM] info: 	HTTP POST /routes
+[2024-09-03 01:00:29.797 PM] info: 	HTTP POST /routes
+[2024-09-03 01:00:30.151 PM] info: 	HTTP POST /routes
+[2024-09-03 01:00:54.089 PM] info: 	HTTP POST /routes
+[2024-09-03 01:00:54.158 PM] info: 	HTTP POST /routes
+[2024-09-03 01:00:54.906 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:22.066 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:22.070 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:22.073 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:22.075 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:22.077 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:22.303 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:23.291 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:23.314 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:23.497 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:23.501 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:23.510 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:23.562 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:29.594 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:29.604 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:29.780 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:30.489 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:30.491 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:30.512 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:30.794 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:30.799 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:30.913 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:31.572 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:31.736 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:32.156 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:32.283 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:32.285 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:32.558 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:33.130 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:33.146 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:33.555 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:33.559 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:33.611 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:33.769 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:33.985 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:34.575 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:34.779 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:34.782 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:34.785 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:34.790 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:35.222 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:35.981 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:35.989 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:36.060 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:36.103 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:36.191 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:36.194 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:36.823 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:37.117 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:40.959 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:41.060 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:41.134 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:41.140 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:41.142 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:41.320 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:41.968 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:41.993 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:42.164 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:42.241 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:42.244 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:42.353 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:43.112 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:43.123 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:43.154 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:43.188 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:43.309 PM] info: 	HTTP POST /routes
+[2024-09-03 01:07:43.664 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:12.070 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:12.084 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:12.198 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:12.301 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:12.358 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:12.481 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:13.055 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:13.087 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:13.098 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:13.430 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:13.463 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:13.487 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:13.897 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:14.005 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:14.011 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:14.370 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:14.450 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:14.458 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:14.829 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:14.865 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:15.052 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:15.222 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:15.360 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:15.482 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:15.666 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:15.793 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:15.973 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:16.171 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:16.484 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:16.531 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:16.663 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:16.727 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:16.778 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:17.074 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:17.315 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:17.501 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:17.626 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:17.694 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:17.862 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:17.877 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:18.451 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:18.526 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:18.602 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:18.610 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:18.825 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:18.884 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:19.473 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:19.516 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:19.661 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:19.704 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:19.775 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:19.841 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:20.327 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:20.411 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:20.506 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:20.671 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:20.700 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:20.725 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:21.342 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:21.377 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:21.523 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:21.964 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:22.023 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:22.238 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:22.282 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:22.383 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:22.432 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:22.994 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:23.016 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:23.023 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:23.184 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:23.341 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:23.403 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:23.929 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:23.950 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:24.088 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:24.117 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:24.457 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:24.713 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:24.890 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:24.892 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:25.039 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:25.083 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:25.444 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:25.739 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:25.799 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:25.875 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:25.920 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:25.978 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:26.336 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:26.697 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:26.801 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:26.803 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:26.806 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:26.879 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:27.339 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:27.589 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:27.723 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:27.764 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:27.789 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:28.063 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:28.268 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:28.608 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:28.693 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:28.735 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:28.786 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:28.919 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:29.088 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:33.095 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:33.098 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:33.287 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:35.628 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:35.647 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:35.877 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:38.145 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:38.160 PM] info: 	HTTP POST /routes
+[2024-09-03 01:08:38.528 PM] info: 	HTTP POST /routes
+[2024-09-03 01:27:49.440 PM] info: 	HTTP POST /routes
+[2024-09-03 01:27:49.481 PM] info: 	HTTP POST /routes
+[2024-09-03 01:27:50.422 PM] info: 	HTTP GET /logout
+[2024-09-03 01:27:50.426 PM] info: 	HTTP GET /logout
+[2024-09-03 01:27:51.203 PM] info: 	HTTP POST /routes
+[2024-09-03 01:27:52.015 PM] info: 	HTTP POST /routes
+[2024-09-03 01:28:29.875 PM] info: 	HTTP POST /routes
+[2024-09-03 01:28:29.883 PM] info: 	HTTP POST /routes
+[2024-09-03 01:28:29.924 PM] info: 	HTTP POST /routes
+[2024-09-03 01:28:29.954 PM] info: 	HTTP POST /routes
+[2024-09-03 01:28:29.984 PM] info: 	HTTP POST /routes
+[2024-09-03 01:28:30.056 PM] info: 	HTTP POST /routes
+[2024-09-03 01:32:43.140 PM] info: 	HTTP POST /login
+[2024-09-03 01:32:43.831 PM] info: 	HTTP POST /routes
+[2024-09-03 01:33:06.805 PM] info: 	HTTP POST /routes
+[2024-09-03 01:33:06.960 PM] info: 	HTTP POST /routes
+[2024-09-03 01:33:30.530 PM] info: 	HTTP POST /login
+[2024-09-03 01:33:31.114 PM] info: 	HTTP POST /routes
+[2024-09-03 01:34:55.218 PM] info: 	HTTP POST /routes
+[2024-09-03 01:34:55.224 PM] info: 	HTTP POST /routes
+[2024-09-03 01:36:03.595 PM] info: 	HTTP POST /login
+[2024-09-03 01:36:04.223 PM] info: 	HTTP POST /routes
+[2024-09-03 01:36:55.217 PM] info: 	HTTP POST /routes
+[2024-09-03 01:36:55.278 PM] info: 	HTTP POST /routes
+[2024-09-03 01:37:24.557 PM] info: 	HTTP POST /login
+[2024-09-03 01:37:25.156 PM] info: 	HTTP POST /routes
+[2024-09-03 01:37:42.085 PM] info: 	HTTP POST /routes
+[2024-09-03 01:37:42.130 PM] info: 	HTTP POST /routes
+[2024-09-03 01:38:19.086 PM] info: 	HTTP POST /routes
+[2024-09-03 01:38:19.431 PM] info: 	HTTP POST /routes
+[2024-09-03 01:42:09.470 PM] info: 	HTTP POST /login
+[2024-09-03 01:42:10.296 PM] info: 	HTTP POST /routes
+[2024-09-03 01:42:25.612 PM] info: 	HTTP POST /routes
+[2024-09-03 01:42:25.795 PM] info: 	HTTP POST /routes
+[2024-09-03 01:44:12.689 PM] info: 	HTTP POST /routes
+[2024-09-03 01:44:12.692 PM] info: 	HTTP POST /routes
+[2024-09-03 01:44:31.142 PM] info: 	HTTP POST /login
+[2024-09-03 01:44:32.095 PM] info: 	HTTP POST /routes
+[2024-09-03 01:47:03.143 PM] info: 	HTTP POST /routes
+[2024-09-03 01:47:03.157 PM] info: 	HTTP POST /routes
+[2024-09-03 01:47:17.731 PM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Strategy.verifyCallback [as _verify] (D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:68:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-09-03 01:47:18.101 PM] warn: 	HTTP POST /login
+[2024-09-03 01:48:47.545 PM] info: 	HTTP POST /routes
+[2024-09-03 01:48:47.592 PM] info: 	HTTP POST /routes
+[2024-09-03 01:48:57.205 PM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Strategy.verifyCallback [as _verify] (D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:69:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-09-03 01:48:57.687 PM] warn: 	HTTP POST /login
+[2024-09-03 01:50:20.047 PM] info: 	HTTP POST /routes
+[2024-09-03 01:50:20.304 PM] info: 	HTTP POST /routes
+[2024-09-03 01:50:36.078 PM] info: 	HTTP POST /login
+[2024-09-03 01:50:37.659 PM] info: 	HTTP POST /routes
+[2024-09-03 01:50:38.896 PM] info: 	HTTP POST /routes
+[2024-09-03 01:50:59.614 PM] info: 	HTTP POST /routes
+[2024-09-03 01:50:59.758 PM] info: 	HTTP POST /routes
+[2024-09-03 01:51:00.844 PM] info: 	HTTP POST /routes
+[2024-09-03 01:51:01.320 PM] info: 	HTTP POST /routes
+[2024-09-03 01:51:39.492 PM] info: 	HTTP GET /logout
+[2024-09-03 01:51:54.315 PM] info: 	HTTP POST /login
+[2024-09-03 02:06:19.310 PM] info: 	HTTP POST /routes
+[2024-09-03 02:06:19.542 PM] info: 	HTTP POST /routes
+[2024-09-03 02:06:20.477 PM] info: 	HTTP POST /routes
+[2024-09-03 02:06:20.484 PM] info: 	HTTP POST /routes
+[2024-09-03 02:08:36.582 PM] info: 	HTTP POST /routes
+[2024-09-03 02:08:36.856 PM] info: 	HTTP POST /routes
+[2024-09-03 02:08:37.891 PM] info: 	HTTP POST /routes
+[2024-09-03 02:08:38.748 PM] info: 	HTTP POST /routes
+[2024-09-03 02:10:11.817 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:10:12.000 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:10:18.272 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:10:18.282 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:10:44.199 PM] info: 	HTTP POST /routes
+[2024-09-03 02:10:44.465 PM] info: 	HTTP POST /routes
+[2024-09-03 02:10:45.553 PM] info: 	HTTP POST /routes
+[2024-09-03 02:10:46.590 PM] info: 	HTTP POST /routes
+[2024-09-03 02:10:48.898 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:10:48.905 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:12:04.008 PM] info: 	HTTP POST /routes
+[2024-09-03 02:12:04.144 PM] info: 	HTTP POST /routes
+[2024-09-03 02:12:05.128 PM] info: 	HTTP POST /routes
+[2024-09-03 02:12:05.283 PM] info: 	HTTP POST /routes
+[2024-09-03 02:12:07.784 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:12:07.795 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:12:31.543 PM] info: 	HTTP POST /routes
+[2024-09-03 02:12:31.616 PM] info: 	HTTP POST /routes
+[2024-09-03 02:12:32.699 PM] info: 	HTTP POST /routes
+[2024-09-03 02:12:32.705 PM] info: 	HTTP POST /routes
+[2024-09-03 02:12:36.987 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:12:37.003 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:14:45.791 PM] info: 	HTTP GET /event/getAll
+[2024-09-03 02:16:20.423 PM] info: 	HTTP GET /event/getAll
+[2024-09-03 02:16:35.323 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:16:35.687 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:19:05.186 PM] info: 	HTTP GET /event/getAll
+[2024-09-03 02:19:20.579 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:20:10.803 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:20:18.831 PM] info: 	HTTP POST /routes
+[2024-09-03 02:20:18.834 PM] info: 	HTTP POST /routes
+[2024-09-03 02:20:20.032 PM] info: 	HTTP POST /routes
+[2024-09-03 02:20:20.066 PM] info: 	HTTP POST /routes
+[2024-09-03 02:20:20.146 PM] info: 	HTTP GET /event/getAll
+[2024-09-03 02:20:20.240 PM] info: 	HTTP GET /event/getAll
+[2024-09-03 02:20:22.016 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:20:22.090 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:36:54.628 PM] info: 	HTTP POST /routes
+[2024-09-03 02:36:54.711 PM] info: 	HTTP POST /routes
+[2024-09-03 02:36:56.213 PM] info: 	HTTP POST /routes
+[2024-09-03 02:36:56.239 PM] info: 	HTTP POST /routes
+[2024-09-03 02:36:56.477 PM] info: 	HTTP GET /event/getAll
+[2024-09-03 02:36:56.513 PM] info: 	HTTP GET /event/getAll
+[2024-09-03 02:36:57.650 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:36:58.312 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:47:03.391 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 02:48:12.640 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 03:05:17.190 PM] info: 	HTTP POST /routes
+[2024-09-03 03:05:17.244 PM] info: 	HTTP POST /routes
+[2024-09-03 03:05:20.118 PM] info: 	HTTP GET /event/getAll
+[2024-09-03 03:05:20.192 PM] info: 	HTTP GET /event/getAll
+[2024-09-03 03:06:31.019 PM] info: 	HTTP POST /routes
+[2024-09-03 03:06:31.439 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 03:06:31.442 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 03:06:55.141 PM] info: 	HTTP POST /routes
+[2024-09-03 03:23:20.636 PM] info: 	HTTP GET /
+[2024-09-03 03:23:21.668 PM] info: 	HTTP GET /favicon.ico
+[2024-09-03 03:33:55.904 PM] warn: 	HTTP GET /
+[2024-09-03 06:23:06.173 PM] warn: 	HTTP GET /
+[2024-09-03 06:24:14.972 PM] info: 	HTTP GET /user/getAll
+[2024-09-03 06:25:10.960 PM] error: 	HTTP GET /user/get/:01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:25:18.296 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:25:25.829 PM] info: 	HTTP GET /user/getAll
+[2024-09-03 06:25:44.054 PM] info: 	HTTP GET /user/getAll?id=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:26:28.403 PM] warn: 	HTTP GET /user/get?id=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:27:53.580 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:28:08.952 PM] warn: 	HTTP GET /user/get?id=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:28:14.609 PM] info: 	HTTP GET /user/getAll?id=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:28:30.712 PM] error: 	HTTP GET /user/get/8fb6b6b8-defe-4073-80b8-64b6d0f20663
+[2024-09-03 06:29:06.497 PM] warn: 	HTTP GET /user/get?uuid=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:29:13.795 PM] warn: 	HTTP GET /user/get?id=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:30:18.113 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:31:46.591 PM] error: 	HTTP GET /user/get/:01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:33:12.003 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:35:18.347 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:36:13.089 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:38:03.088 PM] error: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:39:20.339 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 06:41:36.025 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 07:03:43.250 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 07:12:48.675 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 07:26:48.598 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 07:32:35.835 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 07:55:54.461 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 11:08:11.016 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 11:08:11.061 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 11:16:16.175 PM] info: 	HTTP GET /brand/getAll
+[2024-09-03 11:26:21.264 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-03 11:26:21.381 PM] info: 	HTTP GET /brand/getAll
+[2024-09-03 11:26:21.600 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 11:51:38.793 PM] info: 	HTTP GET /brand/getAll
+[2024-09-03 11:51:38.887 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 11:52:23.216 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 11:52:23.262 PM] info: 	HTTP GET /brand/getAll
+[2024-09-03 11:53:04.349 PM] info: 	HTTP GET /brand/getAll
+[2024-09-03 11:53:04.426 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 11:54:30.168 PM] warn: 	HTTP GET /voucher/getAll_acctive
+[2024-09-03 11:54:32.882 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-03 11:55:47.678 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:06:51.220 AM] info: 	HTTP GET /brand/getAll
+[2024-09-04 12:06:51.225 AM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-04 12:06:51.226 AM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 12:06:52.047 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:06:52.139 AM] info: 	HTTP GET /brand/get/838528c6-e452-4d7f-abf7-68212d681d31
+[2024-09-04 12:06:52.195 AM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:07:02.092 AM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:07:02.099 AM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 12:07:03.821 AM] info: 	HTTP GET /brand/get/1c7ccc41-c473-4efe-976f-ffc836cfa6e2
+[2024-09-04 12:07:03.889 AM] info: 	HTTP GET /brand/get/5113bc0b-d084-42ca-b804-935d76ee0f2b
+[2024-09-04 12:07:04.006 AM] info: 	HTTP GET /brand/get/5a60363e-1716-4884-91c2-1aecae5a6c58
+[2024-09-04 12:07:15.668 AM] info: 	HTTP GET /brand/get/a14eba6c-c00f-4e8a-a0ac-f3dd12ca499c
+[2024-09-04 12:07:15.784 AM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:07:15.976 AM] info: 	HTTP GET /brand/get/5a60363e-1716-4884-91c2-1aecae5a6c58
+[2024-09-04 12:07:16.105 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:07:16.181 AM] info: 	HTTP GET /brand/get/7d43a0eb-6b6a-4aac-b351-ce8c3f5429fa
+[2024-09-04 12:07:16.414 AM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:07:16.682 AM] info: 	HTTP GET /brand/get/63bebb51-9cb3-4739-b427-30fea539cea7
+[2024-09-04 12:07:17.933 AM] info: 	HTTP GET /brand/get/bb603635-02c8-48f2-ba99-34b995ac3e65
+[2024-09-04 12:07:17.937 AM] info: 	HTTP GET /brand/get/2376ab59-64e9-4b7d-9a80-0e22a687172b
+[2024-09-04 12:07:19.885 AM] info: 	HTTP GET /brand/get/63bebb51-9cb3-4739-b427-30fea539cea7
+[2024-09-04 12:07:26.789 AM] info: 	HTTP GET /brand/get/5113bc0b-d084-42ca-b804-935d76ee0f2b
+[2024-09-04 12:07:26.791 AM] info: 	HTTP GET /brand/get/5a60363e-1716-4884-91c2-1aecae5a6c58
+[2024-09-04 12:07:26.805 AM] info: 	HTTP GET /brand/get/a14eba6c-c00f-4e8a-a0ac-f3dd12ca499c
+[2024-09-04 12:07:27.129 AM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:07:27.149 AM] info: 	HTTP GET /brand/get/5a60363e-1716-4884-91c2-1aecae5a6c58
+[2024-09-04 12:07:27.345 AM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:07:27.351 AM] info: 	HTTP GET /brand/get/1c7ccc41-c473-4efe-976f-ffc836cfa6e2
+[2024-09-04 12:07:27.563 AM] info: 	HTTP GET /brand/get/838528c6-e452-4d7f-abf7-68212d681d31
+[2024-09-04 12:07:27.566 AM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:07:27.567 AM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 12:07:27.769 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:08:04.947 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:09:17.109 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc?id
+[2024-09-04 12:13:03.050 AM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 12:13:03.122 AM] info: 	HTTP GET /brand/getAll
+[2024-09-04 12:13:03.202 AM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-04 12:13:06.170 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:13:06.184 AM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:13:06.277 AM] info: 	HTTP GET /brand/get/838528c6-e452-4d7f-abf7-68212d681d31
+[2024-09-04 12:14:51.322 AM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:14:51.713 AM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 12:14:54.592 AM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:18:08.451 AM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 12:18:08.534 AM] info: 	HTTP GET /brand/getAll
+[2024-09-04 12:18:08.730 AM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-04 12:18:09.543 AM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:18:09.598 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:18:09.715 AM] info: 	HTTP GET /brand/get/838528c6-e452-4d7f-abf7-68212d681d31
+[2024-09-04 12:18:17.298 AM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:18:18.558 AM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 12:18:18.857 AM] info: 	HTTP GET /brand/get/1c7ccc41-c473-4efe-976f-ffc836cfa6e2
+[2024-09-04 12:18:20.405 AM] info: 	HTTP GET /brand/get/5113bc0b-d084-42ca-b804-935d76ee0f2b
+[2024-09-04 12:18:20.408 AM] info: 	HTTP GET /brand/get/5a60363e-1716-4884-91c2-1aecae5a6c58
+[2024-09-04 12:18:22.061 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:18:22.063 AM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:18:27.868 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:21:23.331 AM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 12:21:23.714 AM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-04 12:21:23.719 AM] info: 	HTTP GET /brand/getAll
+[2024-09-04 12:21:24.755 AM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:21:24.844 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:21:24.862 AM] info: 	HTTP GET /brand/get/838528c6-e452-4d7f-abf7-68212d681d31
+[2024-09-04 12:22:47.044 AM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:22:47.053 AM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 12:22:47.199 AM] info: 	HTTP GET /brand/get/1c7ccc41-c473-4efe-976f-ffc836cfa6e2
+[2024-09-04 12:22:47.242 AM] info: 	HTTP GET /brand/get/5113bc0b-d084-42ca-b804-935d76ee0f2b
+[2024-09-04 12:22:47.266 AM] info: 	HTTP GET /brand/get/5a60363e-1716-4884-91c2-1aecae5a6c58
+[2024-09-04 12:22:47.820 AM] info: 	HTTP GET /brand/get/5a60363e-1716-4884-91c2-1aecae5a6c58
+[2024-09-04 12:22:48.001 AM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:22:48.116 AM] info: 	HTTP GET /brand/get/a14eba6c-c00f-4e8a-a0ac-f3dd12ca499c
+[2024-09-04 12:22:50.579 AM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 12:22:52.885 AM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:22:53.994 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:22:54.068 AM] info: 	HTTP GET /brand/get/838528c6-e452-4d7f-abf7-68212d681d31
+[2024-09-04 12:22:54.070 AM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:25:21.211 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:27:56.275 AM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 12:27:56.654 AM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-04 12:27:56.665 AM] info: 	HTTP GET /brand/getAll
+[2024-09-04 12:27:58.738 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:27:58.739 AM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:27:58.743 AM] info: 	HTTP GET /brand/get/838528c6-e452-4d7f-abf7-68212d681d31
+[2024-09-04 12:28:03.351 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:30:17.631 AM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:30:17.697 AM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 12:30:17.819 AM] info: 	HTTP GET /brand/get/1c7ccc41-c473-4efe-976f-ffc836cfa6e2
+[2024-09-04 12:30:23.380 AM] info: 	HTTP GET /brand/get/5113bc0b-d084-42ca-b804-935d76ee0f2b
+[2024-09-04 12:30:28.538 AM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 12:30:32.271 AM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 01:31:12.908 AM] error: 	HTTP GET /warehouse/getAll
+[2024-09-04 01:33:36.010 AM] info: 	HTTP GET /warehouse/getAll
+[2024-09-04 01:36:28.730 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=abc&id_user=acb&quantity=1&time_update=2024-08-31T22:57:04.135Z
+[2024-09-04 01:37:06.523 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=%22abc%22&id_user=%22asf%22&quantity=1&time_update=%222024-08-31T22:57:04.135Z%22
+[2024-09-04 01:38:04.569 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=%220665b99d-13f5-48a5-a416-14b43b47d690%22&id_user=%220665b99d-13f5-48a5-a416-14b43b47d693%22&quantity=1&time_update=%222024-08-31T22:57:04.135Z%22
+[2024-09-04 01:38:27.092 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=0665b99d-13f5-48a5-a416-14b43b47d690&id_user=0665b99d-13f5-48a5-a416-14b43b47d693&quantity=1&time_update=2024-08-31T22:57:04.135Z
+[2024-09-04 01:39:03.104 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=%220665b99d-13f5-48a5-a416-14b43b47d690%22&id_user=0665b99d-13f5-48a5-a416-14b43b47d693&quantity=1&time_update=2024-08-31T22:57:04.135Z
+[2024-09-04 01:40:08.987 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=0665b99d-13f5-48a5-a416-14b43b47d691&id_user=0665b99d-13f5-48a5-a416-14b43b47d693&quantity=1&time_update=2024-08-31T22:57:04.135Z
+[2024-09-04 01:43:09.559 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=0665b99d-13f5-48a5-a416-14b43b47d690&id_user=a9e61e61-f8d3-4640-9217-f7c37654899e&quantity=1
+[2024-09-04 01:46:56.205 AM] error: 	HTTP POST /warehouse/addVoucher?id_voucher=0665b99d-13f5-48a5-a416-14b43b47d690&id_user=a9e61e61-f8d3-4640-9217-f7c37654899e
+[2024-09-04 01:51:26.869 AM] warn: 	HTTP POST /warehouse/addVoucher?id_voucher=0665b99d-13f5-48a5-a416-14b43b47d690&id_user=a9e61e61-f8d3-4640-9217-f7c37654899e
+[2024-09-04 01:53:37.330 AM] warn: 	HTTP POST /warehouse/addVoucher?id_voucher=0665b99d-13f5-48a5-a416-14b43b47d690&id_user=a9e61e61-f8d3-4640-9217-f7c37654899e
+[2024-09-04 01:55:39.165 AM] info: 	HTTP POST /warehouse/addVoucher
+[2024-09-04 01:57:05.676 AM] info: 	HTTP POST /warehouse/addVoucher
+[2024-09-04 02:27:24.949 AM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:27:25.162 AM] info: 	HTTP GET /brand/getAll
+[2024-09-04 02:27:25.165 AM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-04 02:27:26.213 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 02:27:26.625 AM] info: 	HTTP GET /brand/get/838528c6-e452-4d7f-abf7-68212d681d31
+[2024-09-04 02:27:26.626 AM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 02:28:06.446 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 02:28:06.475 AM] error: 	HTTP POST /warehouse/addVoucher
+[2024-09-04 02:30:23.500 AM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 02:30:25.368 AM] error: 	HTTP POST /warehouse/addVoucher
+[2024-09-04 12:41:44.439 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 12:41:44.719 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 12:41:44.862 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-04 12:41:46.669 PM] info: 	HTTP GET /brand/get/838528c6-e452-4d7f-abf7-68212d681d31
+[2024-09-04 12:41:46.672 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:41:46.969 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:43:13.405 PM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:43:13.434 PM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 12:43:14.341 PM] info: 	HTTP GET /brand/get/1c7ccc41-c473-4efe-976f-ffc836cfa6e2
+[2024-09-04 12:43:14.674 PM] info: 	HTTP GET /brand/get/5113bc0b-d084-42ca-b804-935d76ee0f2b
+[2024-09-04 12:43:15.482 PM] info: 	HTTP GET /brand/get/5a60363e-1716-4884-91c2-1aecae5a6c58
+[2024-09-04 12:43:17.006 PM] info: 	HTTP GET /brand/get/a14eba6c-c00f-4e8a-a0ac-f3dd12ca499c
+[2024-09-04 12:43:27.359 PM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:43:31.676 PM] info: 	HTTP GET /brand/get/5a60363e-1716-4884-91c2-1aecae5a6c58
+[2024-09-04 12:43:31.680 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:43:31.760 PM] info: 	HTTP GET /brand/get/7d43a0eb-6b6a-4aac-b351-ce8c3f5429fa
+[2024-09-04 12:43:31.954 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:43:32.191 PM] info: 	HTTP GET /brand/get/63bebb51-9cb3-4739-b427-30fea539cea7
+[2024-09-04 12:43:32.499 PM] info: 	HTTP GET /brand/get/2376ab59-64e9-4b7d-9a80-0e22a687172b
+[2024-09-04 12:43:32.696 PM] info: 	HTTP GET /brand/get/bb603635-02c8-48f2-ba99-34b995ac3e65
+[2024-09-04 12:43:34.032 PM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 12:43:35.936 PM] info: 	HTTP GET /brand/get/bcc71286-c047-4d19-be5f-786453b81cb0
+[2024-09-04 12:43:36.243 PM] info: 	HTTP GET /brand/get/f05d5b66-b27c-4e98-805d-3841fc74cae7
+[2024-09-04 12:43:37.580 PM] info: 	HTTP GET /brand/get/9132c62b-a416-4a92-9a8d-bba6c19df807
+[2024-09-04 12:43:37.593 PM] info: 	HTTP GET /brand/get/3d73a4c8-1859-4ebe-b30d-bb80144e556b
+[2024-09-04 12:43:39.226 PM] info: 	HTTP GET /brand/get/7d56bd58-9ae8-42c6-b243-410823dfac8b
+[2024-09-04 12:43:39.355 PM] info: 	HTTP GET /brand/get/e07fa1ce-7014-4131-be61-cf629a533a12
+[2024-09-04 12:43:39.534 PM] info: 	HTTP GET /brand/get/1b679a24-d819-4bad-bcb6-ec32efaeef1f
+[2024-09-04 12:43:39.536 PM] info: 	HTTP GET /brand/get/4c005492-57f2-467e-ac0a-a9a01d8eb8cb
+[2024-09-04 12:43:39.580 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:43:40.879 PM] info: 	HTTP GET /brand/get/3d73a4c8-1859-4ebe-b30d-bb80144e556b
+[2024-09-04 12:43:40.994 PM] info: 	HTTP GET /brand/get/2376ab59-64e9-4b7d-9a80-0e22a687172b
+[2024-09-04 12:43:41.016 PM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 12:43:41.018 PM] info: 	HTTP GET /brand/get/bcc71286-c047-4d19-be5f-786453b81cb0
+[2024-09-04 12:43:41.018 PM] info: 	HTTP GET /brand/get/f05d5b66-b27c-4e98-805d-3841fc74cae7
+[2024-09-04 12:43:41.581 PM] info: 	HTTP GET /brand/get/bb603635-02c8-48f2-ba99-34b995ac3e65
+[2024-09-04 12:43:41.780 PM] info: 	HTTP GET /brand/get/63bebb51-9cb3-4739-b427-30fea539cea7
+[2024-09-04 12:43:41.800 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:43:41.818 PM] info: 	HTTP GET /brand/get/7d43a0eb-6b6a-4aac-b351-ce8c3f5429fa
+[2024-09-04 12:43:41.819 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:43:42.292 PM] info: 	HTTP GET /brand/get/5a60363e-1716-4884-91c2-1aecae5a6c58
+[2024-09-04 12:43:42.473 PM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:43:42.496 PM] info: 	HTTP GET /brand/get/a14eba6c-c00f-4e8a-a0ac-f3dd12ca499c
+[2024-09-04 12:43:42.563 PM] info: 	HTTP GET /brand/get/5113bc0b-d084-42ca-b804-935d76ee0f2b
+[2024-09-04 12:43:42.564 PM] info: 	HTTP GET /brand/get/5a60363e-1716-4884-91c2-1aecae5a6c58
+[2024-09-04 12:43:43.109 PM] info: 	HTTP GET /brand/get/1c7ccc41-c473-4efe-976f-ffc836cfa6e2
+[2024-09-04 12:43:43.168 PM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 12:43:43.231 PM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:43:43.361 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:43:43.379 PM] info: 	HTTP GET /brand/get/838528c6-e452-4d7f-abf7-68212d681d31
+[2024-09-04 12:43:43.817 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:45:05.738 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 12:45:06.005 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 12:45:06.031 PM] info: 	HTTP GET /voucher/getAll_active
+[2024-09-04 12:45:07.908 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:45:07.965 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:45:08.048 PM] info: 	HTTP GET /brand/get/838528c6-e452-4d7f-abf7-68212d681d31
+[2024-09-04 12:45:17.741 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:46:34.045 PM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:46:34.050 PM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 12:46:34.058 PM] info: 	HTTP GET /brand/get/1c7ccc41-c473-4efe-976f-ffc836cfa6e2
+[2024-09-04 12:46:34.061 PM] info: 	HTTP GET /brand/get/5113bc0b-d084-42ca-b804-935d76ee0f2b
+[2024-09-04 12:46:34.064 PM] info: 	HTTP GET /brand/get/5a60363e-1716-4884-91c2-1aecae5a6c58
+[2024-09-04 12:46:34.723 PM] info: 	HTTP GET /brand/get/a14eba6c-c00f-4e8a-a0ac-f3dd12ca499c
+[2024-09-04 12:46:34.738 PM] info: 	HTTP GET /brand/get/7d43a0eb-6b6a-4aac-b351-ce8c3f5429fa
+[2024-09-04 12:46:34.745 PM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:46:34.761 PM] info: 	HTTP GET /brand/get/5a60363e-1716-4884-91c2-1aecae5a6c58
+[2024-09-04 12:46:34.763 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:46:35.441 PM] info: 	HTTP GET /brand/get/bb603635-02c8-48f2-ba99-34b995ac3e65
+[2024-09-04 12:46:35.443 PM] info: 	HTTP GET /brand/get/2376ab59-64e9-4b7d-9a80-0e22a687172b
+[2024-09-04 12:46:35.495 PM] info: 	HTTP GET /brand/get/63bebb51-9cb3-4739-b427-30fea539cea7
+[2024-09-04 12:46:35.495 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:46:35.527 PM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 12:46:36.117 PM] info: 	HTTP GET /brand/get/bcc71286-c047-4d19-be5f-786453b81cb0
+[2024-09-04 12:46:36.120 PM] info: 	HTTP GET /brand/get/f05d5b66-b27c-4e98-805d-3841fc74cae7
+[2024-09-04 12:46:36.137 PM] info: 	HTTP GET /brand/get/3d73a4c8-1859-4ebe-b30d-bb80144e556b
+[2024-09-04 12:46:36.168 PM] info: 	HTTP GET /brand/get/9132c62b-a416-4a92-9a8d-bba6c19df807
+[2024-09-04 12:46:36.232 PM] info: 	HTTP GET /brand/get/e07fa1ce-7014-4131-be61-cf629a533a12
+[2024-09-04 12:46:36.798 PM] info: 	HTTP GET /brand/get/4c005492-57f2-467e-ac0a-a9a01d8eb8cb
+[2024-09-04 12:46:36.805 PM] info: 	HTTP GET /brand/get/1b679a24-d819-4bad-bcb6-ec32efaeef1f
+[2024-09-04 12:46:36.806 PM] info: 	HTTP GET /brand/get/7d56bd58-9ae8-42c6-b243-410823dfac8b
+[2024-09-04 12:46:36.824 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:46:36.894 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:46:37.477 PM] info: 	HTTP GET /brand/get/5a60363e-1716-4884-91c2-1aecae5a6c58
+[2024-09-04 12:46:37.484 PM] info: 	HTTP GET /brand/get/b2815077-1731-401f-9364-e40fa891bc0a
+[2024-09-04 12:46:37.491 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:46:38.659 PM] info: 	HTTP GET /brand/get/1b679a24-d819-4bad-bcb6-ec32efaeef1f
+[2024-09-04 12:46:38.660 PM] info: 	HTTP GET /brand/get/e07fa1ce-7014-4131-be61-cf629a533a12
+[2024-09-04 12:46:38.662 PM] info: 	HTTP GET /brand/get/7d56bd58-9ae8-42c6-b243-410823dfac8b
+[2024-09-04 12:46:38.700 PM] info: 	HTTP GET /brand/get/9132c62b-a416-4a92-9a8d-bba6c19df807
+[2024-09-04 12:46:38.742 PM] info: 	HTTP GET /brand/get/3d73a4c8-1859-4ebe-b30d-bb80144e556b
+[2024-09-04 12:46:39.331 PM] info: 	HTTP GET /brand/get/f05d5b66-b27c-4e98-805d-3841fc74cae7
+[2024-09-04 12:46:39.343 PM] info: 	HTTP GET /brand/get/bb603635-02c8-48f2-ba99-34b995ac3e65
+[2024-09-04 12:46:39.377 PM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 12:46:39.406 PM] info: 	HTTP GET /brand/get/2376ab59-64e9-4b7d-9a80-0e22a687172b
+[2024-09-04 12:46:39.793 PM] info: 	HTTP GET /brand/get/bcc71286-c047-4d19-be5f-786453b81cb0
+[2024-09-04 12:46:39.990 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:46:39.999 PM] info: 	HTTP GET /brand/get/63bebb51-9cb3-4739-b427-30fea539cea7
+[2024-09-04 12:46:40.074 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:46:40.079 PM] info: 	HTTP GET /brand/get/7d43a0eb-6b6a-4aac-b351-ce8c3f5429fa
+[2024-09-04 12:46:40.512 PM] info: 	HTTP GET /brand/get/5a60363e-1716-4884-91c2-1aecae5a6c58
+[2024-09-04 12:46:40.653 PM] info: 	HTTP GET /brand/get/a14eba6c-c00f-4e8a-a0ac-f3dd12ca499c
+[2024-09-04 12:46:40.668 PM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:46:40.726 PM] info: 	HTTP GET /brand/get/5a60363e-1716-4884-91c2-1aecae5a6c58
+[2024-09-04 12:46:40.742 PM] info: 	HTTP GET /brand/get/5113bc0b-d084-42ca-b804-935d76ee0f2b
+[2024-09-04 12:46:41.193 PM] info: 	HTTP GET /brand/get/1c7ccc41-c473-4efe-976f-ffc836cfa6e2
+[2024-09-04 12:46:41.306 PM] info: 	HTTP GET /brand/get/29c31304-9b2f-45b9-ac52-9129b1f758cf
+[2024-09-04 12:46:41.341 PM] info: 	HTTP GET /brand/get/f80656de-da17-4d20-a43e-7b7211b962f6
+[2024-09-04 12:46:41.412 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 12:46:41.431 PM] info: 	HTTP GET /brand/get/838528c6-e452-4d7f-abf7-68212d681d31
+[2024-09-04 12:46:41.892 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 12:56:14.724 PM] info: 	HTTP GET /warehouse/get/a9e61e61-f8d3-4640-9217-f7c37654899e
+[2024-09-04 01:17:09.338 PM] info: 	HTTP POST /warehouse/addVoucher
+[2024-09-04 01:19:03.175 PM] info: 	HTTP POST /warehouse/addVoucher
+[2024-09-04 01:19:08.187 PM] info: 	HTTP POST /warehouse/addVoucher
+[2024-09-04 01:19:15.022 PM] info: 	HTTP POST /warehouse/addVoucher
+[2024-09-04 01:25:48.161 PM] warn: 	HTTP GET /voucher/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:25:48.524 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:25:48.571 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 01:27:27.696 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:27:27.892 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:27:28.250 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 01:31:40.804 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:31:40.814 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:31:41.053 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 01:32:55.079 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:32:55.231 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 01:32:55.338 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:48:00.337 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:48:00.522 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 01:48:00.717 PM] error: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:49:14.779 PM] error: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:51:10.391 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:51:46.587 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:52:26.800 PM] error: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:54:14.068 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:54:49.971 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:55:30.082 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:56:20.065 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:56:49.987 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:58:24.594 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 01:58:25.090 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 01:58:25.854 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:01:44.671 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:01:44.964 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 02:01:45.443 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:01:46.283 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 02:01:46.371 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 02:01:46.383 PM] info: 	HTTP GET /brand/get/f930371c-fe94-4d87-a590-d9f70e8e16e2
+[2024-09-04 02:05:05.450 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:05:06.372 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 02:05:06.736 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:05:07.466 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 02:05:07.629 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 02:05:07.660 PM] info: 	HTTP GET /brand/get/f930371c-fe94-4d87-a590-d9f70e8e16e2
+[2024-09-04 02:05:26.857 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 02:05:43.032 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 02:06:23.020 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 02:06:24.170 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:06:24.941 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 02:06:25.095 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 02:06:25.108 PM] info: 	HTTP GET /brand/get/f930371c-fe94-4d87-a590-d9f70e8e16e2
+[2024-09-04 02:13:30.484 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:14:47.079 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:14:48.224 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 02:14:48.326 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 02:14:48.659 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 02:17:19.718 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:17:19.817 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 02:17:20.125 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:17:21.455 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 02:17:21.974 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 02:19:27.704 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:19:27.894 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 02:19:28.608 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:19:29.509 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 02:19:29.537 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 02:21:03.747 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:21:03.797 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 02:21:04.157 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:21:08.467 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 02:21:08.474 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 02:25:27.369 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 02:30:54.165 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 02:30:54.512 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:30:54.931 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:30:55.734 PM] info: 	HTTP GET /brand/get/cc472b39-58e6-47ec-8086-61fd5f0277f0
+[2024-09-04 02:30:56.338 PM] info: 	HTTP GET /brand/get/7be9ed90-1ad6-4019-9de1-d868870dc2bc
+[2024-09-04 02:43:54.305 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:49:26.615 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:51:09.735 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:51:09.748 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 02:51:10.566 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:51:11.426 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 02:51:11.509 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 02:51:54.576 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 02:51:54.931 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 02:51:55.732 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 02:51:55.745 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 03:00:07.137 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 03:00:07.323 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 03:00:07.874 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 03:00:08.670 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 03:00:08.770 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 03:11:31.431 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 03:11:31.875 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 03:11:32.407 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 03:11:33.420 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 03:11:33.592 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 03:34:22.952 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 03:34:22.974 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 03:34:23.527 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 03:34:25.714 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 03:34:25.731 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 04:15:02.726 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 04:16:27.356 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 04:24:59.619 PM] error: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 04:26:18.773 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 04:26:43.179 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 04:31:42.087 PM] warn: 	HTTP GET /warehouse/getuUsed/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 04:31:55.211 PM] info: 	HTTP GET /warehouse/getUsed/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 04:49:30.325 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 05:03:07.400 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:03:07.435 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 05:03:07.584 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 05:03:08.093 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:03:09.864 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 05:03:09.952 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 05:03:10.257 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 05:03:47.436 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 05:04:51.306 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:04:51.381 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 05:04:51.432 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 05:04:51.902 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:04:52.604 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 05:04:52.667 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 05:04:52.711 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 05:05:12.351 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:05:17.984 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 05:05:17.986 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 05:05:18.414 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:05:19.149 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 05:05:19.168 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 05:05:19.206 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 05:05:34.285 PM] warn: 	HTTP POST /event/addFavEvent
+[2024-09-04 05:05:34.351 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:05:37.491 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:05:37.530 PM] warn: 	HTTP POST /event/addFavEvent
+[2024-09-04 05:05:48.274 PM] warn: 	HTTP POST /event/addFavEvent
+[2024-09-04 05:05:48.448 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:06:06.660 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:07:11.570 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 05:07:11.688 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 05:07:12.016 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:07:12.797 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 05:07:12.834 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 05:07:12.874 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 05:08:58.144 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:08:58.202 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 05:08:58.368 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 05:08:58.806 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:09:00.010 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 05:09:00.249 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 05:09:00.251 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 05:09:37.043 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:13:57.492 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 05:13:57.748 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 05:13:58.044 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:13:58.830 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 05:13:58.941 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 05:13:58.949 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 05:14:00.312 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:14:20.251 PM] warn: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:15:16.911 PM] error: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:18:27.507 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:18:34.411 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 05:18:34.717 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 05:18:35.372 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:18:36.195 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 05:18:36.619 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 05:18:36.620 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 05:18:37.229 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:18:38.010 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 05:18:38.062 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 05:18:43.041 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 05:18:43.044 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 05:18:43.602 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:18:44.337 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 05:18:44.448 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 05:18:44.476 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 05:18:48.350 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:18:48.569 PM] info: 	HTTP POST /event/addFavEvent
+[2024-09-04 05:18:49.060 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 05:18:49.093 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 05:18:52.333 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:18:53.037 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 05:18:53.055 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 05:18:53.060 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 05:39:27.145 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:39:27.172 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 05:39:27.359 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 05:39:27.770 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 05:39:29.730 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 05:39:30.004 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 05:39:30.207 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 05:40:38.076 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:09:44.124 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:09:44.133 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 06:09:44.232 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 06:09:44.682 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:09:45.453 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 06:09:45.525 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 06:09:45.842 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 06:09:54.289 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:09:55.114 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 06:09:55.117 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 06:09:55.283 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 06:21:11.979 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:21:11.998 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 06:21:12.220 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 06:21:12.802 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:21:15.023 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 06:21:15.195 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 06:21:15.199 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 06:21:33.594 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:21:35.677 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 06:21:35.752 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 06:21:36.520 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 06:24:07.462 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 06:24:07.466 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 06:24:08.042 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:24:08.790 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 06:24:08.796 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 06:24:08.797 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 06:28:26.062 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 06:29:50.535 PM] info: 	HTTP GET /brand/getAll?id=05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 06:30:57.038 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:30:57.132 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 06:30:57.290 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 06:30:57.615 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:30:58.329 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 06:30:58.343 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 06:30:58.382 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 06:31:34.904 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:31:36.441 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 06:31:36.615 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 06:31:36.654 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 06:37:17.664 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:37:17.872 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 06:37:17.876 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 06:37:18.635 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:37:19.941 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 06:37:20.007 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 06:37:20.088 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 06:39:03.241 PM] info: 	HTTP GET /user/getAll
+[2024-09-04 06:40:57.298 PM] warn: 	HTTP POST /user/create
+[2024-09-04 06:41:16.574 PM] error: 	HTTP POST /user/create
+[2024-09-04 06:41:53.101 PM] error: 	HTTP POST /user/create
+[2024-09-04 06:42:38.063 PM] error: 	HTTP POST /user/create
+[2024-09-04 06:43:09.600 PM] error: 	404 - SyntaxError: Expected double-quoted property name in JSON at position 325 (line 10 column 1)
+    at JSON.parse (<anonymous>)
+    at parse (/Users/nguyenthanh/Downloads/SOURCE/Kiến Trúc Phần Mềm/KTPM-BE/node_modules/body-parser/lib/types/json.js:92:19)
+    at /Users/nguyenthanh/Downloads/SOURCE/Kiến Trúc Phần Mềm/KTPM-BE/node_modules/body-parser/lib/read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (/Users/nguyenthanh/Downloads/SOURCE/Kiến Trúc Phần Mềm/KTPM-BE/node_modules/raw-body/index.js:238:16)
+    at done (/Users/nguyenthanh/Downloads/SOURCE/Kiến Trúc Phần Mềm/KTPM-BE/node_modules/raw-body/index.js:227:7)
+    at IncomingMessage.onEnd (/Users/nguyenthanh/Downloads/SOURCE/Kiến Trúc Phần Mềm/KTPM-BE/node_modules/raw-body/index.js:287:7)
+    at IncomingMessage.emit (node:events:519:28)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[2024-09-04 06:44:05.596 PM] error: 	HTTP POST /user/create
+[2024-09-04 06:45:24.443 PM] error: 	HTTP POST /user/create
+[2024-09-04 06:46:08.118 PM] error: 	HTTP POST /user/create
+[2024-09-04 06:47:41.562 PM] warn: 	HTTP POST /user/create
+[2024-09-04 06:47:56.751 PM] error: 	HTTP POST /user/create
+[2024-09-04 06:48:54.075 PM] info: 	HTTP POST /user/create
+[2024-09-04 06:56:25.165 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:56:25.174 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 06:56:25.317 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 06:56:25.876 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:56:27.206 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 06:56:27.507 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 06:56:27.702 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 06:56:36.899 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:56:37.839 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 06:56:37.841 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 06:56:38.030 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 06:56:39.204 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 06:56:39.237 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 06:56:39.314 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 06:57:37.438 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 06:57:37.629 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 06:57:38.201 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 06:57:38.909 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 06:57:38.967 PM] info: 	HTTP GET /brand/get/0665b99d-13f5-48a5-a416-14b43b47d690
+[2024-09-04 06:57:38.969 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:04:37.956 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 07:04:37.975 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:04:38.173 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 07:04:39.248 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:04:40.358 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 07:04:40.793 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:04:40.894 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 07:09:45.920 PM] warn: 	HTTP POST /brand/getAll
+[2024-09-04 07:10:34.301 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 07:11:51.996 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:11:52.215 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 07:11:52.221 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 07:11:52.732 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:11:54.618 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 07:11:54.833 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 07:11:54.876 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:12:04.882 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:12:06.002 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 07:12:06.007 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 07:12:06.008 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 07:12:06.787 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:12:06.811 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:12:06.817 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:21:11.534 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 07:21:11.554 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 07:21:11.562 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:21:12.120 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:21:13.166 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 07:21:13.292 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:21:13.316 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 07:21:31.847 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:21:33.469 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 07:21:33.523 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 07:21:33.694 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 07:21:34.711 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:21:34.764 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:21:34.814 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:34:11.269 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:34:11.361 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 07:34:11.368 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 07:34:11.984 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:34:12.970 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 07:34:13.000 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:34:13.206 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 07:34:15.450 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:34:16.261 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 07:34:16.262 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 07:34:16.266 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 07:34:17.132 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:34:17.250 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:34:17.269 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:44:02.066 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:44:02.093 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 07:44:02.255 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 07:44:02.825 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:44:05.396 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 07:44:05.538 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:44:05.661 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 07:44:10.143 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:44:12.770 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 07:44:13.691 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 07:44:14.046 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 07:44:16.462 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:44:17.037 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:44:17.170 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:53:58.239 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:53:58.364 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 07:53:58.385 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 07:53:58.855 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:53:59.641 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 07:53:59.693 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:53:59.922 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 07:54:01.547 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:54:02.256 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 07:54:02.264 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 07:54:02.416 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 07:54:03.209 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:54:03.224 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:54:03.667 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:56:12.287 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:56:12.346 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 07:56:12.387 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 07:56:12.978 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:56:14.580 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 07:56:14.743 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 07:56:14.767 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:56:19.130 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 07:56:19.839 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 07:56:19.840 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 07:56:20.092 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 07:56:20.867 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:56:20.943 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 07:56:21.021 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:00:19.731 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:00:19.828 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 08:00:19.854 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 08:00:20.429 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:00:21.172 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:00:21.598 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:00:21.599 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:00:24.804 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:00:25.627 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 08:00:25.629 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 08:00:25.630 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 08:00:26.603 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:00:26.605 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:00:26.610 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:03:40.165 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:03:40.183 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 08:03:40.676 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 08:03:40.783 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:03:41.923 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:03:41.925 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:03:41.926 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:03:48.122 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:03:48.888 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 08:03:48.902 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 08:03:48.905 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 08:03:49.947 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:03:49.948 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:03:49.950 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:05:53.856 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:05:53.939 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 08:05:54.053 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 08:05:54.952 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:05:55.773 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:05:55.783 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:05:56.041 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:05:57.473 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:05:58.256 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 08:05:58.258 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 08:05:58.269 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 08:05:59.071 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:05:59.077 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:05:59.360 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:09:27.530 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:09:27.536 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 08:09:27.537 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 08:09:28.123 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:09:29.279 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:09:29.298 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:09:29.300 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:09:33.400 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:09:34.389 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 08:09:34.393 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 08:09:34.398 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 08:09:35.399 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:09:35.663 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:09:35.664 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:12:37.579 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:12:37.704 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 08:12:37.821 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 08:12:38.388 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:12:39.196 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:12:39.235 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:12:39.236 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:12:41.453 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:12:42.116 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 08:12:42.366 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 08:12:42.368 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 08:12:43.231 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:12:43.288 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:12:43.300 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:18:15.180 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 08:18:15.207 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 08:18:15.231 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:18:15.864 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:18:16.873 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:18:16.878 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:18:17.030 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:18:26.931 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:18:27.728 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 08:18:27.729 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 08:18:27.729 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 08:18:28.661 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:18:28.730 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:18:28.731 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:28:49.430 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:28:49.527 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 08:28:49.775 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 08:28:50.399 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:28:51.273 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:28:51.344 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:28:51.383 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:28:57.390 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:28:58.105 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 08:28:58.114 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 08:28:58.174 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 08:28:58.937 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:28:58.963 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:28:58.998 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:31:58.617 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:31:59.126 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 08:31:59.153 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 08:31:59.324 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:32:00.398 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:32:00.409 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:32:00.413 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:32:03.247 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:32:04.129 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 08:32:04.200 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 08:32:04.633 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 08:33:25.412 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:33:25.460 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 08:33:25.461 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 08:33:26.145 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:33:27.201 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:33:27.203 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:36:52.439 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:36:52.455 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 08:36:52.549 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 08:36:53.652 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:36:54.701 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:36:54.713 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:36:54.826 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:37:01.399 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:37:02.365 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 08:37:02.366 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 08:37:02.373 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 08:37:03.186 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:37:03.189 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:37:03.215 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:39:58.178 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 08:39:58.236 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:39:58.328 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 08:39:59.030 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:40:00.053 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:40:00.096 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:40:00.099 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:40:07.872 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:40:08.654 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 08:40:08.656 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 08:40:08.657 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 08:40:09.451 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:40:09.468 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:40:09.659 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:42:53.215 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:42:53.235 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 08:42:53.312 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 08:42:53.876 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:42:54.623 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:42:54.655 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:42:54.722 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:42:58.995 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:42:59.677 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 08:42:59.711 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 08:42:59.890 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 08:43:00.706 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:43:00.759 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:43:00.768 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:44:49.264 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 08:44:49.972 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 08:44:50.222 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:44:58.686 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:44:58.697 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:44:58.973 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:45:12.814 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:45:12.823 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:45:12.844 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:45:12.934 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:45:13.610 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 08:45:13.614 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 08:45:13.617 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 08:45:14.449 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:45:14.544 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:45:14.661 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:48:14.568 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:48:15.106 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 08:48:15.223 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 08:48:15.697 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:48:19.603 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:48:19.875 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:48:19.891 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:48:30.829 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:48:32.819 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 08:48:32.887 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 08:48:32.890 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 08:48:34.563 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:48:35.254 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:48:35.271 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:49:54.442 PM] info: 	HTTP GET /brand/getAll
+[2024-09-04 08:49:54.503 PM] info: 	HTTP GET /event/getAll
+[2024-09-04 08:49:55.066 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:49:55.801 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:49:55.860 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:49:55.933 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a5
+[2024-09-04 08:49:57.055 PM] info: 	HTTP GET /event/getAllFavEvent?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-04 08:49:57.099 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:49:57.114 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:49:57.204 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:49:57.754 PM] info: 	HTTP GET /event/getEvent/85bba4e2-8219-4522-9b05-3c1c137db829
+[2024-09-04 08:49:57.788 PM] info: 	HTTP GET /event/getEvent/50893d75-cdd2-4094-9cbe-6baa34152dce
+[2024-09-04 08:49:57.791 PM] info: 	HTTP GET /event/getEvent/c4fb5c4d-4ef7-4c43-b978-4bfab379dce1
+[2024-09-04 08:49:58.594 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:49:58.700 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+[2024-09-04 08:49:58.877 PM] info: 	HTTP GET /brand/get/05e44252-ff08-4a0a-b238-93cf3c5382a0
+>>>>>>> main

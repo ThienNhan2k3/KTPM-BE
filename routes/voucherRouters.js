@@ -14,6 +14,9 @@ router.delete("/delete/:voucher_code", voucherController.deleteVoucher);
 // router.get("/getAll", voucherController.getAll);
 // router.get("/getAll_active", voucherController.getAll_active);
 
+router.get("/getAll", voucherController.getAll);
+router.get("/getAll_active", voucherController.getAll_active);
+// router.post("/create", accountController.createAccount);
 // router.get("/get/:uuid", accountController.getAccountByUUID);
 
 module.exports = router;
