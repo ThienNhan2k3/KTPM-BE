@@ -91,7 +91,7 @@ app.use('/account', accountRoutes);
 app.use('/user', userRoutes);
 app.use('/brand', brandRoutes);
 app.use('/quiz',quizRoutes);
-app.use('/questions', questionRoutes);
+app.use('/question', questionRoutes);
 app.use('/event', EventRoutes);
 app.use('/game', require("./routes/gameRoutes.js"));
 app.use('/voucher', voucherRoutes);
