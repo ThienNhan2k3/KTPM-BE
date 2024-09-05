@@ -1,10 +1,15 @@
-const ErrorResponse = require("../core/errorResponse")
+const ErrorResponse = require("../core/errorResponse");
+const UserService = require("../services/userService");
 
-const authenticate = (req, res, next) => {
-    console.log("Authenticate");
-    
-    console.log(req.isAuthenticated());
-    if(req.isAuthenticated()) {
+const authenticate = async (req, res, next) => {
+    const userId = req.headers["authorization"];
+    if (userId) {
+        const user = await UserService.findById(userId);
+        if (user) {
+            req.user = user;
+            return next();
+        }
+    } else if(req.isAuthenticated()) {
         return next();
     }
     return res.json({

@@ -9,6 +9,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      const {User, Item} = models;
+      this.belongsTo(User, {foreignKey: "id_user"});
+      this.belongsTo(Item, {foreignKey: "id_item"});
     }
   }
   User_Item.init(
@@ -16,10 +19,12 @@ module.exports = (sequelize, DataTypes) => {
       id_item: {
         type: DataTypes.UUID,
         allowNull: false,
+        primaryKey: true
       },
       id_user: {
         type: DataTypes.UUID,
         allowNull: false,
+        primaryKey: true,
       },
       quantity: {
         type: DataTypes.INTEGER,

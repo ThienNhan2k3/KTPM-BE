@@ -105,7 +105,7 @@ app.post("/routes", (req, res, next) => {
             metadata: {
                 login: true,
                 permission: path.includes("/brand"),
-                homePage: path.includes("/brand") ? "/brand" : "/admin"
+                homePage: "/brand"
             },
         })
     } else if (req.user.type == "Admin") {
@@ -114,7 +114,7 @@ app.post("/routes", (req, res, next) => {
             metadata:  {
                 login: true,
                 permission: path.includes("/admin"),
-                homePage: path.includes("/brand") ? "/brand" : "/admin"
+                homePage: "/admin"
             }
         })
     }

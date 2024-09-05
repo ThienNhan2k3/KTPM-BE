@@ -138,7 +138,6 @@ CREATE TABLE "user_vouchers" (
 CREATE TABLE "items" (
   "id" uuid PRIMARY KEY,
   "id_event" uuid,
-  "quantity" integer,
   "name" varchar,
   "image" varchar,
   "time_update" timestamp

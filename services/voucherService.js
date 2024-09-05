@@ -13,39 +13,54 @@ class VoucherService {
         return Voucher.findAll(option);
     }
 
-    static async setVoucherToUser(userId, voucherInEventId, quantity=1) {
-        const voucherInEvent = await Voucher_In_Event.findOne({
+    static async findVoucherByCode(voucher_code) {
+        return Voucher.findAll({
             where: {
-                id: voucherInEventId,
-            },
+                voucher_code
+            }
         });
-        if (voucherInEvent.total_quantity < 1) {
+    }
+
+    static async setVoucherToUser(userId, voucherInEventId, quantity=1) {
+        try {
+            const voucherInEvent = await Voucher_In_Event.findOne({
+                where: {
+                    id: voucherInEventId,
+                },
+            });
+            if (voucherInEvent.total_quantity < 1) {
+                return null;
+            } 
+            
+            
+            const [userVoucher, created] = await User_Voucher.findOrCreate({
+                where: {  
+                    id_voucher: voucherInEventId,
+                    id_user: userId, 
+                },
+                defaults: {
+                    id_voucher: voucherInEventId,
+                    id_user: userId,
+                    quantity: quantity,
+                    time_update: new Date(),
+                    used: 0
+                },  
+            })
+            if (!created) {
+                userVoucher.quantity += quantity;
+                await userVoucher.save();
+            }
+    
+    
+            voucherInEvent.total_quantity -= 1;
+            await voucherInEvent.save();
+    
+            return true;
+        } catch (error) {
+            console.error(error);
             return false;
-        } 
-        
-        
-        const [userVoucher, created] = await User_Voucher.findOrCreate({
-            where: {  
-                id_voucher: voucherInEventId,
-                id_user: userId, 
-            },
-            defaults: {
-                id_voucher: voucherInEventId,
-                id_user: userId,
-                quantity: quantity,
-                time_update: new Date(),
-            },  
-        })
-        if (!created) {
-            userVoucher.quantity += quantity;
-            await userVoucher.save();
         }
-
-
-        voucherInEvent.total_quantity -= 1;
-        await voucherInEvent.save();
-
-        return true;
+        
     } 
 }
 

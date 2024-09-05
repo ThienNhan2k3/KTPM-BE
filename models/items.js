@@ -11,6 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      const {User_Item, Event} = models;
+      this.hasMany(User_Item, {foreignKey: 'id_user'});
+      this.belongsTo(Event, {foreignKey: "id_event"});
     }
   }
   Item.init({
@@ -22,10 +25,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     id_event: {
       type: DataTypes.UUID,
-      allowNull: false
-    },
-    quantity: {
-      type: DataTypes.INTEGER,
       allowNull: false
     },
     name: {

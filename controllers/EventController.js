@@ -1,5 +1,9 @@
 const { where } = require('sequelize');
 const { Event } = require('../models');
+const ItemService = require("../services/itemService");
+const VoucherService = require('../services/voucherService');
+const EventService = require('../services/eventService');
+const ErrorResponse = require('../core/errorResponse');
 
 
 // Get all events
@@ -101,3 +105,85 @@ exports.deleteAccount = async (req, res) => {
         return res.status(500).json(err);
     }
 };
+
+exports.playLacXiEvent = async (req, res) => {
+    const eventId = req.params.uuid;
+    const userId = req.user.id;
+    try {
+        if (await EventService.removeEventTicket(eventId, userId)) {
+            return res.json({
+                code: 200,
+                item: await  ItemService.giveRandomItemToUser(userId, eventId, 1)
+            });
+        }
+        return res.json({
+            code: 400,
+            message: "Bạn không có đủ vé để tham gia"
+        });
+       
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json(err);
+    }
+}
+
+exports.redeemGift = async (req, res) => {
+    const userId = req.user.id;
+    const eventId = req.params.uuid;
+    try {
+        const itemsInEvent = await ItemService.getAllItemOfEvent(eventId);
+        const itemOfUsers =  await ItemService.getNumberOfItemOfUserInEvent(userId, eventId);
+        
+        if (itemOfUsers == itemsInEvent.length) {
+            for (let i = 0; i < itemsInEvent.length; i++) {
+                console.log(itemsInEvent[i].id);
+                await ItemService.deleteItemOfUser(userId, itemsInEvent[i].id);
+            }
+            const vouchersInEvent = await VoucherService.findVouchersByEventId(eventId)
+            const randomVoucher = vouchersInEvent[(Math.floor(Math.random() * vouchersInEvent.length))];
+            const isAsignedVoucher = await  VoucherService.setVoucherToUser(userId, randomVoucher. Voucher_In_Events[0].id, 1)
+            if (isAsignedVoucher) {
+                return res.json({
+                    code: 200,
+                    item: randomVoucher
+                });
+            }
+            throw new ErrorResponse("Server Internal Error", 500);
+        }
+
+        return res.json({
+            code: 400,
+            message: "Bạn không có đủ items"
+        });
+
+        
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json(err);
+    }
+}
+exports.shareFb = async (req, res) => {
+    const userId = req.user.id;
+    const eventId = req.params.uuid;
+    try {
+        const isAdded = await EventService.addEventTicket(eventId, userId);
+        if (isAdded) {
+            return res.json({
+                code: 200,
+                message: "Thêm ticket thành công"
+            });
+        }
+        throw new ErrorResponse("Server Internal Error", 500);
+
+
+        
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json(err);
+    }
+}
+exports.donateTicket = async (req, res) => {
+    return res.json({
+        message: "Chưa làm"
+    })
+}

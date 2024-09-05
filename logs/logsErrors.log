@@ -362,3 +362,8 @@
 [2024-09-03 01:48:57.205 PM] error: 	404 - TypeError: Cannot read properties of undefined (reading 'findOne')
     at Strategy.verifyCallback [as _verify] (D:\Code\Web Project\KTPM-Backend\routes\authRoutes.js:69:35)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2024-09-05 11:37:39.190 AM] error: 	HTTP GET /event/lacxi/c4fb5c4d-4ef7-4c43-b978-4bfab379dce2/redeem
+[2024-09-05 11:38:23.231 AM] error: 	HTTP GET /event/lacxi/c4fb5c4d-4ef7-4c43-b978-4bfab379dce2/redeem
+[2024-09-05 12:13:28.774 PM] error: 	HTTP GET /event/lacxi/c4fb5c4d-4ef7-4c43-b978-4bfab379dce2/redeem
+[2024-09-05 01:29:50.393 PM] error: 	500 - Server Internal Error
+[2024-09-05 01:29:50.810 PM] error: 	HTTP GET /event/share/c4fb5c4d-4ef7-4c43-b978-4bfab379dce2
