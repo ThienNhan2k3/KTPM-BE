@@ -90,6 +90,7 @@ CREATE TABLE "answers" (
 );
 
 CREATE TABLE "fav_events" (
+  "id" uuid PRIMARY KEY,
   "id_event" uuid,
   "id_user" uuid,
   "time_update" timestamp

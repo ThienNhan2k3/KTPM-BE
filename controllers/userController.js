@@ -4,61 +4,63 @@ const { User } = require('../models');
 exports.getAll = async (req, res) => {
     try {
         const users = await User.findAll({
-            where:{
+            where: {
                 type: "Người chơi"
             }
         });
         return res.json(users);
     } catch (err) {
         console.log(err);
-        return res.status(500).json(err);
+        return res.status(500).json({ error: 'Internal Server Error' });
     }
 };
 
-// Create an user
+// Create a user
 exports.createuser = async (req, res) => {
-    const { name, email, password, phone, type, status } = req.body;
+    const { full_name, email, password, phone, type, status, user_name, avatar } = req.body;
     try {
-        const f_user = await user.findOne({
-            where: { email },
+        const existingUser = await User.findOne({
+            where: { phone },
         });
-        if (f_user) {
-            return res.status(404).json({ error: 'user already exist!' });
+        if (existingUser) {
+            return res.status(400).json({ error: 'User already exists!' });
         } else {
-            const user = await user.create({ name, email, password, phone, type, status });
-            return res.json(user);
+            const newUser = await User.create({ full_name, email, password, phone, type, status, user_name, avatar, time_update: new Date() });
+            return res.json(newUser);
         }
-        
     } catch (err) {
         console.log(err);
-        return res.status(500).json(err);
+        return res.status(500).json({ error: 'Internal Server Error' });
     }
 };
 
-// Find an user by UUID
+// Find a user by UUID
 exports.getuserByUUID = async (req, res) => {
-    const id = req.params.uuid;
+    const uuid = req.params.uuid;
     try {
-        const user = await user.findOne({
-            where: { id },
+        const userData = await User.findOne({
+            where: { id: uuid },
         });
-        return res.json(user);
+        if (!userData) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+        return res.json(userData);
     } catch (err) {
         console.log(err);
-        return res.status(500).json(err);
+        return res.status(500).json({ error: 'Internal Server Error' });
     }
 };
 
-// Update an user
+// Update a user
 exports.updateuser = async (req, res) => {
     const id = req.params.uuid;
     const { name, email, password, phone, type, status } = req.body;
     try {
-        const user = await user.findOne({
+        const user = await User.findOne({
             where: { id },
         });
         if (!user) {
-            return res.status(404).json({ error: 'user not found' });
+            return res.status(404).json({ error: 'User not found' });
         }
         user.name = name;
         user.email = email;
@@ -71,26 +73,26 @@ exports.updateuser = async (req, res) => {
         return res.json(user);
     } catch (err) {
         console.log(err);
-        return res.status(500).json(err);
+        return res.status(500).json({ error: 'Internal Server Error' });
     }
 };
 
-// Delete an user
+// Delete a user
 exports.deleteuser = async (req, res) => {
     const id = req.params.uuid;
     try {
-        const user = await user.findOne({
+        const user = await User.findOne({
             where: { id },
         });
 
         if (!user) {
-            return res.status(404).json({ error: 'user not found' });
+            return res.status(404).json({ error: 'User not found' });
         }
 
         await user.destroy();
-        return res.json({ message: 'user deleted successfully' });
+        return res.json({ message: 'User deleted successfully' });
     } catch (err) {
         console.log(err);
-        return res.status(500).json(err);
+        return res.status(500).json({ error: 'Internal Server Error' });
     }
 };

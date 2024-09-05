@@ -1,31 +1,7 @@
-// const { where } = require("sequelize");
-// const { Voucher } = require("../models");
+//const { where } = require("sequelize");
+//const { Voucher } = require("../models");
 
-// // Get all vouchers
-// exports.getAll = async (req, res) => {
-//   try {
-//     const vouchers = await Voucher.findAll();
-//     return res.json(vouchers);
-//   } catch (err) {
-//     console.log(err);
-//     return res.status(500).json(err);
-//   }
-// };
 
-// // Get all vouchers that still active
-// exports.getAll_active = async (req, res) => {
-//   try {
-//     const vouchers = await Voucher.findAll({
-//       where: {
-//         status: "Active",
-//       },
-//     });
-//     return res.json(vouchers);
-//   } catch (err) {
-//     console.log(err);
-//     return res.status(500).json(err);
-//   }
-// };
 
 // // Create a voucher
 // exports.create = async (req, res) => {
@@ -164,30 +140,31 @@
 //   }
 // };
 
-const { Voucher } = require("../models");
-const { Op } = require("@sequelize/core");
+const { Voucher_In_Event, Voucher } = require("../models");
 
-class voucherController {
-  // Get all vouchers of brand
-  static getVoucherByIdBrand = async (req, res) => {
-    const id_brand = req.params.id_brand;
-    let vouchers = null;
-
+class voucher_in_eventController {
+  // Get all by id_event
+  static getVoucherByIdEvent = async (req, res) => {
+    const id_event = req.params.uuid;
     try {
-      vouchers = await Voucher.findAll({
-        where: {
-          id_brand,
-          status: {
-            [Op.ne]: "Delete", // Điều kiện lấy tất cả các user có status khác "Delete"
+      const vouchers = await Voucher_In_Event.findAll({
+        where: { id_event },
+        include: [
+          {
+            model: Voucher,
+            required: true,
           },
-        },
+        ],
+        order: [['id', 'ASC']],
       });
+      //console.log(vouchers);
       return res.send(vouchers);
     } catch (err) {
       console.log(err);
       return res.status(500).json(err);
     }
   };
+  
 
   // Get all vouchers
   static getAll = async (req, res) => {
@@ -218,102 +195,37 @@ class voucherController {
     }
   };
 
-  // Create a voucher
-  static createVoucher = async (req, res) => {
-    const { voucher_code, max_discount, value, description, status } = req.body;
-    try {
-      const [, created] = await Voucher.findOrCreate({
-        where: { voucher_code },
-        defaults: {
-          voucher_code,
-          id_brand: "05e44252-ff08-4a0a-b238-93cf3c5382a6",
-          image: "",
-          max_discount,
-          value,
-          description,
-          status,
-          time_update: new Date(),
-        },
-      });
-
-      if (!created) {
-        return res.send({ message: "voucher_code" });
-      } else {
-        return res.send({ message: "Success" });
-      }
-    } catch (err) {
-      console.log(err);
-      return res.status(500).json(err);
-    }
-  };
-
-  // Update a voucher
-  static updateVoucher = async (req, res) => {
-    const voucher_code = req.params.voucher_code;
-    const body = req.body;
-
-    console.log(voucher_code);
-    console.log(body.status);
-
-    let voucher = null;
-
-    try {
-      voucher = await Voucher.findOne({
-        where: { voucher_code },
-      });
-
-      if (!voucher) {
-        return res.status(404).json({ error: "Voucher not found" });
-      }
-
-      if (voucher.status !== body.status) {
-        voucher.status = body.status;
-        voucher.time_update = new Date();
-
-        await voucher.save();
-
-        return res.send({ message: "Success" });
-      } else {
-        return res.send({ message: "Fail" });
-      }
-    } catch (err) {
-      console.log(err);
-      return res.status(500).json(err);
-    }
-  };
-
-  //   // Delete a voucher
-  static deleteVoucher = async (req, res) => {
-    const voucher_code = req.params.voucher_code;
-
-    let voucher = null;
-
-    try {
-      voucher = await Voucher.findOne({
-        where: { voucher_code },
-      });
-
-      if (!voucher) {
-        return res.status(404).json({ error: "Voucher not found" });
-      }
-
-      voucher.status = "Delete";
-      voucher.time_update = new Date();
-
-      await voucher.save();
-
-      return res.send({ message: "Success" });
-    } catch (err) {
-      console.log(err);
-      return res.status(500).json(err);
-    }
-  };
+  //   // Create an account
+  //   static createAccount = async (req, res) => {
+  //     const { name, email, password, phone, type, status } = req.body;
+  //     try {
+  //       const f_account = await Users.findOne({
+  //         where: { email },
+  //       });
+  //       if (f_account) {
+  //         return res.status(404).json({ error: "Account already exist!" });
+  //       } else {
+  //         const account = await Users.create({
+  //           name,
+  //           email,
+  //           password,
+  //           phone,
+  //           type,
+  //           status,
+  //         });
+  //         return res.json(account);
+  //       }
+  //     } catch (err) {
+  //       console.log(err);
+  //       return res.status(500).json(err);
+  //     }
+  //   };
 
   //   // Find an account by UUID
   //   static getAccountByUUID = async (req, res) => {
   //     const id = req.params.uuid;
   //     try {
-  //       const account = await User.findOne({
+  //       const account = await Users.findOne({
   //         where: { id },
   //       });
   //       return res.json(account);
@@ -322,6 +234,51 @@ class voucherController {
   //       return res.status(500).json(err);
   //     }
   //   };
-}
 
-module.exports = voucherController;
+  //   // Update an account
+  //   static updateAccount = async (req, res) => {
+  //     const id = req.params.uuid;
+  //     const { name, email, password, phone, type, status } = req.body;
+  //     try {
+  //       const account = await Users.findOne({
+  //         where: { id },
+  //       });
+  //       if (!account) {
+  //         return res.status(404).json({ error: "Account not found" });
+  //       }
+  //       account.name = name;
+  //       account.email = email;
+  //       account.password = password;
+  //       account.phone = phone;
+  //       account.type = type;
+  //       account.status = status;
+
+  //       await account.save();
+  //       return res.json(account);
+  //     } catch (err) {
+  //       console.log(err);
+  //       return res.status(500).json(err);
+  //     }
+  //   };
+
+  //   // Delete an account
+  //   static deleteAccount = async (req, res) => {
+  //     const id = req.params.uuid;
+  //     try {
+  //       const account = await Users.findOne({
+  //         where: { id },
+  //       });
+
+  //       if (!account) {
+  //         return res.status(404).json({ error: "Account not found" });
+  //       }
+
+  //       await account.destroy();
+  //       return res.json({ message: "Account deleted successfully" });
+  //     } catch (err) {
+  //       console.log(err);
+  //       return res.status(500).json(err);
+  //     }
+  //   };
+}
+module.exports = voucher_in_eventController;

@@ -52,6 +52,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: null,
       },
+      avatar: {
+        type: DataTypes.STRING,
+        allowNull: null,
+      },
       time_update: {
         type: DataTypes.DATE,
         allowNull: false,

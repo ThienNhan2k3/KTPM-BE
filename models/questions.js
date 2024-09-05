@@ -44,8 +44,8 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      answear: {
-        type: DataTypes.INTEGER,
+      answer: {
+        type: DataTypes.NUMBER,
         allowNull: false,
       },
       time_update: {
