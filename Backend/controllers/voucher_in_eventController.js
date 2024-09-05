@@ -165,6 +165,59 @@ class voucher_in_eventController {
     }
   };
   
+  // Create voucher in event
+  static create = async (req, res) => {
+    const {
+      id_voucher_code,
+      id_event,
+      exp_date,
+      total_quantity
+    }= req.body;
+    console.log("ready to create voucher in event")
+    try {
+      const voucher = await Voucher_In_Event.create({
+        id_voucher_code,
+        id_event,
+        exp_date,
+        total_quantity,
+        time_update: new Date(),
+      });
+      return res.json(voucher);
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
+  };
+
+  // Update voucher in event
+  static update = async (req, res) => {
+    const id = req.params.uuid;
+    const {
+      id_voucher_code,
+      id_event,
+      exp_date,
+      total_quantity
+    }= req.body;
+
+    try {
+      const voucher = await Voucher_In_Event.findOne({
+        where: { id },
+      });
+      if (!voucher) {
+        return res.status(404).json({ error: "voucher not found" });
+      }
+      voucher.id_voucher_code = id_voucher_code;
+      voucher.exp_date = exp_date;
+      voucher.total_quantity = total_quantity;
+      voucher.time_update = new Date();
+      
+      await voucher.save();
+      return res.json(voucher);
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
+  };
 
   // Get all vouchers
   static getAll = async (req, res) => {
