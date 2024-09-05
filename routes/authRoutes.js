@@ -1,5 +1,6 @@
 const express = require('express');
 const passport = require('passport');
+const bcrypt = require("bcrypt");
 const authController = require("../controllers/authController");
 const LocalStrategy = require('passport-local').Strategy;
 const {User, Brand} = require("../models")
@@ -51,8 +52,6 @@ passport.deserializeUser(async function(accountId, done) {
 });
 
 const verifyCallback = async (email, password, done) => {
-    console.log("Email:::", email);
-    console.log("password:::", password);
     email = email ? email.trim() : ""; 
     if (!email) {
         return done(null, false, {message: JSON.stringify({flag: "email", content: "Tên tài khoản hoặc email bị bỏ trống" })});
@@ -76,9 +75,8 @@ const verifyCallback = async (email, password, done) => {
         if (!account) {
             return done(null, false);
         }
-        console.log(account);
-        // const isMatch = await bcrypt.compare(password, account.password);
-        const isMatch = password === account.password;
+        const isMatch = await bcrypt.compare(password, account.password);
+        // const isMatch = password === account.password;
         if (!isMatch) {
             return done(null, false);
         }
