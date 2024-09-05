@@ -12,7 +12,10 @@ router.post("/login", passport.authenticate('local', {
 }), authController.postLogin);
 
 router.get("/login", (req, res) => {
-    res.json("Login get")
+    res.json({
+        code: 400,
+        message: "Tài khoản hoặc mật khẩu không hợp lệ"
+    })
 })
 
 
