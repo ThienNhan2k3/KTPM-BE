@@ -1,6 +1,6 @@
-const { where } = require("sequelize");
 const { User, Brand } = require("../models");
 const { Op } = require("@sequelize/core");
+const { uploadToImgur } = require("../middlewares/uploadFile");
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
@@ -37,7 +37,7 @@ class accountController {
   };
 
   // Create an user account
-  static createAccountUser = async (req, res) => {
+  static createAccountUser = async (req, res, next) => {
     const {
       full_name,
       user_name,
@@ -49,9 +49,20 @@ class accountController {
       phone,
       type,
       status,
-    } = req.body;
+    } = JSON.parse(req.body.my_data);
+
+    // console.log(req.body.my_data);
+    // console.log(req.file);
 
     let hashPassword = null;
+    let imgurLink = null;
+
+    if (req.file) {
+      // Upload the file to Imgur
+      imgurLink = await uploadToImgur(req.file.buffer);
+    } else {
+      imgurLink = "";
+    }
 
     bcrypt.hash(password, saltRounds, async (err, hash) => {
       if (err) {
@@ -65,7 +76,7 @@ class accountController {
           defaults: {
             full_name,
             user_name,
-            avatar: "",
+            avatar: imgurLink,
             dob,
             email,
             password: hashPassword,

@@ -1,5 +1,6 @@
 const express = require("express");
 const voucherController = require("../controllers/voucherController");
+const { upload } = require("../middlewares/uploadFile");
 
 const router = express.Router();
 
@@ -7,7 +8,11 @@ router.get(
   "/getVoucherByIdBrand/:id_brand",
   voucherController.getVoucherByIdBrand
 );
-router.post("/create", voucherController.createVoucher);
+router.post(
+  "/create",
+  upload.single("my_image"),
+  voucherController.createVoucher
+);
 router.put("/update/:voucher_code", voucherController.updateVoucher);
 router.delete("/delete/:voucher_code", voucherController.deleteVoucher);
 
