@@ -1,57 +1,48 @@
 "use strict";
-const { Model, Table } = require("sequelize");
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class Event extends Model {
+  class Voucher extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-
     static associate(models) {
       // define association here
-      const {User_Event, Voucher_In_Event, Item, Brand} = models;
-      this.hasMany(User_Event, {foreignKey: 'id_event'});
-      this.hasMany(Voucher_In_Event, {foreignKey: "id_event"});
-      this.hasMany(Item, {foreignKey: "id_event"});
-
+      const { Voucher_In_Event } = models;
+      this.hasMany(Voucher_In_Event, { foreignKey: "id_voucher_code" });
     }
   }
-  Event.init(
+  Voucher.init(
     {
-      id: {
-        allowNull: false,
-        primaryKey: true,
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
-      },
-      type: {
+      voucher_code: {
         type: DataTypes.STRING,
         allowNull: false,
-      },
-      id_game: {
-        type: DataTypes.UUID,
-        allowNull: false,
+        primaryKey: true,
       },
       id_brand: {
         type: DataTypes.UUID,
-        allowNull: false,
-      },
-      name: {
-        type: DataTypes.STRING,
         allowNull: false,
       },
       image: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      start_time: {
-        type: DataTypes.DATEONLY,
-        allowNull: null,
+      value: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
       },
-      end_time: {
-        type: DataTypes.DATEONLY,
-        allowNull: null,
+      max_discount: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+      },
+      description: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+      },
+      status: {
+        type: DataTypes.STRING,
+        allowNull: false,
       },
       time_update: {
         type: DataTypes.DATE,
@@ -60,8 +51,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      tableName: "events",
-      modelName: "Event",
+      tableName: "vouchers",
+      modelName: "Voucher",
       // don't add the timestamp attributes (updatedAt, createdAt)
       timestamps: false,
       // If don't want createdAt
@@ -70,5 +61,5 @@ module.exports = (sequelize, DataTypes) => {
       updatedAt: false,
     }
   );
-  return Event;
+  return Voucher;
 };

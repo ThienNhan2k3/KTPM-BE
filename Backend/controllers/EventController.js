@@ -4,6 +4,8 @@ const ItemService = require("../services/itemService");
 const VoucherService = require('../services/voucherService');
 const EventService = require('../services/eventService');
 const ErrorResponse = require('../core/errorResponse');
+const rabbitMQConnection = require("../database/rabbitmq/connection");
+
 
 // Get all events
 exports.getAll = async (req, res) => {
@@ -134,20 +136,25 @@ exports.redeemGift = async (req, res) => {
         const itemOfUsers =  await ItemService.getNumberOfItemOfUserInEvent(userId, eventId);
         
         if (itemOfUsers == itemsInEvent.length) {
-            for (let i = 0; i < itemsInEvent.length; i++) {
-                console.log(itemsInEvent[i].id);
-                await ItemService.deleteItemOfUser(userId, itemsInEvent[i].id);
-            }
+            rabbitMQConnection.sendToTopicExchange("items", "deleteEachItemOfUserInEvent", {
+                userId,
+                items: itemsInEvent
+            });    
+            // for (let i = 0; i < itemsInEvent.length; i++) {
+            //     await ItemService.deleteItemOfUser(userId, itemsInEvent[i].id);
+            // }
             const vouchersInEvent = await VoucherService.findVouchersByEventId(eventId)
             const randomVoucher = vouchersInEvent[(Math.floor(Math.random() * vouchersInEvent.length))];
-            const isAsignedVoucher = await  VoucherService.setVoucherToUser(userId, randomVoucher. Voucher_In_Events[0].id, 1)
-            if (isAsignedVoucher) {
-                return res.json({
-                    code: 200,
-                    item: randomVoucher
-                });
-            }
-            throw new ErrorResponse("Server Internal Error", 500);
+            // const isAsignedVoucher = await  VoucherService.setVoucherToUser(userId, randomVoucher. Voucher_In_Events[0].id, 1)
+            rabbitMQConnection.sendToTopicExchange("vouchers", "setVoucherToUser", {
+                userId,
+                voucherInEventId: randomVoucher.Voucher_In_Events[0].id,
+                quantity: 1
+            }); 
+            return res.json({
+                code: 200,
+                item: randomVoucher
+            });
         }
 
         return res.json({
