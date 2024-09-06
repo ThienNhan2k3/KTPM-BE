@@ -16,7 +16,7 @@ exports.getAll = async (req, res) => {
 
 // Create a question
 exports.create = async (req, res) => {
-    const {id_quiz, ques, choice_1, choice_2, choice_3, choice_4, answer,} = req.body;
+    const {id_quiz, ques, choice_1, choice_2, choice_3, choice_4, answer} = req.body;
     try {
         const quiz = await Quiz .findOne({
             where: {
@@ -64,45 +64,26 @@ exports.getbyQuiz = async (req, res) => {
     }
 };
 
-// Find an quiz by UUID
-exports.getQuizByUUID = async (req, res) => {
-    const uuid = req.params.uuid;
-    try {
-        const quiz = await Quiz.findOne({
-            where: { uuid },
-        });
-        return res.json(quiz);
-    } catch (err) {
-        console.log(err);
-        return res.status(500).json(err);
-    }
-};
-
 // Update an quiz
-exports.updateQuiz = async (req, res) => {
-    const uuid = req.params.uuid;
-    const { question, answers, correct_answer, qeID} = req.body;
+exports.update = async (req, res) => {
+    const id = req.params.uuid;
+    const { id_quiz, ques, choice_1, choice_2, choice_3, choice_4, answer} = req.body;
     try {
-        const quizevent = await QuizEvent.findOne({
-            where: {
-                uuid: qeID,
-            }
-        })
-        if(quizevent) {
-            const quiz = await Quiz.findOne({
-                where: { uuid },
-            });
-            if (!quiz) {
-                return res.status(404).json({ error: 'quiz not found' });
-            }
-            quiz.question = question;
-            quiz.answers = answers;
-            quiz.correct_answer = correct_answer;
-            quiz.qeID = qeID;
-    
-            await quiz.save();
-            return res.json(quiz);
-        } else return res.status(404).json({ error: 'qeID not found' });
+        const question = await Question.findOne({
+            where: { id },
+        });
+        if (!question) {
+            return res.status(404).json({ error: 'question not found' });
+        }
+        question.ques = ques;
+        question.choice_1 = choice_1;
+        question.choice_2 = choice_2;
+        question.choice_3 = choice_3;
+        question.choice_4 = choice_4;
+        question.answer = answer;
+
+        await question.save();
+        return res.json(question);
     } catch (err) {
         console.log(err);
         return res.status(500).json(err);
@@ -110,19 +91,19 @@ exports.updateQuiz = async (req, res) => {
 };
 
 // Delete an quiz
-exports.deleteQuiz = async (req, res) => {
-    const uuid = req.params.uuid;
+exports.delete = async (req, res) => {
+    const id = req.params.uuid;
     try {
-        const quiz = await Quiz.findOne({
-            where: { uuid },
+        const question = await Question.findOne({
+            where: { id },
         });
 
-        if (!quiz) {
-            return res.status(404).json({ error: 'quiz not found' });
+        if (!question) {
+            return res.status(404).json({ error: 'question not found' });
         }
 
-        await quiz.destroy();
-        return res.json({ message: 'quiz deleted successfully' });
+        await question.destroy();
+        return res.json({ message: 'Question deleted successfully' });
     } catch (err) {
         console.log(err);
         return res.status(500).json(err);
