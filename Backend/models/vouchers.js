@@ -48,6 +48,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.DATE,
         allowNull: false,
       },
+      type: {
+        type: DataTypes.STRING,
+        allowNull: null,
+      },
     },
     {
       sequelize,

@@ -166,6 +166,7 @@
 
 const { Voucher } = require("../models");
 const { Op } = require("@sequelize/core");
+const { uploadToImgur } = require("../middlewares/uploadFile");
 
 class voucherController {
   // Get all vouchers of brand
@@ -220,17 +221,32 @@ class voucherController {
 
   // Create a voucher
   static createVoucher = async (req, res) => {
-    const { voucher_code, max_discount, value, description, status } = req.body;
+    const { voucher_code, max_discount, value, description, type, status } =
+      JSON.parse(req.body.my_data);
+
+    // console.log(req.body.my_data);
+    // console.log(req.file);
+
+    let imgurLink = null;
+
+    if (req.file) {
+      // Upload the file to Imgur
+      imgurLink = await uploadToImgur(req.file.buffer);
+    } else {
+      imgurLink = "";
+    }
+
     try {
       const [, created] = await Voucher.findOrCreate({
         where: { voucher_code },
         defaults: {
           voucher_code,
           id_brand: "05e44252-ff08-4a0a-b238-93cf3c5382a6",
-          image: "",
+          image: imgurLink,
           max_discount,
           value,
           description,
+          type,
           status,
           time_update: new Date(),
         },
