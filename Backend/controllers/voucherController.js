@@ -219,6 +219,37 @@ class voucherController {
     }
   };
 
+  // Count all active vouchers
+  static countAll_active = async (req, res) => {
+    try {
+      const activeVouchersCount = await Voucher.count({
+        where: {
+          status: "Active",
+        },
+      });
+      return res.json({ activeVouchersCount });
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
+  };
+
+  // Count all inactive vouchers
+  static countAll_inactive = async (req, res) => {
+    try {
+      const inactiveVouchersCount = await Voucher.count({
+        where: {
+          status: "Inactive",
+        },
+      });
+      return res.json({ inactiveVouchersCount });
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
+  };
+
+
   // Create a voucher
   static createVoucher = async (req, res) => {
     const { voucher_code, max_discount, value, description, type, status } =

@@ -25,8 +25,8 @@ exports.create = async (req, res) => {
         });
 
         if (quiz) {
-            console.log(answer.type);
-            console.log(answer);
+            //console.log(answer.type);
+            //console.log(answer);
             const question = await Question.create({
                 id_quiz: quiz.id, // Assuming the QuizEvent has an `id` field that relates to `id_quiz`
                 ques,

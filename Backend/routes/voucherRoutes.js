@@ -16,8 +16,8 @@ router.post(
 router.put("/update/:voucher_code", voucherController.updateVoucher);
 router.delete("/delete/:voucher_code", voucherController.deleteVoucher);
 
-// router.get("/getAll", voucherController.getAll);
-// router.get("/getAll_active", voucherController.getAll_active);
+router.get("/countAll_active", voucherController.countAll_active);
+router.get("/countAll_inactive", voucherController.countAll_inactive);
 
 router.get("/getAll", voucherController.getAll);
 router.get("/getAll_active", voucherController.getAll_active);
