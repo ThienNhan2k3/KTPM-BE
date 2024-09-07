@@ -1,21 +1,18 @@
 const { Item} = require('../models');
 
-// Get all users
+// Get all items
 exports.getAll = async (req, res) => {
     try {
-        const users = await User.findAll({
-            where: {
-                type: "Người chơi"
-            }
+        const items = await Item.findAll({
         });
-        return res.json(users);
+        return res.json(items);
     } catch (err) {
         console.log(err);
         return res.status(500).json({ error: 'Internal Server Error' });
     }
 };
 
-// Create a user
+// Create an item
 exports.create = async (req, res) => {
     const { id_event, name, image } = req.body;
     try {
@@ -32,63 +29,58 @@ exports.create = async (req, res) => {
     }
 };
 
-// Find a user by UUID
-exports.getuserByUUID = async (req, res) => {
-    const uuid = req.params.uuid;
+// Find items by id_event
+exports.getbyIdEvent = async (req, res) => {
+    const id_event = req.params.uuid;
     try {
-        const userData = await User.findOne({
-            where: { id: uuid },
+        const items = await Item.findAll({
+            where: { id_event},
         });
-        if (!userData) {
-            return res.status(404).json({ message: 'User not found' });
-        }
-        return res.json(userData);
+        console.log("items:", items);
+        return res.json(items);
     } catch (err) {
         console.log(err);
         return res.status(500).json({ error: 'Internal Server Error' });
     }
 };
 
-// Update a user
-exports.updateuser = async (req, res) => {
+// Update an item
+exports.update = async (req, res) => {
     const id = req.params.uuid;
-    const { name, email, password, phone, type, status } = req.body;
+    const { id_event, name, image } = req.body;
     try {
-        const user = await User.findOne({
+        const item = await Item.findOne({
             where: { id },
         });
-        if (!user) {
-            return res.status(404).json({ error: 'User not found' });
+        if (!item) {
+            return res.status(404).json({ error: 'Item not found' });
         }
-        user.name = name;
-        user.email = email;
-        user.password = password;
-        user.phone = phone;
-        user.type = type;
-        user.status = status;
+        item.id_event = id_event; 
+        item.name = name;
+        item.image = image;
 
-        await user.save();
-        return res.json(user);
+        await item.save();
+        return res.json(item);
     } catch (err) {
         console.log(err);
         return res.status(500).json({ error: 'Internal Server Error' });
     }
 };
 
-// Delete a user
-exports.deleteuser = async (req, res) => {
+// Delete an item
+exports.delete = async (req, res) => {
     const id = req.params.uuid;
     try {
-        const user = await User.findOne({
+        const item = await Item.findOne({
             where: { id },
         });
 
-        if (!user) {
-            return res.status(404).json({ error: 'User not found' });
+        if (!item) {
+            return res.status(404).json({ error: 'Item not found' });
         }
 
-        await user.destroy();
-        return res.json({ message: 'User deleted successfully' });
+        await item.destroy();
+        return res.json({ message: 'Item deleted successfully' });
     } catch (err) {
         console.log(err);
         return res.status(500).json({ error: 'Internal Server Error' });
