@@ -7,5 +7,6 @@ router.get('/getAll', userVoucherController.getAll);
 router.get('/get/:uuid', userVoucherController.getAllByUserUuid)
 router.get('/getUsed/:uuid', userVoucherController.getAllUsedByUserUuid)
 router.post('/addVoucher', userVoucherController.addVoucherIntoWarehouse)
+router.get("/getItem/:id", userVoucherController.getItemById)
 
 module.exports = router;

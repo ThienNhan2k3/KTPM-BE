@@ -1,4 +1,3 @@
-
 class AuthController {
     static postLogin = async (req, res, next) => {
         // req.session.accountId = req.user.id;
