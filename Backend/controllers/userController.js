@@ -1,4 +1,4 @@
-const { User, User_Item, Item, Event, Gift_Items_History } = require('../models');
+const { User, User_Item, Item, Event, Gift_Items_History, sequelize } = require('../models');
 const { Op } = require('sequelize');
 
 // Get all users
@@ -205,7 +205,7 @@ exports.getGiftItemsHistoryByGiver = async (req, res) => {
             id_giver: id_giver,
             },
             attributes: ['id_recipient', 'gift_time', 'id_item', 'quantity'], // Chỉ lấy những cột cần thiết
-            order: [['gift_time', 'ASC']] // Sắp xếp theo thời gian
+            order: [['gift_time', 'DESC']] // Sắp xếp theo thời gian
         });
         
         if (giftHistory.length > 0) {
@@ -261,5 +261,88 @@ exports.getGiftItemsHistoryByGiver = async (req, res) => {
     } catch (error) {
     console.error("Error fetching gift items history: ", error);
     res.status(500).json({ error: "An error occurred while fetching gift items history" });
+    }
+};
+
+exports.sendItems = async (req, res) => {
+    const { id_giver, user_name, itemsList } = req.body;
+    let transaction;
+    try {
+        // Kiểm tra người nhận
+        const recipient = await User.findOne({
+            where: {
+                user_name: user_name,
+                status: "Active",
+                type: "Người chơi",
+            },
+        });
+    
+        if (!recipient) {
+            return res.status(404).json({ message: "Người nhận không hợp lệ." });
+        }
+    
+        // Bắt đầu transaction
+        const transaction = await sequelize.transaction();
+    
+        // Kiểm tra và gửi item
+        for (const item of itemsList) {
+            const { id_item, quantity } = item;
+    
+            // Tìm User_Item của người gửi
+            const senderItem = await User_Item.findOne({
+            where: {
+                id_user: id_giver,
+                id_item: id_item,
+            },
+            });
+    
+            // Trừ số lượng item của người gửi
+            senderItem.quantity -= quantity;
+            senderItem.time_update = new Date();
+            await senderItem.save({ transaction });
+    
+            // Tìm hoặc tạo User_Item của người nhận
+            const [recipientItem, created] = await User_Item.findOrCreate({
+            where: {
+                id_user: recipient.id,
+                id_item: id_item,
+            },
+            defaults: {
+                id_user: recipient.id,
+                id_item: id_item,
+                quantity: quantity,
+                time_update: new Date(),
+            },
+            transaction,
+            });
+    
+            if (!created) {
+            // Nếu đã tồn tại item, cập nhật số lượng
+            recipientItem.quantity += quantity;
+            recipientItem.time_update = new Date();
+            await recipientItem.save({ transaction });
+            }
+    
+            // Lưu lịch sử gửi item
+            await Gift_Items_History.create(
+            {
+                id_giver: id_giver,
+                id_recipient: recipient.id,
+                id_item: id_item,
+                quantity: quantity,
+                gift_time: new Date(),
+            },
+            { transaction }
+            );
+        }
+    
+        // Commit transaction
+        await transaction.commit();
+        return res.status(200).json({ message: "Gửi item thành công!" });
+  
+    } catch (error) {
+        console.error(error);
+        if (transaction) await transaction.rollback();
+        return res.status(500).json({ message: "Có lỗi xảy ra." });
     }
 };
