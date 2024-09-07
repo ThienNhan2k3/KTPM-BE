@@ -87,7 +87,7 @@ app.use("/public/images/games", express.static(dir));
 __io.on("connection", require("./services/socketService.js").connection);
 app.use("/", require("./routes/authRoutes"));
 
-app.use(authenticate)
+// app.use(authenticate)
 
 app.use('/account', accountRoutes);
 app.use('/user', userRoutes);
@@ -98,7 +98,6 @@ app.use('/event', EventRoutes);
 app.use('/game', require("./routes/gameRoutes.js"));
 app.use('/voucher', voucherRoutes);
 app.use('/voucher_in_event', voucher_in_eventRoutes);
-
 app.use('/warehouse', userVoucherRoutes);
 
 app.post("/routes", (req, res, next) => {
