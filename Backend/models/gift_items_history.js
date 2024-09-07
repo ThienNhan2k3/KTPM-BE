@@ -1,5 +1,5 @@
 "use strict";
-const { Model } = require("sequelize");
+const { Model, INTEGER } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Gift_Items_History extends Model {
     /**
@@ -31,8 +31,8 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.UUID,
         allowNull: false,
       },
-      id_game: {
-        type: DataTypes.UUID,
+      quantity: {
+        type: DataTypes.INTEGER,
         allowNull: false,
       },
       gift_time: {

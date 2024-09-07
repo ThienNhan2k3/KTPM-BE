@@ -1,0 +1,15 @@
+[2024-09-05 02:45:01.436 PM] info: 	HTTP GET /warehouse/getUsed/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-05 02:45:14.370 PM] info: 	HTTP GET /warehouse/getAll
+[2024-09-05 02:47:02.015 PM] info: 	HTTP GET /warehouse/getAll
+[2024-09-05 02:48:26.789 PM] info: 	HTTP GET /warehouse/getAll?userId=01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-05 02:51:28.941 PM] info: 	HTTP GET /event/lacxi/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-05 02:51:50.699 PM] info: 	HTTP GET /warehouse/getAll
+[2024-09-05 03:05:09.629 PM] info: 	HTTP GET /user/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-05 03:05:09.650 PM] info: 	HTTP GET /event/getAll
+[2024-09-05 03:05:09.717 PM] info: 	HTTP GET /brand/getAll
+[2024-09-05 03:05:09.812 PM] info: 	HTTP GET /warehouse/get/01724dc6-775a-4f52-95fd-245c615f2e77
+[2024-09-05 03:06:46.331 PM] info: 	HTTP GET //brand/getAll
+[2024-09-05 03:07:05.376 PM] info: 	HTTP GET /user/getAll
+[2024-09-05 03:15:41.137 PM] info: 	HTTP GET /user/getAll
+[2024-09-05 03:16:12.783 PM] info: 	HTTP GET /user/getAll
+[2024-09-05 03:16:50.513 PM] info: 	HTTP GET /user/getAll
