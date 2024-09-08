@@ -11,8 +11,22 @@ router.post(
   accountController.createAccountUser
 );
 router.post("/create/brand", accountController.createAccountBrand);
-router.get("/get/:uuid", accountController.getAccountByUUID);
-router.put("/update/:type/:uuid", accountController.updateAccount);
+router.get("/getAccount/:type/:uuid", accountController.getAccountByUUID);
+router.put("/update/status/:type/:uuid", accountController.updateStatusAccount);
+router.put(
+  "/update/information/user/:uuid",
+  upload.single("my_image"),
+  accountController.updateInformationUser
+);
+router.put(
+  "/update/information/brand/:uuid",
+  upload.single("my_image"),
+  accountController.updateInformationBrand
+);
+router.put(
+  "/update/password/:type/:uuid",
+  accountController.updatePasswordAccount
+);
 router.delete("/delete/:type/:uuid", accountController.deleteAccount);
 
 module.exports = router;

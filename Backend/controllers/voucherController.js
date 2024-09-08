@@ -252,6 +252,7 @@ class voucherController {
 
   // Create a voucher
   static createVoucher = async (req, res) => {
+    const id_brand = req.params.id_brand;
     const { voucher_code, max_discount, value, description, type, status } =
       JSON.parse(req.body.my_data);
 
@@ -272,7 +273,7 @@ class voucherController {
         where: { voucher_code },
         defaults: {
           voucher_code,
-          id_brand: "05e44252-ff08-4a0a-b238-93cf3c5382a6",
+          id_brand: id_brand,
           image: imgurLink,
           max_discount,
           value,

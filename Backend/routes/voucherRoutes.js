@@ -9,7 +9,7 @@ router.get(
   voucherController.getVoucherByIdBrand
 );
 router.post(
-  "/create",
+  "/create/:id_brand",
   upload.single("my_image"),
   voucherController.createVoucher
 );

@@ -1,4 +1,5 @@
 const express = require("express");
+var cookieParser = require("cookie-parser");
 const cors = require("cors");
 const path = require("path");
 const expressWinston = require("express-winston");
@@ -28,7 +29,7 @@ const EventRoutes = require("./routes/EventRoutes");
 const itemRoutes = require("./routes/itemRoutes");
 const voucherRoutes = require("./routes/voucherRoutes.js");
 const voucher_in_eventRoutes = require("./routes/voucher_in_eventRoutes.js");
-const userVoucherRoutes = require("./routes/userVoucherRoutes.js")
+const userVoucherRoutes = require("./routes/userVoucherRoutes.js");
 
 // initalize sequelize with session store
 const SessionStore = require("connect-session-sequelize")(session.Store);
@@ -90,50 +91,52 @@ app.use("/", require("./routes/authRoutes"));
 
 // app.use(authenticate)
 
-app.use('/account', accountRoutes);
-app.use('/user', userRoutes);
-app.use('/brand', brandRoutes);
-app.use('/quiz',quizRoutes);
-app.use('/question', questionRoutes);
-app.use('/event', EventRoutes);
-app.use('/item',itemRoutes);
-app.use('/game', require("./routes/gameRoutes.js"));
-app.use('/voucher', voucherRoutes);
-app.use('/voucher_in_event', voucher_in_eventRoutes);
-app.use('/warehouse', userVoucherRoutes);
+app.use("/account", accountRoutes);
+app.use("/user", userRoutes);
+app.use("/brand", brandRoutes);
+app.use("/quiz", quizRoutes);
+app.use("/question", questionRoutes);
+app.use("/event", EventRoutes);
+app.use("/item", itemRoutes);
+app.use("/game", require("./routes/gameRoutes.js"));
+app.use("/voucher", voucherRoutes);
+app.use("/voucher_in_event", voucher_in_eventRoutes);
+app.use("/warehouse", userVoucherRoutes);
 
 app.post("/routes", (req, res, next) => {
-    const path = req.body.path || "";
-    console.log("path:::", path);
-    if (req.user.type == null) {
-        return res.json({
-            code: 200,
-            metadata: {
-                login: true,
-                permission: path.includes("/brand"),
-                homePage: "/brand"
-            },
-        })
-    } else if (req.user.type == "Admin") {
-        return res.json({
-            code: 200,
-            metadata:  {
-                login: true,
-                permission: path.includes("/admin"),
-                homePage: "/admin"
-            }
-        })
-    }
-
-    req.logout(function(err) {
-        if (err) { return next(err); }
-        res.json({
-            code: 200,
-            metadate: "Logout successfully"
-        });
+  console.log("routes" + req.user);
+  const path = req.body.path || "";
+  console.log("path:::", path);
+  if (req.user.type == null) {
+    return res.json({
+      code: 200,
+      metadata: {
+        login: true,
+        permission: path.includes("/brand"),
+        homePage: "/brand",
+      },
     });
-})
+  } else if (req.user.type == "Admin") {
+    return res.json({
+      code: 200,
+      metadata: {
+        login: true,
+        permission: path.includes("/admin"),
+        homePage: "/admin",
+      },
+    });
+  }
 
+  req.logout(function (err) {
+    if (err) {
+      return next(err);
+    }
+    res.json({
+      code: 200,
+      metadate: "Logout successfully",
+    });
+  });
+});
 
 // Handling error
 app.use((err, req, res, next) => {
