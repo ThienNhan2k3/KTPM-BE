@@ -139,6 +139,7 @@ class accountController {
             gps: `${lat}, ${long}`,
             status: "Inactive",
             time_update: new Date(),
+            avatar: "",
           },
         });
 
@@ -168,12 +169,22 @@ class accountController {
 
   // Find an account by UUID
   static getAccountByUUID = async (req, res) => {
+    const type = req.params.type;
     const id = req.params.uuid;
+
+    let account = null;
+
     try {
-      const account = await User.findOne({
-        where: { id },
-      });
-      return res.json(account);
+      if (type === "user") {
+        account = await User.findOne({
+          where: { id },
+        });
+      } else {
+        account = await Brand.findOne({
+          where: { id },
+        });
+      }
+      return res.send(account);
     } catch (err) {
       console.log(err);
       return res.status(500).json(err);
@@ -181,7 +192,7 @@ class accountController {
   };
 
   // Update an account
-  static updateAccount = async (req, res) => {
+  static updateStatusAccount = async (req, res) => {
     const type = req.params.type;
     const id = req.params.uuid;
     const body = req.body;
@@ -210,6 +221,137 @@ class accountController {
         await account.save();
 
         return res.send({ message: "Success" });
+      } else {
+        return res.send({ message: "Fail" });
+      }
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
+  };
+
+  static updateInformationUser = async (req, res) => {
+    const id = req.params.uuid;
+    const { full_name, dob, gender, fb_acc, phone } = JSON.parse(
+      req.body.my_data
+    );
+
+    let imgurLink = null;
+
+    if (req.file) {
+      // Upload the file to Imgur
+      imgurLink = await uploadToImgur(req.file.buffer);
+    }
+
+    try {
+      const user = await User.findOne({
+        where: { id },
+      });
+
+      if (!user) {
+        return res.status(404).json({ error: "Account not found" });
+      }
+
+      user.full_name = full_name;
+      user.dob = dob;
+      user.gender = gender;
+      user.fb_acc = fb_acc;
+      user.phone = phone;
+      if (imgurLink !== null) {
+        user.avatar = imgurLink;
+      }
+      user.time_update = new Date();
+
+      await user.save();
+
+      return res.send({ message: "Success" });
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
+  };
+
+  static updateInformationBrand = async (req, res) => {
+    const id = req.params.uuid;
+    const { phone, industry, address, lat, long } = JSON.parse(
+      req.body.my_data
+    );
+
+    let imgurLink = null;
+
+    if (req.file) {
+      // Upload the file to Imgur
+      imgurLink = await uploadToImgur(req.file.buffer);
+    }
+
+    try {
+      const brand = await Brand.findOne({
+        where: { id },
+      });
+
+      if (!brand) {
+        return res.status(404).json({ error: "Account not found" });
+      }
+
+      brand.phone = phone;
+      brand.industry = industry;
+      brand.address = address;
+      brand.gps = `${lat}, ${long}`;
+      if (imgurLink !== null) {
+        brand.avatar = imgurLink;
+      }
+      brand.time_update = new Date();
+
+      await brand.save();
+
+      return res.send({ message: "Success" });
+    } catch (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
+  };
+
+  static updatePasswordAccount = async (req, res) => {
+    const type = req.params.type;
+    const id = req.params.uuid;
+    const body = req.body;
+
+    console.log(body);
+
+    let account = null;
+    let hashPassword = null;
+
+    try {
+      if (type == "user") {
+        account = await User.findOne({
+          where: { id },
+        });
+      } else {
+        account = await Brand.findOne({
+          where: { id },
+        });
+      }
+
+      if (!account) {
+        return res.status(404).json({ error: "Account not found" });
+      }
+
+      const isMatch = await bcrypt.compare(body.old_password, account.password);
+
+      if (isMatch) {
+        bcrypt.hash(body.new_password1, saltRounds, async (err, hash) => {
+          if (err) {
+            return next(err);
+          }
+          hashPassword = hash;
+
+          account.password = hashPassword;
+          account.time_update = new Date();
+
+          await account.save();
+
+          return res.send({ message: "Success" });
+        });
       } else {
         return res.send({ message: "Fail" });
       }
