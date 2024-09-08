@@ -77,7 +77,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 const PORT = process.env.PORT || 5000;
-const SOCKET_PORT = process.env.SOCKET_PORT || 5001;
 
 const dir = path.join(__dirname, "public", "images", "games");
 app.use("/public/images/games", express.static(dir));
@@ -86,6 +85,7 @@ app.use("/public/images/games", express.static(dir));
 
 __io.on("connection", require("./services/socketService.js").connection);
 app.use("/", require("./routes/authRoutes"));
+
 
 app.use(authenticate)
 

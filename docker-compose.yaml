@@ -1,0 +1,32 @@
+services:
+  backend:
+    build: ./Backend
+    environment:
+      - PORT=5000 
+    deploy:
+      replicas: 2
+    networks:
+      - loadbalancing
+
+  itemworker:
+    build: ./ItemWorker
+    networks:
+      - loadbalancing
+
+  voucherworker:
+    build: ./VoucherWorker
+    networks:
+      - loadbalancing
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    ports:
+      - "5000:80"
+    networks:
+      - loadbalancing
+    depends_on:
+      - backend
+
+networks:
+  loadbalancing:
