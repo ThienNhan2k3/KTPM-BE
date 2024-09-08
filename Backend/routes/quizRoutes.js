@@ -9,5 +9,5 @@ router.get('/get/:uuid', quizController.getQuiz);
 router.get('/get_by_event/:uuid', quizController.getQuiz_byEvent);
 //router.put('/update/:uuid', quizController.updateQuiz);
 //router.delete('/delete/:uuid', quizController.deleteQuiz);
-
+router.get('/questionCount/:id_event', quizController.getQuestionCountByEvent);
 module.exports = router;
