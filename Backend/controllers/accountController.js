@@ -13,21 +13,31 @@ class accountController {
 
     try {
       if (type == "user") {
-        accounts = await User.findAll({
-          where: {
-            status: {
-              [Op.ne]: "Delete", // Điều kiện lấy tất cả các user có status khác "Delete"
+        accounts = await User.findAll(
+          {
+            where: {
+              status: {
+                [Op.ne]: "Delete", // Điều kiện lấy tất cả các user có status khác "Delete"
+              },
             },
           },
-        });
+          {
+            order: ["id"],
+          }
+        );
       } else {
-        accounts = await Brand.findAll({
-          where: {
-            status: {
-              [Op.ne]: "Delete", // Điều kiện lấy tất cả các user có status khác "Delete"
+        accounts = await Brand.findAll(
+          {
+            where: {
+              status: {
+                [Op.ne]: "Delete", // Điều kiện lấy tất cả các user có status khác "Delete"
+              },
             },
           },
-        });
+          {
+            order: ["id"],
+          }
+        );
       }
       return res.send(accounts);
     } catch (err) {

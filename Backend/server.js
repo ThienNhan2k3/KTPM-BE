@@ -1,5 +1,5 @@
 const express = require("express");
-var cookieParser = require("cookie-parser");
+let cookieParser = require("cookie-parser");
 const cors = require("cors");
 const path = require("path");
 const expressWinston = require("express-winston");
@@ -74,6 +74,8 @@ app.use(
   })
 );
 
+app.use(cookieParser());
+
 /*-----------Passport Authentication-----------*/
 app.use(passport.initialize());
 app.use(passport.session());
@@ -89,7 +91,7 @@ app.use("/public/images/games", express.static(dir));
 __io.on("connection", require("./services/socketService.js").connection);
 app.use("/", require("./routes/authRoutes"));
 
-// app.use(authenticate)
+app.use(authenticate);
 
 app.use("/account", accountRoutes);
 app.use("/user", userRoutes);
@@ -107,22 +109,34 @@ app.post("/routes", (req, res, next) => {
   console.log("routes" + req.user);
   const path = req.body.path || "";
   console.log("path:::", path);
-  if (req.user.type == null) {
+  try {
+    if (req.user.type == null) {
+      return res.json({
+        code: 200,
+        metadata: {
+          login: true,
+          permission: path.includes("/brand"),
+          homePage: "/brand",
+        },
+      });
+    } else if (req.user.type == "Admin") {
+      return res.json({
+        code: 200,
+        metadata: {
+          login: true,
+          permission: path.includes("/admin"),
+          homePage: "/admin",
+        },
+      });
+    }
+  } catch (err) {
+    console.log(err);
     return res.json({
       code: 200,
       metadata: {
-        login: true,
-        permission: path.includes("/brand"),
-        homePage: "/brand",
-      },
-    });
-  } else if (req.user.type == "Admin") {
-    return res.json({
-      code: 200,
-      metadata: {
-        login: true,
-        permission: path.includes("/admin"),
-        homePage: "/admin",
+        login: false,
+        permission: false,
+        homePage: path,
       },
     });
   }

@@ -175,14 +175,19 @@ class voucherController {
     let vouchers = null;
 
     try {
-      vouchers = await Voucher.findAll({
-        where: {
-          id_brand,
-          status: {
-            [Op.ne]: "Delete", // Điều kiện lấy tất cả các user có status khác "Delete"
+      vouchers = await Voucher.findAll(
+        {
+          where: {
+            id_brand,
+            status: {
+              [Op.ne]: "Delete", // Điều kiện lấy tất cả các user có status khác "Delete"
+            },
           },
         },
-      });
+        {
+          order: ["voucher_code"],
+        }
+      );
       return res.send(vouchers);
     } catch (err) {
       console.log(err);
@@ -248,7 +253,6 @@ class voucherController {
       return res.status(500).json(err);
     }
   };
-
 
   // Create a voucher
   static createVoucher = async (req, res) => {
