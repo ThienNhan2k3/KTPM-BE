@@ -82,12 +82,17 @@ const SOCKET_PORT = process.env.SOCKET_PORT || 5001;
 const dir = path.join(__dirname, "public", "images", "games");
 app.use("/public/images/games", express.static(dir));
 
+const publicDir = path.join(__dirname, 'public');
+
+// Cấu hình để Express phục vụ các file tĩnh từ thư mục public
+app.use('/public', express.static(publicDir));
+
 // Use the routes
 
 __io.on("connection", require("./services/socketService.js").connection);
 app.use("/", require("./routes/authRoutes"));
 
-app.use(authenticate)
+// app.use(authenticate)
 
 app.use('/account', accountRoutes);
 app.use('/user', userRoutes);
