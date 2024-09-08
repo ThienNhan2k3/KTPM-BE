@@ -25,8 +25,8 @@ exports.create = async (req, res) => {
         });
 
         if (quiz) {
-            console.log(answer.type);
-            console.log(answer);
+            //console.log(answer.type);
+            //console.log(answer);
             const question = await Question.create({
                 id_quiz: quiz.id, // Assuming the QuizEvent has an `id` field that relates to `id_quiz`
                 ques,
@@ -68,6 +68,8 @@ exports.getbyQuiz = async (req, res) => {
 exports.update = async (req, res) => {
     const id = req.params.uuid;
     const { id_quiz, ques, choice_1, choice_2, choice_3, choice_4, answer} = req.body;
+    console.log(req.body);
+    console.log("Update question");
     try {
         const question = await Question.findOne({
             where: { id },

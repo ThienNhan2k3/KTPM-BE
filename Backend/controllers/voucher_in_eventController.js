@@ -198,7 +198,7 @@ class voucher_in_eventController {
       exp_date,
       total_quantity
     }= req.body;
-
+    console.log("Update voucher in event");
     try {
       const voucher = await Voucher_In_Event.findOne({
         where: { id },

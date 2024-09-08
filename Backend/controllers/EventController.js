@@ -8,7 +8,9 @@ const ErrorResponse = require('../core/errorResponse');
 // Get all events
 exports.getAll = async (req, res) => {
     try {
-        const events = await Event.findAll();
+        const events = await Event.findAll({
+            order: [['id', 'ASC']]
+        });
         return res.json(events);
     } catch (err) {
         console.log(err);
