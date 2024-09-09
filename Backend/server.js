@@ -19,8 +19,7 @@ const io = require("socket.io")(server, {
   //   origin: "http://localhost:5173",
   //   methods: ["GET", "POST"],
   // },
-  transports: [ "websocket" ] ,
-
+  transports: ["websocket"],
 });
 
 global.__io = io;
@@ -98,27 +97,27 @@ app.use("/", require("./routes/authRoutes"));
 app.get("/create123", (req, res) => {
   // __io.emit("dbChange", "changed");
   rabbitmqConnection.sendToTopicExchange("userTable", "refreshUserTable", {
-    eventId: "roomAdmin", 
+    eventId: "roomAdmin",
     message: "dbChange",
-    data: `changed`
-  })
+    data: `changed`,
+  });
   res.send("Db Changed");
-})
-// app.use(authenticate)
+});
+app.use(authenticate);
 
-app.use('/account', accountRoutes);
-app.use('/user', userRoutes);
-app.use('/brand', brandRoutes);
-app.use('/quiz',quizRoutes);
-app.use('/question', questionRoutes);
-app.use('/event', EventRoutes);
-app.use('/item', itemRoutes);
-app.use('/game', require("./routes/gameRoutes.js"));
-app.use('/adminreport', require("./routes/playTimeReportRoutes.js"));
-app.use('/voucher', voucherRoutes);
-app.use('/voucher_in_event', voucher_in_eventRoutes);
+app.use("/account", accountRoutes);
+app.use("/user", userRoutes);
+app.use("/brand", brandRoutes);
+app.use("/quiz", quizRoutes);
+app.use("/question", questionRoutes);
+app.use("/event", EventRoutes);
+app.use("/item", itemRoutes);
+app.use("/game", require("./routes/gameRoutes.js"));
+app.use("/adminreport", require("./routes/playTimeReportRoutes.js"));
+app.use("/voucher", voucherRoutes);
+app.use("/voucher_in_event", voucher_in_eventRoutes);
 
-app.use('/warehouse', userVoucherRoutes);
+app.use("/warehouse", userVoucherRoutes);
 
 app.post("/routes", (req, res, next) => {
   console.log("routes" + req.user);
@@ -187,26 +186,20 @@ app.use((error, req, res, next) => {
   });
 });
 
-
-
-async function broadcastingEvent({eventId, message, data}) {
+async function broadcastingEvent({ eventId, message, data }) {
   return await __io.to(eventId).emit(message, data);
-
 }
-
 
 const protypeQuizExchange = {
-  "quiz": {topic: "emitQuiz", cb: broadcastingEvent},
-  "userTable": {topic: "refreshUserTable", cb: broadcastingEvent},
-}
-
+  quiz: { topic: "emitQuiz", cb: broadcastingEvent },
+  userTable: { topic: "refreshUserTable", cb: broadcastingEvent },
+};
 
 const setUpRabbitMQ = async () => {
-  for(let [key, value] of Object.entries(protypeQuizExchange)) {
-      rabbitmqConnection.receiveFromTopicExchange(key, value.topic, value.cb);
+  for (let [key, value] of Object.entries(protypeQuizExchange)) {
+    rabbitmqConnection.receiveFromTopicExchange(key, value.topic, value.cb);
   }
-}
-
+};
 
 server.listen(PORT, async () => {
   console.log(`Server is running on http://localhost:${PORT}`);

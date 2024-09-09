@@ -176,13 +176,6 @@ CREATE TABLE "play_time_reports" (
   "end_time" timestamp
 );
 
-
-ALTER TABLE "play_time_reports" ADD FOREIGN KEY ("id_user") REFERENCES "users" ("id");
-
-ALTER TABLE "play_time_reports" ADD FOREIGN KEY ("id_event") REFERENCES "events" ("id");
-
-
-
 ALTER TABLE "events" ADD FOREIGN KEY ("id_game") REFERENCES "games" ("id");
 
 ALTER TABLE "events" ADD FOREIGN KEY ("id_brand") REFERENCES "brands" ("id");
@@ -193,8 +186,6 @@ ALTER TABLE "quizes" ADD FOREIGN KEY ("id_game") REFERENCES "games" ("id");
 
 ALTER TABLE "questions" ADD FOREIGN KEY ("id_quiz") REFERENCES "quizes" ("id");
 
-ALTER TABLE "answers" ADD FOREIGN KEY ("id_question") REFERENCES "questions" ("id");
-
 ALTER TABLE "fav_events" ADD FOREIGN KEY ("id_event") REFERENCES "events" ("id");
 
 ALTER TABLE "fav_events" ADD FOREIGN KEY ("id_user") REFERENCES "users" ("id");
@@ -202,8 +193,6 @@ ALTER TABLE "fav_events" ADD FOREIGN KEY ("id_user") REFERENCES "users" ("id");
 ALTER TABLE "user_events" ADD FOREIGN KEY ("id_user") REFERENCES "users" ("id");
 
 ALTER TABLE "user_events" ADD FOREIGN KEY ("id_event") REFERENCES "events" ("id");
-
-ALTER TABLE "user_event_details" ADD FOREIGN KEY ("id_user_event") REFERENCES "user_events" ("id");
 
 ALTER TABLE "vouchers" ADD FOREIGN KEY ("id_brand") REFERENCES "brands" ("id");
 
@@ -214,8 +203,6 @@ ALTER TABLE "vouchers_in_event" ADD FOREIGN KEY ("id_event") REFERENCES "events"
 ALTER TABLE "user_vouchers" ADD FOREIGN KEY ("id_voucher") REFERENCES "vouchers_in_event" ("id");
 
 ALTER TABLE "user_vouchers" ADD FOREIGN KEY ("id_user") REFERENCES "users" ("id");
-
-ALTER TABLE "items" ADD FOREIGN KEY ("id_event") REFERENCES "events" ("id");
 
 ALTER TABLE "user_items" ADD FOREIGN KEY ("id_user") REFERENCES "users" ("id");
 
@@ -232,5 +219,20 @@ ALTER TABLE "voucher_exchange_history" ADD FOREIGN KEY ("id_user") REFERENCES "u
 ALTER TABLE "voucher_exchange_history" ADD FOREIGN KEY ("id_voucher") REFERENCES "vouchers_in_event" ("id");
 
 ALTER TABLE "voucher_exchange_history" ADD FOREIGN KEY ("id_item") REFERENCES "items" ("id");
+
+-- ALTER TABLE "play_time_reports" ADD FOREIGN KEY ("id_user") REFERENCES "users" ("id");
+
+-- ALTER TABLE "play_time_reports" ADD FOREIGN KEY ("id_event") REFERENCES "events" ("id");
+
+-- ALTER TABLE "answers" ADD FOREIGN KEY ("id_question") REFERENCES "questions" ("id");
+
+-- ALTER TABLE "user_event_details" ADD FOREIGN KEY ("id_user_event") REFERENCES "user_events" ("id");
+
+-- ALTER TABLE "items" ADD FOREIGN KEY ("id_event") REFERENCES "events" ("id");
+
+
+
+
+
 
 
