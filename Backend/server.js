@@ -81,7 +81,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 const PORT = process.env.PORT || 5000;
-const SOCKET_PORT = process.env.SOCKET_PORT || 5001;
 
 const dir = path.join(__dirname, "public", "images", "games");
 app.use("/public/images/games", express.static(dir));
@@ -93,17 +92,21 @@ app.use("/", require("./routes/authRoutes"));
 
 app.use(authenticate);
 
-app.use("/account", accountRoutes);
-app.use("/user", userRoutes);
-app.use("/brand", brandRoutes);
-app.use("/quiz", quizRoutes);
-app.use("/question", questionRoutes);
-app.use("/event", EventRoutes);
-app.use("/item", itemRoutes);
-app.use("/game", require("./routes/gameRoutes.js"));
-app.use("/voucher", voucherRoutes);
-app.use("/voucher_in_event", voucher_in_eventRoutes);
-app.use("/warehouse", userVoucherRoutes);
+
+app.use(authenticate)
+
+app.use('/account', accountRoutes);
+app.use('/user', userRoutes);
+app.use('/brand', brandRoutes);
+app.use('/quiz',quizRoutes);
+app.use('/question', questionRoutes);
+app.use('/event', EventRoutes);
+app.use('/game', require("./routes/gameRoutes.js"));
+app.use('/adminreport', require("./routes/playTimeReportRoutes.js"));
+app.use('/voucher', voucherRoutes);
+app.use('/voucher_in_event', voucher_in_eventRoutes);
+
+app.use('/warehouse', userVoucherRoutes);
 
 app.post("/routes", (req, res, next) => {
   console.log("routes" + req.user);

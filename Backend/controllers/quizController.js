@@ -1,5 +1,5 @@
 const { where } = require('sequelize');
-const { Quiz } = require('../models');
+const { Quiz, Question} = require('../models');
 
 
 // Get all quizs
@@ -104,6 +104,32 @@ exports.deleteQuiz = async (req, res) => {
 
         await quiz.destroy();
         return res.json({ message: 'quiz deleted successfully' });
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json(err);
+    }
+};
+
+// Hàm trả về số lượng câu hỏi dựa trên id_event
+exports.getQuestionCountByEvent = async (req, res) => {
+    const { id_event } = req.params;
+    try {
+        // Tìm quiz dựa trên id_event
+        const quiz = await Quiz.findOne({
+            where: { id_event },
+        });
+
+        if (!quiz) {
+            return res.status(404).json({ message: 'Quiz not found for the given event ID' });
+        }
+
+        // Tìm số lượng câu hỏi dựa trên id_quiz của quiz tìm được
+        const questionCount = await Question.count({
+            where: { id_quiz: quiz.id },
+        });
+
+        // Trả số lượng câu hỏi về client
+        return res.json({ questionCount });
     } catch (err) {
         console.log(err);
         return res.status(500).json(err);

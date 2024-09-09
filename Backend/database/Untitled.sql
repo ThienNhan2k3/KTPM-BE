@@ -168,6 +168,21 @@ CREATE TABLE "voucher_exchange_history" (
   "time" timestamp
 );
 
+CREATE TABLE "play_time_reports" (
+  "id" uuid PRIMARY KEY,
+  "id_user" uuid,
+  "id_event" uuid,
+  "start_time" timestamp,
+  "end_time" timestamp
+);
+
+
+ALTER TABLE "play_time_reports" ADD FOREIGN KEY ("id_user") REFERENCES "users" ("id");
+
+ALTER TABLE "play_time_reports" ADD FOREIGN KEY ("id_event") REFERENCES "events" ("id");
+
+
+
 ALTER TABLE "events" ADD FOREIGN KEY ("id_game") REFERENCES "games" ("id");
 
 ALTER TABLE "events" ADD FOREIGN KEY ("id_brand") REFERENCES "brands" ("id");

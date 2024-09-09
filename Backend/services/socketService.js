@@ -45,6 +45,7 @@ async function emitEventEnd(io, eventId, userId) {
   //   return b["value"] - a["value"];
   // });
 
+  console.log(allPlayerScore)
 
   io.to(eventId).emit("eventEnd", {
     allPlayerScore,
@@ -79,7 +80,7 @@ async function askQuestion(io, eventId, userId, timer) {
     choice_2: questions[questionIndex + 1].choice_2,
     choice_3: questions[questionIndex + 1].choice_3,
     choice_4: questions[questionIndex + 1].choice_4,
-    answer: questions[questionIndex + 1].answear,
+    answer: questions[questionIndex + 1].answer,
     endTime: new Date(Date.now() + (SocketService.timer * 2 + 2) * 1000) // Phải chờ ít nhất 12s sau thì câu hỏi tiếp theo mới đc hỏi vì vậy thời gian end = 10s (trả lời) + 12s (delay)
   } : null;
 
@@ -130,22 +131,25 @@ class SocketService {
       }
 
       const event = await EventService.findQuizById(eventId);
-      const currentDate = new Date();
-      if (!event || currentDate < new Date(event.start_time) || currentDate > new Date(event.end_time)) {
-        socket.disconnect();
-        return;
-      } 
-
-      const player = await UserService.findPlayerWithTicketOfEventById(userId, eventId);
-      if (!player || (!player.User_Events && player.User_Events.length > 0 && player.User_Events[0].playthrough <= 0)) {
+      const currentDate = new Date().setHours(0, 0, 0, 0);
+      const eventStartDate = new Date(event.start_time).setHours(0, 0, 0, 0);
+      const eventEndDate = new Date(event.end_time).setHours(0, 0, 0, 0);
+      
+      if (!event || currentDate < eventStartDate || currentDate > eventEndDate) {
         socket.disconnect();
         return;
       }
 
-      //Bỏ đi một ticket của người chơi
-      player.User_Events[0].playthrough -= 1;
-      // console.log("ticket:::", player.User_Events[0].playthrough);
-      await player.User_Events[0].save();
+      const player = await UserService.findPlayerWithTicketOfEventById(userId, eventId);
+      // if (!player || (!player.User_Events && player.User_Events.length > 0 && player.User_Events[0].playthrough <= 0)) {
+      //   socket.disconnect();
+      //   return;
+      // }
+
+      // //Bỏ đi một ticket của người chơi
+      // player.User_Events[0].playthrough -= 1;
+      // // console.log("ticket:::", player.User_Events[0].playthrough);
+      // await player.User_Events[0].save();
 
 
       
@@ -188,6 +192,7 @@ class SocketService {
         await redis.set(`eventQuizes:${eventId}:questionIndex`, intialIndex);
 
         question = questions[intialIndex];
+        
         //Lưu câu hỏi hiện tại trong danh sách các câu hỏi vào Redis DB
         await redis.hset(`eventQuizes:${eventId}:currentQuestion`, {
           ques: question.ques,
@@ -195,7 +200,7 @@ class SocketService {
           choice_2: question.choice_2,
           choice_3: question.choice_3,
           choice_4: question.choice_4,
-          answer: question.answear,
+          answer: question.answer,
         });
 
       }

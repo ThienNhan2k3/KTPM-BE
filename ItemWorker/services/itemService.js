@@ -1,5 +1,5 @@
 const {Item, User_Item, Event} = require("../models");
-const { Op } = require('@sequelize/core');
+const { Op } = require('sequelize');
 
 
 class ItemService {
@@ -103,40 +103,7 @@ class ItemService {
         
     }
 
-    static async getItemsByUserAndEvent(userId, eventId) {
-        try {
-            // Truy vấn tất cả các items theo eventId
-            const items = await Item.findAll({
-                attributes: ['name', 'id'], // Lấy trường 'name' và 'id từ bảng Item
-                where: {
-                    id_event: eventId, 
-                },
-            });
-
-            // Truy vấn số lượng các items của người dùng
-            const userItems = await User_Item.findAll({
-                attributes: ['id_item', 'quantity'], 
-                where: {
-                    id_user: userId, 
-                },
-            });
-
-            // Tạo một dictionary để lưu trữ quantity của từng item
-            const userItemsMap = userItems.reduce((acc, userItem) => {
-                acc[userItem.id_item] = userItem.quantity;
-                return acc;
-            }, {});
-
-            return items.map(item => ({
-                itemName: item.name,
-                quantity: userItemsMap[item.id] || 0, // Lấy quantity từ dictionary, mặc định là 0 nếu không có
-            }));
-        } catch (error) {
-            console.error('Error fetching items by user and event:', error);
-            throw error; // Ném lỗi để xử lý bên trên
-        }
-    }
-    
+  
 }
 
 module.exports = ItemService;
