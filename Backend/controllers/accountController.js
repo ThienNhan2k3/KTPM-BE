@@ -324,7 +324,7 @@ class accountController {
     let hashPassword = null;
 
     try {
-      if (type == "user") {
+      if (type == "admin") {
         account = await User.findOne({
           where: { id },
         });
