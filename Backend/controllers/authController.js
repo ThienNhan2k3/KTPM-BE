@@ -83,7 +83,11 @@ class AuthController {
             }
           }
         } else {
-          SocketService.send_message;
+          rabbitmqConnection.sendToTopicExchange("userTable", "refreshUserTable", {
+            eventId: "roomAdmin", 
+            message: "dbChange",
+            data: `changed`
+          })
           return res.send({ message: "Success" });
         }
       } catch (err) {

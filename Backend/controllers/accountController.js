@@ -4,6 +4,7 @@ const { uploadToImgur } = require("../middlewares/uploadFile");
 const SocketService = require("../services/socketService");
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
+const rabbitmqConnection = require("../database/rabbitmq/connection");
 
 class accountController {
   // Get all accounts
@@ -260,6 +261,12 @@ class accountController {
       brand.time_update = new Date();
 
       await brand.save();
+
+      rabbitmqConnection.sendToTopicExchange("userTable", "refreshUserTable", {
+        eventId: "roomAdmin", 
+        message: "dbChange",
+        data: `changed`
+      })
 
       return res.send({ message: "Success" });
     } catch (err) {

@@ -15,11 +15,12 @@ const { authenticate, isAdmin } = require("./middlewares/authentication.js");
 const app = express();
 const server = require("http").Server(app);
 const io = require("socket.io")(server, {
-  cors: {
-    origin: "http://localhost:5173",
-    methods: ["GET", "POST"],
-  },
-  transports: [ "websocket" ] 
+  // cors: {
+  //   origin: "http://localhost:5173",
+  //   methods: ["GET", "POST"],
+  // },
+  transports: [ "websocket" ] ,
+
 });
 
 global.__io = io;
@@ -94,6 +95,15 @@ app.use("/public/images/games", express.static(dir));
 __io.on("connection", require("./services/socketService.js").connection);
 app.use("/", require("./routes/authRoutes"));
 
+app.get("/create123", (req, res) => {
+  // __io.emit("dbChange", "changed");
+  rabbitmqConnection.sendToTopicExchange("userTable", "refreshUserTable", {
+    eventId: "roomAdmin", 
+    message: "dbChange",
+    data: `changed`
+  })
+  res.send("Db Changed");
+})
 // app.use(authenticate)
 
 app.use('/account', accountRoutes);

@@ -187,7 +187,7 @@ class SocketService {
     });
 
     socket.on("refreshUserTable", async() => {
-      socket.join("refreshUserTable");
+      socket.join("roomAdmin");
     })
 
     //event on here
