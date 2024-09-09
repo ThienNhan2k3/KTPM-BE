@@ -6,4 +6,6 @@ const PlayTimeReportController = require("../controllers/playTimeReportControlle
 
 router.post("/playtimeingame", PlayTimeReportController.getPlayTimeInAllGame);
 
+router.post("/topBrand", PlayTimeReportController.getTopGameInAllGame);
+
 module.exports = router;

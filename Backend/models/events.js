@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       this.hasMany(User_Event, {foreignKey: 'id_event'});
       this.hasMany(Voucher_In_Event, {foreignKey: "id_event"});
       this.hasMany(Item, {foreignKey: "id_event"});
+      this.belongsTo(Brand, {foreignKey: "id_brand"});
 
     }
   }
