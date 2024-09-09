@@ -5,6 +5,8 @@ const ItemService = require("../services/itemService");
 const VoucherService = require('../services/voucherService');
 const EventService = require('../services/eventService');
 const ErrorResponse = require('../core/errorResponse');
+const rabbitMQConnection = require("../database/rabbitmq/connection");
+const { uploadToImgur } = require("../middlewares/uploadFile");
 
 // Get all events
 exports.getAll = async (req, res) => {
@@ -112,7 +114,7 @@ exports.getByUUID = async (req, res) => {
 // Update an event
 exports.update = async (req, res) => {
     const id = req.params.uuid;
-    const { type, id_game, id_brand, name, image, start_time, end_time } = req.body;
+    const { type, id_game, id_brand, name, start_time, end_time } = req.body;
     try {
         const update_event = await Event.findOne({
             where: { id },
@@ -122,7 +124,6 @@ exports.update = async (req, res) => {
         }
 
         update_event.name = name;
-        update_event.image = image;
         update_event.start_time = start_time;
         update_event.end_time = end_time;
         update_event.time_update= new Date();
@@ -238,20 +239,25 @@ exports.redeemGift = async (req, res) => {
         const itemOfUsers =  await ItemService.getNumberOfItemOfUserInEvent(userId, eventId);
         
         if (itemOfUsers == itemsInEvent.length) {
-            for (let i = 0; i < itemsInEvent.length; i++) {
-                console.log(itemsInEvent[i].id);
-                await ItemService.deleteItemOfUser(userId, itemsInEvent[i].id);
-            }
+            rabbitMQConnection.sendToTopicExchange("items", "deleteEachItemOfUserInEvent", {
+                userId,
+                items: itemsInEvent
+            });    
+            // for (let i = 0; i < itemsInEvent.length; i++) {
+            //     await ItemService.deleteItemOfUser(userId, itemsInEvent[i].id);
+            // }
             const vouchersInEvent = await VoucherService.findVouchersByEventId(eventId)
             const randomVoucher = vouchersInEvent[(Math.floor(Math.random() * vouchersInEvent.length))];
-            const isAsignedVoucher = await  VoucherService.setVoucherToUser(userId, randomVoucher. Voucher_In_Events[0].id, 1)
-            if (isAsignedVoucher) {
-                return res.json({
-                    code: 200,
-                    item: randomVoucher
-                });
-            }
-            throw new ErrorResponse("Server Internal Error", 500);
+            // const isAsignedVoucher = await  VoucherService.setVoucherToUser(userId, randomVoucher. Voucher_In_Events[0].id, 1)
+            rabbitMQConnection.sendToTopicExchange("vouchers", "setVoucherToUser", {
+                userId,
+                voucherInEventId: randomVoucher.Voucher_In_Events[0].id,
+                quantity: 1
+            }); 
+            return res.json({
+                code: 200,
+                item: randomVoucher
+            });
         }
 
         return res.json({
@@ -428,4 +434,3 @@ exports.getAllFavorite = async (req, res) => {
         return res.status(500).json({ error: 'Internal Server Error' });
     }
 };
-

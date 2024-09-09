@@ -1,4 +1,5 @@
 const { Item} = require('../models');
+const { uploadToImgur } = require("../middlewares/uploadFile");
 
 // Get all items
 exports.getAll = async (req, res) => {
