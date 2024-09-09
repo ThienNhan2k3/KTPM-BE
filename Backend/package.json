@@ -12,8 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "@sequelize/core": "^7.0.0-alpha.37",
-    "axios": "^1.7.7",
     "amqplib": "^0.10.4",
+    "axios": "^1.7.7",
     "bcrypt": "^5.1.1",
     "connect-session-sequelize": "^7.1.7",
     "cookie-parser": "^1.4.6",

@@ -15,6 +15,7 @@ exports.getAll = async (req, res) => {
 // Create an item
 exports.create = async (req, res) => {
     const { id_event, name, image } = req.body;
+    console.log("create Item");
     try {
         const item = await Item.create({
             id_event, 

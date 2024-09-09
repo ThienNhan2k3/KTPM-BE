@@ -214,6 +214,7 @@ class voucherController {
     try {
       vouchers = await Voucher.findAll({
         where: {
+          id_brand: req.user.id,
           status: "Active",
         },
       });
