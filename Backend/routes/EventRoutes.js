@@ -20,8 +20,8 @@ router.post('/addFavEvent', EventController.addFavorite)
 router.delete('/deleteFavEvent', EventController.deleteFavorite)
 
 //Lac xi
+router.get("/lacxi/redeem/:userId/:uuid", EventController.redeemGift); 
 router.get("/lacxi/:uuid/:userId", EventController.playLacXiEvent); 
-router.get("/lacxi/:uuid/redeem", EventController.redeemGift); 
 router.get("/share/:uuid", EventController.shareFb); 
 // router.post("/donate/:uuid", EventController.donateTicket); 
 router.get('/lacxi/getOrCreatePlaythrough/:userId/:eventId', EventController.getOrCreatePlaythrough)

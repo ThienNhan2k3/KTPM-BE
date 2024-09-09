@@ -27,12 +27,6 @@ class ItemService {
         });
     }
     static async getNumberOfItemOfUserInEvent(userId, eventId) {
-        console.log(await User_Item.findOne({
-            where: {
-                id_item: "c4fb5c4d-4ef7-4c43-b978-4bfab379dce3",  
-            },
-            // i
-        }))
         return User_Item.count({
             where: {
                 id_user: userId,
@@ -42,12 +36,9 @@ class ItemService {
             },
             include: [{
                 model: Item,
-                include: [{
-                    model: Event,
-                    where: {
-                        id: eventId
-                    }
-                }]
+                where: {
+                    id_event: eventId
+                }
                 
             }]
         });

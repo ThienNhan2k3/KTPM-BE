@@ -186,6 +186,10 @@ class SocketService {
       console.log(">>>User disconnect id is ", socket.id);
     });
 
+    socket.on("refreshUserTable", async() => {
+      socket.join("refreshUserTable");
+    })
+
     //event on here
     socket.on("playEvent", async (eventId, userId) => {
       if (!uuid.validate(eventId) || !uuid.validate(userId)) {

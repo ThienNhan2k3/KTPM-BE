@@ -7,6 +7,7 @@ const EventService = require('../services/eventService');
 const ErrorResponse = require('../core/errorResponse');
 const rabbitMQConnection = require("../database/rabbitmq/connection");
 const { uploadToImgur } = require("../middlewares/uploadFile");
+const uuid = require("uuid");
 
 // Get all events
 exports.getAll = async (req, res) => {
@@ -233,11 +234,19 @@ exports.getUserItemsForEvent = async (req, res) => {
 };
 
 exports.redeemGift = async (req, res) => {
-    const userId = req.user.id;
+    const userId = req.params.userId;
     const eventId = req.params.uuid;
+
+    console.log(uuid.validate(userId), uuid.validate(eventId))
     try {
         const itemsInEvent = await ItemService.getAllItemOfEvent(eventId);
-        const itemOfUsers =  await ItemService.getNumberOfItemOfUserInEvent(userId, eventId);
+        const itemOfUsers = await ItemService.getNumberOfItemOfUserInEvent(userId, eventId);
+        console.log("---------------------");
+        
+        console.log(itemOfUsers);
+        console.log("---------------------");
+
+        console.log(itemsInEvent.length);
         
         if (itemOfUsers == itemsInEvent.length) {
             rabbitMQConnection.sendToTopicExchange("items", "deleteEachItemOfUserInEvent", {

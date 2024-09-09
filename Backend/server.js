@@ -178,18 +178,22 @@ app.use((error, req, res, next) => {
 });
 
 
-async function boardcastingEvent({eventId, message, data}) {
+
+async function broadcastingEvent({eventId, message, data}) {
   return await __io.to(eventId).emit(message, data);
+
 }
 
+
 const protypeQuizExchange = {
-  "emitQuiz": boardcastingEvent
+  "quiz": {topic: "emitQuiz", cb: broadcastingEvent},
+  "userTable": {topic: "refreshUserTable", cb: broadcastingEvent},
 }
 
 
 const setUpRabbitMQ = async () => {
   for(let [key, value] of Object.entries(protypeQuizExchange)) {
-      rabbitmqConnection.receiveFromTopicExchange("quiz", key, value);
+      rabbitmqConnection.receiveFromTopicExchange(key, value.topic, value.cb);
   }
 }
 
