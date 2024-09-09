@@ -1,7 +1,7 @@
 "use strict";
 const { Model, Table } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class Event extends Model {
+  class User extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -10,14 +10,13 @@ module.exports = (sequelize, DataTypes) => {
 
     static associate(models) {
       // define association here
-      const {User_Event, Voucher_In_Event, Item, Brand} = models;
-      this.hasMany(User_Event, {foreignKey: 'id_event'});
-      this.hasMany(Voucher_In_Event, {foreignKey: "id_event"});
-      this.hasMany(Item, {foreignKey: "id_event"});
-
+      const {User_Item} = models;
+      // this.hasMany(User_Event, {foreignKey: 'id_user'});
+      // this.hasMany(User_Voucher, {foreignKey: 'id_user'});
+      this.hasMany(User_Item, {foreignKey: 'id_user'});
     }
   }
-  Event.init(
+  User.init(
     {
       id: {
         allowNull: false,
@@ -25,32 +24,48 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
       },
-      type: {
+      full_name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      id_game: {
-        type: DataTypes.UUID,
-        allowNull: false,
-      },
-      id_brand: {
-        type: DataTypes.UUID,
-        allowNull: false,
-      },
-      name: {
+      user_name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      image: {
+      password: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      start_time: {
-        type: DataTypes.DATEONLY,
+      avatar: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      dob: {
+        type: DataTypes.STRING,
         allowNull: null,
       },
-      end_time: {
-        type: DataTypes.DATEONLY,
+      gender: {
+        type: DataTypes.STRING,
+        allowNull: null,
+      },
+      fb_acc: {
+        type: DataTypes.STRING,
+        allowNull: null,
+      },
+      email: {
+        type: DataTypes.STRING,
+        allowNull: null,
+      },
+      phone: {
+        type: DataTypes.STRING,
+        allowNull: null,
+      },
+      type: {
+        type: DataTypes.STRING,
+        allowNull: null,
+      },
+      status: {
+        type: DataTypes.STRING,
         allowNull: null,
       },
       time_update: {
@@ -60,8 +75,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     {
       sequelize,
-      tableName: "events",
-      modelName: "Event",
+      tableName: "users",
+      modelName: "User",
       // don't add the timestamp attributes (updatedAt, createdAt)
       timestamps: false,
       // If don't want createdAt
@@ -70,5 +85,5 @@ module.exports = (sequelize, DataTypes) => {
       updatedAt: false,
     }
   );
-  return Event;
+  return User;
 };

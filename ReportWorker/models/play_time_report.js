@@ -1,23 +1,20 @@
 "use strict";
-const { Model, Table } = require("sequelize");
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class Event extends Model {
+  class Play_Time_Report extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-
     static associate(models) {
       // define association here
-      const {User_Event, Voucher_In_Event, Item, Brand} = models;
-      this.hasMany(User_Event, {foreignKey: 'id_event'});
-      this.hasMany(Voucher_In_Event, {foreignKey: "id_event"});
-      this.hasMany(Item, {foreignKey: "id_event"});
-
+      const {Event, User} = models;
+      this.belongsTo(Event, {foreignKey: "id_event"});
+      this.belongsTo(User, {foreignKey: "id_user"});
     }
   }
-  Event.init(
+  Play_Time_Report.init(
     {
       id: {
         allowNull: false,
@@ -25,43 +22,27 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
       },
-      type: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      id_game: {
+      id_event: {
         type: DataTypes.UUID,
         allowNull: false,
       },
-      id_brand: {
+      id_user: {
         type: DataTypes.UUID,
-        allowNull: false,
-      },
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      image: {
-        type: DataTypes.STRING,
         allowNull: false,
       },
       start_time: {
-        type: DataTypes.DATEONLY,
-        allowNull: null,
+        type: DataTypes.DATE,
+        allowNull: false,
       },
       end_time: {
-        type: DataTypes.DATEONLY,
-        allowNull: null,
-      },
-      time_update: {
         type: DataTypes.DATE,
         allowNull: false,
       },
     },
     {
       sequelize,
-      tableName: "events",
-      modelName: "Event",
+      tableName: "play_time_reports",
+      modelName: "Play_Time_Report",
       // don't add the timestamp attributes (updatedAt, createdAt)
       timestamps: false,
       // If don't want createdAt
@@ -70,5 +51,5 @@ module.exports = (sequelize, DataTypes) => {
       updatedAt: false,
     }
   );
-  return Event;
+  return Play_Time_Report;
 };
