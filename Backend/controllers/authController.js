@@ -3,6 +3,7 @@ const { Op } = require("@sequelize/core");
 const SocketService = require("../services/socketService");
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
+const rabbitmqConnection = require("../database/rabbitmq/connection");
 
 class AuthController {
   static postLogin = async (req, res, next) => {
@@ -52,7 +53,7 @@ class AuthController {
       hashPassword = hash;
 
       try {
-        const [, created] = await Brand.findOrCreate({
+        const [brand, created] = await Brand.findOrCreate({
           where: { [Op.or]: { brand_name, email } },
           defaults: {
             brand_name,
@@ -67,6 +68,8 @@ class AuthController {
             avatar: "",
           },
         });
+
+        console.log(created);
 
         if (!created) {
           let brand = await Brand.findOne({
@@ -83,11 +86,15 @@ class AuthController {
             }
           }
         } else {
-          rabbitmqConnection.sendToTopicExchange("userTable", "refreshUserTable", {
-            eventId: "roomAdmin", 
-            message: "dbChange",
-            data: `changed`
-          })
+          rabbitmqConnection.sendToTopicExchange(
+            "userTable",
+            "refreshUserTable",
+            {
+              eventId: "roomAdmin",
+              message: "dbChange",
+              data: `changed`,
+            }
+          );
           return res.send({ message: "Success" });
         }
       } catch (err) {
