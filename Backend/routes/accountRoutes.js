@@ -10,7 +10,6 @@ router.post(
   upload.single("my_image"),
   accountController.createAccountUser
 );
-router.post("/create/brand", accountController.createAccountBrand);
 router.get("/getAccount/:type/:uuid", accountController.getAccountByUUID);
 router.put("/update/status/:type/:uuid", accountController.updateStatusAccount);
 router.put(

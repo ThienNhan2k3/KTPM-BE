@@ -14,6 +14,8 @@ router.post(
   authController.postLogin
 );
 
+router.post("/create/brand", authController.createAccountBrand);
+
 router.get("/login", (req, res) => {
   res.json({
     code: 400,
