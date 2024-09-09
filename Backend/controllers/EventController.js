@@ -12,6 +12,7 @@ const { uploadToImgur } = require("../middlewares/uploadFile");
 exports.getAll = async (req, res) => {
     try {
         const events = await Event.findAll({
+            where: {id_brand: req.user.id},
             order: [['id', 'ASC']]
         });
         return res.json(events);
@@ -63,7 +64,7 @@ exports.getOngoingEvents = async (req, res) => {
 
 
 exports.create = async (req, res) => {
-    const { type, id_game, id_brand, name, start_time, end_time } = JSON.parse(req.body.my_data);
+    const { type, id_game, name, start_time, end_time } = JSON.parse(req.body.my_data);
     let imgurLink = null;
     if (req.file) {
         // Upload the file to Imgur
@@ -78,7 +79,7 @@ exports.create = async (req, res) => {
         const new_event = await Event.create({
             type, 
             id_game, 
-            id_brand, 
+            id_brand: req.user.id, 
             name, 
             image: imgurLink, 
             start_time, 
