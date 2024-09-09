@@ -102,6 +102,7 @@ app.use('/brand', brandRoutes);
 app.use('/quiz',quizRoutes);
 app.use('/question', questionRoutes);
 app.use('/event', EventRoutes);
+app.use('/item', itemRoutes);
 app.use('/game', require("./routes/gameRoutes.js"));
 app.use('/adminreport', require("./routes/playTimeReportRoutes.js"));
 app.use('/voucher', voucherRoutes);

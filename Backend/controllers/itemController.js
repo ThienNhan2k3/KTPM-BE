@@ -1,4 +1,5 @@
 const { Item} = require('../models');
+const { uploadToImgur } = require("../middlewares/uploadFile");
 
 // Get all items
 exports.getAll = async (req, res) => {
@@ -14,13 +15,22 @@ exports.getAll = async (req, res) => {
 
 // Create an item
 exports.create = async (req, res) => {
-    const { id_event, name, image } = req.body;
-    console.log("create Item");
+    const { id_event, name } = JSON.parse(req.body.my_data);
+    let imgurLink = null;
+    if (req.file) {
+        // Upload the file to Imgur
+        imgurLink = await uploadToImgur(req.file.buffer);
+        console.log("Upload image!");
+      } else {
+        console.log("No image!");
+        imgurLink = "";
+      }
+
     try {
         const item = await Item.create({
             id_event, 
             name, 
-            image,
+            image: imgurLink,
             time_update: new Date() // Set the current time for `time_update`
         });
         return res.json(item);

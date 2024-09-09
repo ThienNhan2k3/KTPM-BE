@@ -5,6 +5,7 @@ const { upload } = require("../middlewares/uploadFile");
 const router = express.Router();
 
 router.get('/getAll', EventController.getAll);
+router.get('/getOngoingEvents', EventController.getOngoingEvents);
 router.post('/create', 
     upload.single("my_image"),
     EventController.create);
@@ -15,13 +16,15 @@ router.get('/getEvent/:id', EventController.getByID);
 
 //favEvent
 router.get('/getAllFavEvent', EventController.getAllFavorite);
-router.get('/checkFavEvent', EventController.checkFavorite);
 router.post('/addFavEvent', EventController.addFavorite)
 router.delete('/deleteFavEvent', EventController.deleteFavorite)
 
-router.get("/lacxi/:uuid", EventController.playLacXiEvent); 
+//Lac xi
+router.get("/lacxi/:uuid/:userId", EventController.playLacXiEvent); 
 router.get("/lacxi/:uuid/redeem", EventController.redeemGift); 
 router.get("/share/:uuid", EventController.shareFb); 
 // router.post("/donate/:uuid", EventController.donateTicket); 
+router.get('/lacxi/getOrCreatePlaythrough/:userId/:eventId', EventController.getOrCreatePlaythrough)
+router.get('/lacxi/getUserItemsForEvent/:userId/:eventId', EventController.getUserItemsForEvent)
 
 module.exports = router;
