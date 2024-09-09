@@ -51,46 +51,49 @@ async function emitAnswer(io, eventId, userId, correctAnswer) {
 }
 
 async function emitEventEnd(io, eventId, userId) {
-  // const vouchers = await VoucherService.findVouchersByEventId(eventId);
-
   const allPlayerScore = await redis.hgetall(`eventQuizes:${eventId}:players`);
-  const sortable = Object.entries(allPlayerScore)
-    .sort(([,a],[,b]) => b-a)
-    .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
-  
+    const sortable = Object.entries(allPlayerScore)
+      .sort(([,a],[,b]) => b-a)
+      .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
     
-
-  const vouchers = await VoucherService.findVouchersByEventId(eventId)
-  // const randomVoucher = vouchersInEvent[(Math.floor(Math.random() * vouchersInEvent.length))];
-  // const isAsignedVoucher = await  VoucherService.setVoucherToUser(userId, randomVoucher. Voucher_In_Events[0].id, 1)
-  // if (isAsignedVoucher) {
-  //     return res.json({
-  //         code: 200,
-  //         item: randomVoucher
-  //     });
-  // }
-
-  vouchers.sort(function(a, b) {
-    return b["value"] - a["value"];
-  });
-
-  console.log(vouchers);
-
-  // io.to(eventId).emit("eventEnd", {
-  //   allPlayerScore,
-  //   voucher: "Voucher 50%",
-  // });
+    console.log(sortable);
 
   
-
-  rabbitmqConnection.sendToTopicExchange("quiz", "emitQuiz", {
-    eventId, 
-    message: "eventEnd",
-    data:  {
+    const voucherObj = {};
+    const vouchersInEvent = await VoucherService.findVouchersByEventId(eventId)
+    console.log(vouchersInEvent);
+    for (const [key, value] of Object.entries(sortable)) {
+        let randomVoucher = vouchersInEvent[(Math.floor(Math.random() * vouchersInEvent.length))];
+        // const isAsignedVoucher = await  VoucherService.setVoucherToUser(userId, randomVoucher. Voucher_In_Events[0].id, 1)
+        voucherObj[key] = randomVoucher;
+        if (randomVoucher != null) {
+            rabbitmqConnection.sendToTopicExchange("vouchers", "setVoucherToUser", {
+                userId: key,
+                voucherInEventId: randomVoucher.Voucher_In_Events[0].id,
+                quantity: 1
+            }); 
+        } 
+      }
+      
+  
+    // io.to(eventId).emit("eventEnd", {
+    //   allPlayerScore,
+    //   voucher: "Voucher 50%",
+    // });
+    
+    const data = {
       allPlayerScore,
-      voucher: "Voucher 50%",
+      voucher: voucherObj,
     }
-  })
+
+    console.log(data);
+    
+  
+    rabbitmqConnection.sendToTopicExchange("quiz", "emitQuiz", {
+      eventId, 
+      message: "eventEnd",
+      data: data
+    })
 }
 
 async function updateNewQuestionToDb(eventId, newQuestion) {

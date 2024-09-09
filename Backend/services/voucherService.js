@@ -6,7 +6,7 @@ class VoucherService {
             include: [{
                 model: Voucher_In_Event,
                 where: {
-                    id_event: eventId
+                    id_event: eventId,
                 }
             }]
         };
