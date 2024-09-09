@@ -9,6 +9,8 @@ const logger = require("./logger/winstonLog");
 const passport = require("passport");
 const session = require("express-session");
 var bodyParser = require("body-parser");
+const rabbitmqConnection = require("./database/rabbitmq/connection.js");
+
 const { authenticate, isAdmin } = require("./middlewares/authentication.js");
 const app = express();
 const server = require("http").Server(app);
@@ -17,7 +19,9 @@ const io = require("socket.io")(server, {
     origin: "http://localhost:5173",
     methods: ["GET", "POST"],
   },
+  transports: [ "websocket" ] 
 });
+
 global.__io = io;
 
 const accountRoutes = require("./routes/accountRoutes");
@@ -90,7 +94,7 @@ app.use("/public/images/games", express.static(dir));
 __io.on("connection", require("./services/socketService.js").connection);
 app.use("/", require("./routes/authRoutes"));
 
-app.use(authenticate)
+// app.use(authenticate)
 
 app.use('/account', accountRoutes);
 app.use('/user', userRoutes);
@@ -172,11 +176,29 @@ app.use((error, req, res, next) => {
   });
 });
 
+
+async function boardcastingEvent({eventId, message, data}) {
+  return await __io.to(eventId).emit(message, data);
+}
+
+const protypeQuizExchange = {
+  "emitQuiz": boardcastingEvent
+}
+
+
+const setUpRabbitMQ = async () => {
+  for(let [key, value] of Object.entries(protypeQuizExchange)) {
+      rabbitmqConnection.receiveFromTopicExchange("quiz", key, value);
+  }
+}
+
+
 server.listen(PORT, async () => {
   console.log(`Server is running on http://localhost:${PORT}`);
   try {
     await sequelize.sync();
     await sequelize.authenticate();
+    await setUpRabbitMQ();
     console.log("Database Connected!");
   } catch (error) {
     console.error("Unable to connect to the database:", error);

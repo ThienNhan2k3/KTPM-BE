@@ -4,16 +4,30 @@ const UserService = require("./userService");
 const EventService = require("./eventService");
 const uuid = require("uuid");
 const VoucherService = require("./voucherService");
+const rabbitmqConnection = require("../database/rabbitmq/connection");
+
 
 function emitQuestion(io, eventId, title, question, timer) {
-  io.to(eventId).emit(title, {
-    ques: question.ques,
-    choice_1: question.choice_1,
-    choice_2: question.choice_2,
-    choice_3: question.choice_3,
-    choice_4: question.choice_4,
-    timer,
-  });
+  // io.to(eventId).emit(title, {
+  //   ques: question.ques,
+  //   choice_1: question.choice_1,
+  //   choice_2: question.choice_2,
+  //   choice_3: question.choice_3,
+  //   choice_4: question.choice_4,
+  //   timer,
+  // });
+  rabbitmqConnection.sendToTopicExchange("quiz", "emitQuiz", {
+    eventId, 
+    message: title,
+    data: {
+      ques: question.ques,
+      choice_1: question.choice_1,
+      choice_2: question.choice_2,
+      choice_3: question.choice_3,
+      choice_4: question.choice_4,
+      timer,
+    }
+  })
 }
 
 async function emitAnswer(io, eventId, userId, correctAnswer) {
@@ -28,32 +42,55 @@ async function emitAnswer(io, eventId, userId, correctAnswer) {
     AllScores,
     playerScore,
   };
-  io.to(eventId).emit("answerOfQuestion", answerObject);
+  // io.to(eventId).emit("answerOfQuestion", answerObject);
+  rabbitmqConnection.sendToTopicExchange("quiz", "emitQuiz", {
+    eventId, 
+    message: "answerOfQuestion",
+    data: answerObject
+  })
 }
 
 async function emitEventEnd(io, eventId, userId) {
   // const vouchers = await VoucherService.findVouchersByEventId(eventId);
 
   const allPlayerScore = await redis.hgetall(`eventQuizes:${eventId}:players`);
-  // const sortable = Object.entries(allPlayerScore)
-  //   .sort(([,a],[,b]) => a-b)
-  //   .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
+  const sortable = Object.entries(allPlayerScore)
+    .sort(([,a],[,b]) => b-a)
+    .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
+  
+    
 
-  // for (let key of sortable.keys()) {
-  //   console.log(key);
-  //   // VoucherService.setVoucherToUser(key);
+  const vouchers = await VoucherService.findVouchersByEventId(eventId)
+  // const randomVoucher = vouchersInEvent[(Math.floor(Math.random() * vouchersInEvent.length))];
+  // const isAsignedVoucher = await  VoucherService.setVoucherToUser(userId, randomVoucher. Voucher_In_Events[0].id, 1)
+  // if (isAsignedVoucher) {
+  //     return res.json({
+  //         code: 200,
+  //         item: randomVoucher
+  //     });
   // }
 
-  // vouchers.sort(function(a, b) {
-  //   return b["value"] - a["value"];
+  vouchers.sort(function(a, b) {
+    return b["value"] - a["value"];
+  });
+
+  console.log(vouchers);
+
+  // io.to(eventId).emit("eventEnd", {
+  //   allPlayerScore,
+  //   voucher: "Voucher 50%",
   // });
 
-  console.log(allPlayerScore);
+  
 
-  io.to(eventId).emit("eventEnd", {
-    allPlayerScore,
-    voucher: "Voucher 50%",
-  });
+  rabbitmqConnection.sendToTopicExchange("quiz", "emitQuiz", {
+    eventId, 
+    message: "eventEnd",
+    data:  {
+      allPlayerScore,
+      voucher: "Voucher 50%",
+    }
+  })
 }
 
 async function updateNewQuestionToDb(eventId, newQuestion) {
@@ -149,6 +186,7 @@ class SocketService {
     //event on here
     socket.on("playEvent", async (eventId, userId) => {
       if (!uuid.validate(eventId) || !uuid.validate(userId)) {
+        console.log("uuid");
         socket.disconnect();
         return;
       }
@@ -163,6 +201,7 @@ class SocketService {
         currentDate < eventStartDate ||
         currentDate > eventEndDate
       ) {
+        console.log("event");
         socket.disconnect();
         return;
       }
@@ -183,7 +222,12 @@ class SocketService {
 
       socket.join(eventId);
       console.log(`${userId} has joined the game!`);
-      __io.to(eventId).emit("message", `${userId} has joined the game!`);
+      // __io.to(eventId).emit("message", `${userId} has joined the game!`);
+      rabbitmqConnection.sendToTopicExchange("quiz", "emitQuiz", {
+        eventId, 
+        message: "message",
+        data: `${userId} has joined the game!`
+      })
 
       //Lưu eventId mà user đang tham gia vào Redis DB
       await redis.set(`player:${userId}`, eventId);
@@ -200,6 +244,7 @@ class SocketService {
         );
 
         if (questionIndex + 1 >= tempEventQuizes.length) {
+          console.log("redis");
           socket.disconnect();
         }
       } else {
@@ -247,7 +292,12 @@ class SocketService {
           while (countDown >= 1) {
             setTimeout(
               function (countDown) {
-                __io.to(eventId).emit("eventStart", countDown);
+                // __io.to(eventId).emit("eventStart", countDown);
+                rabbitmqConnection.sendToTopicExchange("quiz", "emitQuiz", {
+                  eventId, 
+                  message: "eventStart",
+                  data: countDown
+                })
               },
               (10 - countDown) * 1000,
               countDown
@@ -308,7 +358,12 @@ class SocketService {
   static send_message(socket) {
     console.log("User connection id is ", socket.id);
 
-    socket.emit("message", "success");
+    // socket.emit("message", "success");
+    rabbitmqConnection.sendToTopicExchange("quiz", "emitQuiz", {
+      eventId, 
+      message: "message",
+      data: "success"
+    })
   }
 }
 

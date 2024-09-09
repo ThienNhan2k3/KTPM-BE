@@ -11,7 +11,7 @@ exports.getAll = async (req, res) => {
     console.log(req.user);
     try {
         const events = await Event.findAll({
-            where: {id_brand: req.user.id},
+            // where: {id_brand: req.user.id},
             order: [['id', 'ASC']]
         });
         return res.json(events);
